@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Shuttle of Destiny
-//
-//  Created by Balya Elfata on 12/06/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -16,6 +9,7 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear()
     }
 }
 
