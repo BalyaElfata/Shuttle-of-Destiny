@@ -22,6 +22,14 @@
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
+		E93804602C1997910093AD03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E93804622C19B0A00093AD03 /* game_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio.mp3; sourceTree = "<group>"; };
+		E93804632C19B0A00093AD03 /* menu_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu_audio.mp3; sourceTree = "<group>"; };
+		E93804652C19B0A00093AD03 /* click_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sfx.mp3; sourceTree = "<group>"; };
+		E93804662C19B0A00093AD03 /* end_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E93804672C19B0A00093AD03 /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E93804702C19B0CC0093AD03 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E93804722C19B2FE0093AD03 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93804742C19B2FE0093AD03 /* PressStart2P-Regular.ttf in Resources */,
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
+				E93804692C19B0A00093AD03 /* game_audio.mp3 in Resources */,
+				E938046C2C19B0A00093AD03 /* end_of_day_sfx.mp3 in Resources */,
+				E938046A2C19B0A00093AD03 /* menu_audio.mp3 in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +172,9 @@
 			files = (
 				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
 				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
+				E93804712C19B0CC0093AD03 /* Helper.swift in Sources */,
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
+				E93804612C1997910093AD03 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

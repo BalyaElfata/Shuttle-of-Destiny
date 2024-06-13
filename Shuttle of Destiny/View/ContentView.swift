@@ -1,15 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showMainMenu = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        GeometryReader { geo in
+            if showMainMenu {
+                ContentView()
+            } else {
+                ZStack {
+                    
+                    VStack {
+                        Text("Shuttle of Destiny")
+                            .font(.custom(Constants.psFont, size: geo.size.height * Constants.titleSize))
+                            .f
+                    }
+                    
+                }
+            }
         }
-        .padding()
-        .onAppear()
+        .frame(width: geo.size.width, height: geo.size.height)
     }
 }
 
