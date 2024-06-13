@@ -12,6 +12,16 @@
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
+		E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */; };
+		E960D1012C1A89DE00C3979B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F32C1A89DE00C3979B /* Constants.swift */; };
+		E960D1022C1A89DE00C3979B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F42C1A89DE00C3979B /* Helper.swift */; };
+		E960D1032C1A89DE00C3979B /* game_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F62C1A89DE00C3979B /* game_audio.mp3 */; };
+		E960D1042C1A89DE00C3979B /* menu_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */; };
+		E960D1052C1A89DE00C3979B /* click_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */; };
+		E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */; };
+		E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */; };
+		E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FD2C1A89DE00C3979B /* ContentView.swift */; };
+		E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,14 +32,16 @@
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
-		E93804602C1997910093AD03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E93804622C19B0A00093AD03 /* game_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio.mp3; sourceTree = "<group>"; };
-		E93804632C19B0A00093AD03 /* menu_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu_audio.mp3; sourceTree = "<group>"; };
-		E93804652C19B0A00093AD03 /* click_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sfx.mp3; sourceTree = "<group>"; };
-		E93804662C19B0A00093AD03 /* end_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end_of_day_sfx.mp3; sourceTree = "<group>"; };
-		E93804672C19B0A00093AD03 /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
-		E93804702C19B0CC0093AD03 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		E93804722C19B2FE0093AD03 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		E960D0F32C1A89DE00C3979B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E960D0F42C1A89DE00C3979B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E960D0F62C1A89DE00C3979B /* game_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio.mp3; sourceTree = "<group>"; };
+		E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu_audio.mp3; sourceTree = "<group>"; };
+		E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FD2C1A89DE00C3979B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,11 @@
 			isa = PBXGroup;
 			children = (
 				212384D72C1989E40019D2D4 /* View */,
+				E960D0F22C1A89DE00C3979B /* fonts */,
+				E960D0F52C1A89DE00C3979B /* helpers */,
+				E960D0F82C1A89DE00C3979B /* music */,
+				E960D0FC2C1A89DE00C3979B /* sfx */,
+				E960D0FF2C1A89DE00C3979B /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
 				212384C92C1980F60019D2D4 /* Assets.xcassets */,
 				212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */,
@@ -92,6 +109,51 @@
 			children = (
 				212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */,
 				212384C72C1980F50019D2D4 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E960D0F22C1A89DE00C3979B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		E960D0F52C1A89DE00C3979B /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F32C1A89DE00C3979B /* Constants.swift */,
+				E960D0F42C1A89DE00C3979B /* Helper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		E960D0F82C1A89DE00C3979B /* music */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F62C1A89DE00C3979B /* game_audio.mp3 */,
+				E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		E960D0FC2C1A89DE00C3979B /* sfx */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */,
+				E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */,
+				E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */,
+			);
+			path = sfx;
+			sourceTree = "<group>";
+		};
+		E960D0FF2C1A89DE00C3979B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0FD2C1A89DE00C3979B /* ContentView.swift */,
+				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,12 +216,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93804742C19B2FE0093AD03 /* PressStart2P-Regular.ttf in Resources */,
+				E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */,
+				E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */,
+				E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */,
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
-				E93804692C19B0A00093AD03 /* game_audio.mp3 in Resources */,
-				E938046C2C19B0A00093AD03 /* end_of_day_sfx.mp3 in Resources */,
-				E938046A2C19B0A00093AD03 /* menu_audio.mp3 in Resources */,
+				E960D1042C1A89DE00C3979B /* menu_audio.mp3 in Resources */,
+				E960D1052C1A89DE00C3979B /* click_sfx.mp3 in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
+				E960D1032C1A89DE00C3979B /* game_audio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,10 +235,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
+				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
 				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
-				E93804712C19B0CC0093AD03 /* Helper.swift in Sources */,
+				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
+				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
-				E93804612C1997910093AD03 /* Constants.swift in Sources */,
+				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
