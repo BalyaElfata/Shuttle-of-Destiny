@@ -14,7 +14,7 @@ class Helper {
     private var sfxPlayer: AVAudioPlayer!
     
     func playMenuMusic() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "music/menu_audio", ofType: "mp3")!)
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "menu_audio", ofType: "mp3")!)
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
@@ -28,7 +28,7 @@ class Helper {
     }
     
     func playGameplayMusic() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "music/game_audio", ofType: "mp3")!)
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "game_audio", ofType: "mp3")!)
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
@@ -41,7 +41,7 @@ class Helper {
     }
     
     func playClickSfx() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "sfx/click_sfx", ofType: "mp3")!)
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "click_sfx", ofType: "mp3")!)
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
@@ -53,7 +53,7 @@ class Helper {
     }
     
     func playEODSfx() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "sfx/end_of_day_sfx", ofType: "mp3")!)
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "end_of_day_sfx", ofType: "mp3")!)
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
@@ -65,7 +65,7 @@ class Helper {
     }
     
     func playSODSfx() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "sfx/start_of_day_sfx", ofType: "mp3")!)
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "start_of_day_sfx", ofType: "mp3")!)
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
