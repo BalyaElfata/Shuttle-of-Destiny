@@ -1,47 +1,65 @@
 import SwiftUI
+import Foundation
 
 struct TypingAnimationView: View {
     @State var conversation_index = 1
     let conversation_1_alex = "Dad, look! I got it!"
     let conversation_2_dad = "I'm so proud of you, my son"
+    @State var isConversationCompleted: Bool = False
+//    let conversation_list = [conversation_1_alex, conversation_2_dad]
+//    let question = "Do you want to accompany Mia?"
     @State private var animatedText: String = ""
 
     var body: some View {
-        HStack{
-            VStack (alignment: .leading){
-                Text(animatedText)
-                    .font(.title)
-                    .padding()
-                
-                // Choice Button
-                if conversation_index > 2 {
-                    HStack {
-                        Spacer()
-                        Rectangle()
-                            .frame(width: 160, height: 120)
-                            .cornerRadius(50)
-                            .foregroundColor(.blue)
-                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        Rectangle()
-                            .frame(width: 160, height: 120)
-                            .cornerRadius(50)
-                            .foregroundColor(.blue)
-                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                    }
-                }
-            }
+        VStack (){
             Spacer()
+            Image("park")
+                .resizable()
+//                    .scaledToFill()
+                .ignoresSafeArea(.all)
+//                // Choice Button
+//                if conversation_index > 2 {
+//                    HStack {
+//                        Spacer()
+//                        Rectangle()
+//                            .frame(width: 160, height: 90)
+//                            .cornerRadius(50)
+//                            .foregroundColor(.blue)
+//                            .shadow(radius: 4)
+//                            .overlay(Text("YES"))
+//                        Spacer()
+//                        Rectangle()
+//                            .frame(width: 160, height: 90)
+//                            .cornerRadius(50)
+//                            .foregroundColor(.blue)
+//                            .shadow(radius: 4)
+//                            .overlay(Text("NO"))
+//                        Spacer()
+//                    }
+//                }
+            
+            // Conversation
+            Text(animatedText)
+                .font(.title)
+                .padding()
         }
-        .onAppear {
+        .onTapGesture {
+            // next conversation
+            animatedText = ""
+            
+            conversation_index+=1
             switch conversation_index {
             case 1:
                 animateText(text: conversation_1_alex)
             case 2:
                 animateText(text: conversation_2_dad)
             default:
-                animateText(text: "Error!")
+                animateText(text: "Conversation is done.")
             }
+    
+        }
+        .onAppear {
+            animateText(text: conversation_1_alex)
         }
     }
 
@@ -51,9 +69,6 @@ struct TypingAnimationView: View {
                 animatedText.append(character)
                 // You can add haptic feedback to support typing animation.(optional)
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            }
-            if animatedText == text {
-                conversation_index += 1
             }
         }
     }
