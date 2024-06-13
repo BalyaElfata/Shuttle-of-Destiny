@@ -14,13 +14,12 @@ struct ContentView: View {
                     VStack {
                         Text("Shuttle of Destiny")
                             .font(.custom(Constants.psFont, size: geo.size.height * Constants.titleSize))
-                            .f
                     }
                     
                 }
             }
+                .frame(width: geo.size.width, height: geo.size.height)
         }
-        .frame(width: geo.size.width, height: geo.size.height)
     }
 }
 
