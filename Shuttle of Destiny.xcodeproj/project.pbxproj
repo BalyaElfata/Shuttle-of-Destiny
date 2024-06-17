@@ -22,6 +22,10 @@
 		E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */; };
 		E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FD2C1A89DE00C3979B /* ContentView.swift */; };
 		E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */; };
+		E9FD793F2C20FC24004D531E /* bad_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */; };
+		E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793C2C20FC24004D531E /* prologue_music.mp3 */; };
+		E9FD79412C20FC24004D531E /* neutral_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */; };
+		E9FD79422C20FC24004D531E /* good_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
 		E960D0FD2C1A89DE00C3979B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
+		E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bad_ed_music.mp3; path = "Shuttle of Destiny/music/bad_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
+		E9FD793C2C20FC24004D531E /* prologue_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = prologue_music.mp3; path = "Shuttle of Destiny/music/prologue_music.mp3"; sourceTree = SOURCE_ROOT; };
+		E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = neutral_ed_music.mp3; path = "Shuttle of Destiny/music/neutral_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
+		E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = good_ed_music.mp3; path = "Shuttle of Destiny/music/good_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 		E960D0F82C1A89DE00C3979B /* music */ = {
 			isa = PBXGroup;
 			children = (
+				E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */,
+				E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */,
+				E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */,
+				E9FD793C2C20FC24004D531E /* prologue_music.mp3 */,
 				E960D0F62C1A89DE00C3979B /* game_audio.mp3 */,
 				E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */,
 			);
@@ -218,11 +230,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FD79422C20FC24004D531E /* good_ed_music.mp3 in Resources */,
 				E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */,
 				E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */,
 				E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */,
+				E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */,
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
+				E9FD793F2C20FC24004D531E /* bad_ed_music.mp3 in Resources */,
 				E960D1042C1A89DE00C3979B /* menu_audio.mp3 in Resources */,
+				E9FD79412C20FC24004D531E /* neutral_ed_music.mp3 in Resources */,
 				E960D1052C1A89DE00C3979B /* click_sfx.mp3 in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
 				E960D1032C1A89DE00C3979B /* game_audio.mp3 in Resources */,

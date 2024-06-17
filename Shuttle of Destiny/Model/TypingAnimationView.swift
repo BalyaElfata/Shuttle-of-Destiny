@@ -50,7 +50,7 @@ struct TypingAnimationView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.1) {
                 animatedText.append(character)
                 // You can add haptic feedback to support typing animation.(optional)
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+//                UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
             if animatedText == text {
                 conversation_index += 1

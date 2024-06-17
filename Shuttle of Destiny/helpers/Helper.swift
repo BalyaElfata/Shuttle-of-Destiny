@@ -27,6 +27,19 @@ class Helper {
         }
     }
     
+    func playPrologueMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "prologue_music", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.setVolume(0.8, fadeDuration: 5)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the prologue music part couldn't be played, due to error: \(error).")
+        }
+    }
+    
     func playGameplayMusic() {
         let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "game_audio", ofType: "mp3")!)
         
@@ -37,6 +50,45 @@ class Helper {
             audioPlayer?.play()
         } catch {
             print("The audio file for the gameplay music part couldn't be played, due to error: \(error).")
+        }
+    }
+    
+    func playGoodEDMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "good_ed_music", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.setVolume(0.8, fadeDuration: 5)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the good ending music part couldn't be played, due to error: \(error).")
+        }
+    }
+    
+    func playBadEDMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "bad_ed_music", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.setVolume(0.8, fadeDuration: 5)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the bad ending music part couldn't be played, due to error: \(error).")
+        }
+    }
+    
+    func playNeutralEDMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "neutral_ed_music", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.setVolume(0.8, fadeDuration: 5)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the neutral ending music part couldn't be played, due to error: \(error).")
         }
     }
     
