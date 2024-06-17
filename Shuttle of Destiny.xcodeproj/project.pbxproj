@@ -26,6 +26,8 @@
 		E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793C2C20FC24004D531E /* prologue_music.mp3 */; };
 		E9FD79412C20FC24004D531E /* neutral_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */; };
 		E9FD79422C20FC24004D531E /* good_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */; };
+		E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FD79432C20FECF004D531E /* VT323-Regular.ttf */; };
+		E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD79452C20FF5E004D531E /* ADVView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		E9FD793C2C20FC24004D531E /* prologue_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = prologue_music.mp3; path = "Shuttle of Destiny/music/prologue_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = neutral_ed_music.mp3; path = "Shuttle of Destiny/music/neutral_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = good_ed_music.mp3; path = "Shuttle of Destiny/music/good_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
+		E9FD79432C20FECF004D531E /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
+		E9FD79452C20FF5E004D531E /* ADVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		E960D0F22C1A89DE00C3979B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E9FD79432C20FECF004D531E /* VT323-Regular.ttf */,
 				E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */,
 			);
 			path = fonts;
@@ -166,6 +171,7 @@
 		E960D0FF2C1A89DE00C3979B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9FD79452C20FF5E004D531E /* ADVView.swift */,
 				E960D0FD2C1A89DE00C3979B /* ContentView.swift */,
 				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
 			);
@@ -233,6 +239,7 @@
 				E9FD79422C20FC24004D531E /* good_ed_music.mp3 in Resources */,
 				E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */,
 				E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */,
+				E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */,
 				E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */,
 				E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */,
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
@@ -258,6 +265,7 @@
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
+				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
 				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@ import Foundation
 
 enum Constants {
     static let psFont = "PressStart2P-Regular"
+    static let vtFont = "VT323-Regular"
     
     static let mainColor = "#006769"
     static let secondaryColor = "#40A578"
@@ -18,6 +19,7 @@ enum Constants {
     static let bigTitleSize =  0.18
     static let titleSize =  0.108
     static let textSize =  0.0492
+    static let smallTextSize =  0.0360
 
     static let gapSize =  0.18
     static let extraMediumGapSize =  0.15
