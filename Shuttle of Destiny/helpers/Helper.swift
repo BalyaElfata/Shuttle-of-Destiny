@@ -92,6 +92,19 @@ class Helper {
         }
     }
     
+    func playADVMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "adv_music", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.setVolume(0.8, fadeDuration: 5)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the ADV music part couldn't be played, due to error: \(error).")
+        }
+    }
+    
     func playClickSfx() {
         let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "click_sfx", ofType: "mp3")!)
         

@@ -3,13 +3,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var animateScreenViews = false
-    @State private var showMainMenu = false
+    @State private var showPrologueForStart = false
     
     var body: some View {
-        GeometryReader { geo in
-            if showMainMenu {
-                ContentView()
-            } else {
+        if showPrologueForStart {
+            ADVView()
+        } else {
+            GeometryReader { geo in
                 ZStack {
                     Color.main
                     
@@ -20,13 +20,14 @@ struct ContentView: View {
                                     .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.titleSize))
                                     .multilineTextAlignment(.center)
                                 
-                                
                                 Spacer()
                                     .frame(width: geo.size.width * Constants.mediumGapSize, height: geo.size.height * Constants.mediumGapSize)
                                 
                                 VStack {
                                     Button {
                                         Helper.sharedHelper.playClickSfx()
+                                        
+                                        showPrologueForStart = true
                                     } label: {
                                         Text("Start Game")
                                             .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.textSize))
@@ -53,15 +54,15 @@ struct ContentView: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
             }
-        }
-        .onAppear {
-            Helper.sharedHelper.playMenuMusic()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                animateScreenViews = true
+            .onAppear {
+                Helper.sharedHelper.playMenuMusic()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    animateScreenViews = true
+                }
             }
+            .preferredColorScheme(.dark)
+            .ignoresSafeArea()
         }
-        .preferredColorScheme(.dark)
-        .ignoresSafeArea()
     }
 }
 
