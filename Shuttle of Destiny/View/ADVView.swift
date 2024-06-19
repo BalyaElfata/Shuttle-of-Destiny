@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ADVView: View {
     @State private var showDailyPlayViewForPrologue = false
@@ -13,9 +14,11 @@ struct ADVView: View {
     @State private var showEODProgressView = false
     @State private var showEndingView = false
     
+    @Query private var gameplayRun: [Gameplay]
+    
     var body: some View {
         
-        if showDailyPlayViewForPrologue {
+        if showDailyPlayViewForPrologue && gameplayRun.first(where: { $0.dayLapsed == 0 }) {
             EventView()
         } else if showDailyPlayView {
             EventView()

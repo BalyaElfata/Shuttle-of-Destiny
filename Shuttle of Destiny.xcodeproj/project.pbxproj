@@ -28,6 +28,7 @@
 		E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */; };
 		E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4262C22B6AD008FD08C /* CreditsView.swift */; };
 		E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */; };
+		E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D42C2C22CD80008FD08C /* Gameplay.swift */; };
 		E9FD793F2C20FC24004D531E /* bad_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */; };
 		E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793C2C20FC24004D531E /* prologue_music.mp3 */; };
 		E9FD79412C20FC24004D531E /* neutral_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */; };
@@ -61,6 +62,7 @@
 		E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
 		E9C3D4262C22B6AD008FD08C /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
+		E9C3D42C2C22CD80008FD08C /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bad_ed_music.mp3; path = "Shuttle of Destiny/music/bad_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9FD793C2C20FC24004D531E /* prologue_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = prologue_music.mp3; path = "Shuttle of Destiny/music/prologue_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = neutral_ed_music.mp3; path = "Shuttle of Destiny/music/neutral_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
@@ -99,6 +101,7 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
+				E9C3D42A2C22CD66008FD08C /* models */,
 				E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */,
 				212384D72C1989E40019D2D4 /* View */,
 				E960D0F22C1A89DE00C3979B /* fonts */,
@@ -196,6 +199,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E9C3D42A2C22CD66008FD08C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +296,7 @@
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
+				E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */,
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
 				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
 				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,

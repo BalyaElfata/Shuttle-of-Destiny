@@ -11,7 +11,8 @@ import SwiftUI
 struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
-            TypingAnimationView()
+            ContentView()
+                .modelContainer(for: Gameplay.self)
         }
     }
 }

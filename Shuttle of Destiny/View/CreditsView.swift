@@ -21,39 +21,39 @@ struct CreditsView: View {
                     
                     VStack {
                                 Text("Created in JKT with love by \n\n DRIM")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                 
                                 Spacer()
                                     .frame(width: geo.size.width * Constants.mediumGapSize, height: geo.size.height * Constants.mediumGapSize)
                                 
                                 Text("Balya Elfata")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Geraldo")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Hose")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Lonard Steven")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Sony Chandra")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Valentinus Kenji")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
