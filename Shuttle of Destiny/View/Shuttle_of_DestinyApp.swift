@@ -5,13 +5,26 @@
 //  Created by Balya Elfata on 12/06/24.
 //
 
+//import SwiftUI
+//
+//@main
+//struct Shuttle_of_DestinyApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            HomeView(alreadyChoose: false)
+//        }.modelContainer(for: DataItem.self)
+//    }
+//}
+
 import SwiftUI
+import SwiftData
 
 @main
 struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(alreadyChoose: false)
-        }.modelContainer(for: DataItem.self)
+            HomeView()
+                .modelContainer(for: DataItem.self)
+        }
     }
 }

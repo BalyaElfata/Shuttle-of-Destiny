@@ -5,7 +5,6 @@ struct DailyEvents: View {
     
     var pointModels: DataItem
     @Environment(\.modelContext) private var context
-    @Query private var dataItems: [DataItem]
     @Binding var alreadyChoose: Bool
     
     var body: some View {
@@ -30,7 +29,6 @@ struct DailyEvents: View {
                     
                     Button(action: {
                         updatePoints(for: .relationship)
-                        
                     }) {
                         Text("Relationship")
                             .font(.title2)
@@ -81,9 +79,6 @@ struct DailyEvents: View {
     }
     
     private func updatePoints(for category: PointCategory) {
-        
-//        guard let item = pointModels.first else { return }
-
         switch category {
         case .relationship:
             pointModels.RelationPoint += 1
@@ -96,13 +91,13 @@ struct DailyEvents: View {
         pointModels.Days += 1
         alreadyChoose = true
         
+        
         do {
             try context.save()
         } catch {
             print("Failed to save data item: \(error.localizedDescription)")
         }
     }
-    
 }
 
 enum PointCategory {
@@ -110,6 +105,9 @@ enum PointCategory {
 }
 
 #Preview {
-    DailyEvents(pointModels: DataItem(), alreadyChoose: .constant(false)).modelContainer(for: DataItem.self)
-        
+    let container = try! ModelContainer(for: DataItem.self)
+    let dataItem = DataItem()
+    
+    return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false))
+        .modelContainer(container)
 }
