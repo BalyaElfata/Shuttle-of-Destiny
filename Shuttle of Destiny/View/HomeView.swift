@@ -4,7 +4,7 @@ import SwiftData
 struct HomeView: View {
     
     @Environment(\.modelContext) private var context
-    @Query private var dataItems: [DataItem]
+    var pointModels: DataItem
     @State var alreadyChoose: Bool = false
     
     var body: some View {
@@ -13,7 +13,7 @@ struct HomeView: View {
                 .frame(height: 20.0)
             
             HStack {
-                Text("Day Counter: \(dataItems.first?.Days ?? 0)")
+                Text("Day Counter: \(pointModels.Days)")
                     .font(.title)
                     .fontWeight(.semibold)
                 Spacer()
@@ -21,9 +21,9 @@ struct HomeView: View {
             .padding()
             
             if alreadyChoose == true {
-                DaySummaryView(alreadyChoose: $alreadyChoose)
+                DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
             } else {
-//                DailyEvents(/*pointModels: DataItem()*/, alreadyChoose: $alreadyChoose)
+                DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose)
             }
             
             Spacer()
@@ -32,5 +32,15 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(alreadyChoose: false)
+    
+    let container = try! ModelContainer(for: DataItem.self)
+    
+    do{
+        return HomeView(pointModels: DataItem(), alreadyChoose: false)
+            .modelContainer(container)
+    }catch{
+        print("Error")
+    }
+    
+
 }

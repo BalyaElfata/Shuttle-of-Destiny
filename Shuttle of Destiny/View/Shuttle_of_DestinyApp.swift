@@ -23,8 +23,10 @@ import SwiftData
 struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .modelContainer(for: DataItem.self)
+            let container = try! ModelContainer(for: DataItem.self)
+            
+            HomeView(pointModels: DataItem(), alreadyChoose: false).modelContainer(container)
+                
         }
     }
 }
