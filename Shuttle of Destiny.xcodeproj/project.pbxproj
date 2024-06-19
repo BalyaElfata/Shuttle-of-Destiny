@@ -12,6 +12,13 @@
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
+		F70AA48A2C1ACFFF0081F425 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4892C1ACFFF0081F425 /* DailyEvent.swift */; };
+		F70AA48C2C1AD00A0081F425 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA48B2C1AD0090081F425 /* HomeView.swift */; };
+		F70AA48F2C1AD0150081F425 /* SuddenEventLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA48E2C1AD0150081F425 /* SuddenEventLogic.swift */; };
+		F70AA4912C1AD0210081F425 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4902C1AD0210081F425 /* Color.swift */; };
+		F70AA4932C1AD0440081F425 /* PointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4922C1AD0440081F425 /* PointModel.swift */; };
+		F70AA4952C1AD04A0081F425 /* SuddenPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4942C1AD04A0081F425 /* SuddenPointModel.swift */; };
+		F70AA4972C1AE4680081F425 /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4962C1AE4680081F425 /* DaySummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
+		F70AA4892C1ACFFF0081F425 /* DailyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
+		F70AA48B2C1AD0090081F425 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F70AA48E2C1AD0150081F425 /* SuddenEventLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuddenEventLogic.swift; sourceTree = "<group>"; };
+		F70AA4902C1AD0210081F425 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F70AA4922C1AD0440081F425 /* PointModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointModel.swift; sourceTree = "<group>"; };
+		F70AA4942C1AD04A0081F425 /* SuddenPointModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuddenPointModel.swift; sourceTree = "<group>"; };
+		F70AA4962C1AE4680081F425 /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,8 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
+				F70AA4902C1AD0210081F425 /* Color.swift */,
+				F70AA48D2C1AD0150081F425 /* Logic */,
 				212384D72C1989E40019D2D4 /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
 				212384C92C1980F60019D2D4 /* Assets.xcassets */,
@@ -74,6 +90,8 @@
 		212384D62C1989D90019D2D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F70AA4942C1AD04A0081F425 /* SuddenPointModel.swift */,
+				F70AA4922C1AD0440081F425 /* PointModel.swift */,
 				212384D42C1982780019D2D4 /* TypingAnimationView.swift */,
 			);
 			path = Model;
@@ -82,10 +100,21 @@
 		212384D72C1989E40019D2D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F70AA48B2C1AD0090081F425 /* HomeView.swift */,
+				F70AA4892C1ACFFF0081F425 /* DailyEvent.swift */,
 				212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */,
 				212384C72C1980F50019D2D4 /* ContentView.swift */,
+				F70AA4962C1AE4680081F425 /* DaySummaryView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F70AA48D2C1AD0150081F425 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				F70AA48E2C1AD0150081F425 /* SuddenEventLogic.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70AA4972C1AE4680081F425 /* DaySummaryView.swift in Sources */,
+				F70AA4952C1AD04A0081F425 /* SuddenPointModel.swift in Sources */,
+				F70AA48A2C1ACFFF0081F425 /* DailyEvent.swift in Sources */,
 				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
+				F70AA4912C1AD0210081F425 /* Color.swift in Sources */,
 				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
+				F70AA48C2C1AD00A0081F425 /* HomeView.swift in Sources */,
+				F70AA48F2C1AD0150081F425 /* SuddenEventLogic.swift in Sources */,
+				F70AA4932C1AD0440081F425 /* PointModel.swift in Sources */,
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shuttle of Destiny/Preview Content\"";
-				DEVELOPMENT_TEAM = H3779UJ6B2;
+				DEVELOPMENT_TEAM = 7ZGNG2S2A2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,12 +338,11 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "balya.Shuttle-of-Destiny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shuttle of Destiny/Preview Content\"";
-				DEVELOPMENT_TEAM = H3779UJ6B2;
+				DEVELOPMENT_TEAM = 7ZGNG2S2A2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -340,12 +375,11 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "balya.Shuttle-of-Destiny";
 				PRODUCT_NAME = "$(TARGET_NAME)";

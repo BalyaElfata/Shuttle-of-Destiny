@@ -11,7 +11,7 @@ import SwiftUI
 struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            HomeView(alreadyChoose: false)
+        }.modelContainer(for: DataItem.self)
     }
 }
