@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */; };
-		212384C82C1980F50019D2D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384C72C1980F50019D2D4 /* ContentView.swift */; };
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
@@ -39,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		212384C22C1980F50019D2D4 /* Shuttle of Destiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shuttle of Destiny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
-		212384C72C1980F50019D2D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		212384C92C1980F60019D2D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -103,7 +99,6 @@
 			children = (
 				E9C3D42A2C22CD66008FD08C /* models */,
 				E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */,
-				212384D72C1989E40019D2D4 /* View */,
 				E960D0F22C1A89DE00C3979B /* fonts */,
 				E960D0F52C1A89DE00C3979B /* helpers */,
 				E960D0F82C1A89DE00C3979B /* music */,
@@ -131,15 +126,6 @@
 				212384D42C1982780019D2D4 /* TypingAnimationView.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		212384D72C1989E40019D2D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */,
-				212384C72C1980F50019D2D4 /* ContentView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E960D0F22C1A89DE00C3979B /* fonts */ = {
@@ -289,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
 				E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */,
 				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
 				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
@@ -297,7 +282,6 @@
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
 				E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */,
-				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
 				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
 				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
 				E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */,
