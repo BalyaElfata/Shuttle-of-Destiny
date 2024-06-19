@@ -39,7 +39,7 @@ struct ContentView: View {
                                     Button {
                                         Helper.sharedHelper.playClickSfx()
                                     } label: {
-                                        Text("Exit")
+                                        Text("DRIM!")
                                             .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.textSize))
                                     }
                                     .padding(geo.size.height * Constants.smallGapSize)

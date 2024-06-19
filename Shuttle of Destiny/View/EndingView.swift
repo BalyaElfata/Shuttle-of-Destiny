@@ -1,5 +1,5 @@
 //
-//  ADVView.swift
+//  EndingView.swift
 //  Shuttle of Destiny
 //
 //  Created by Lonard Steven on 18/06/24.

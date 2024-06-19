@@ -14,6 +14,8 @@
 		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
 		E9039FAB2C21B143006182F6 /* adv_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9039FAA2C21B143006182F6 /* adv_music.mp3 */; };
 		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
+		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
+		E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8372C2276F4003E3DCA /* EndProgressView.swift */; };
 		E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */; };
 		E960D1012C1A89DE00C3979B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F32C1A89DE00C3979B /* Constants.swift */; };
 		E960D1022C1A89DE00C3979B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F42C1A89DE00C3979B /* Helper.swift */; };
@@ -42,6 +44,8 @@
 		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
 		E9039FAA2C21B143006182F6 /* adv_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = adv_music.mp3; path = "Shuttle of Destiny/music/adv_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
+		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
 		E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Shuttle-of-Destiny-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		E960D0F32C1A89DE00C3979B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				E9FD79452C20FF5E004D531E /* ADVView.swift */,
 				E960D0FD2C1A89DE00C3979B /* ContentView.swift */,
 				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
+				E923D8352C2276DE003E3DCA /* EventView.swift */,
+				E923D8372C2276F4003E3DCA /* EndProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
 				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
 				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
+				E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */,
+				E923D8362C2276DE003E3DCA /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -109,9 +109,9 @@ class Helper {
         let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "click_sfx", ofType: "mp3")!)
         
         do {
-            sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
-            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
-            sfxPlayer?.play()
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.setVolume(0.5, fadeDuration: 2)
+            audioPlayer?.play()
         } catch {
             print("The audio file for the Click SFX part couldn't be played, due to error: \(error).")
         }
