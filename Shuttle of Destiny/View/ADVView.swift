@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ADVView: View {
     @State private var showDailyPlayViewForPrologue = false
     @State private var showDailyPlayView = false
     @State private var showEODProgressView = false
     @State private var showEndingView = false
+    
+    @Query private var gameplayRun: [Gameplay]
     
     var body: some View {
         

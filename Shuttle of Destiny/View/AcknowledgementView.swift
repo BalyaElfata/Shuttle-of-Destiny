@@ -21,31 +21,31 @@ struct AcknowledgementView: View {
                     
                             VStack {
                                 Text("Music & sound effects")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                 
                                 Spacer()
                                     .frame(width: geo.size.width * Constants.mediumGapSize, height: geo.size.height * Constants.mediumGapSize)
                                 
                                 Text("'Victory Screen', 'Epic Battle' & 'Waiting Time' \n by Lesiakower from Pixabay")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("'Violet Sky' \n by Space_Cat from Pixabay")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("'Blinding Light' & 'Victory Game' \n by Dream-Protocol in Pixabay")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
                                 Text("Thank you for playing! Hehehe")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.smallTextSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
-                                    .padding(.vertical, geo.size.width * Constants.smallGapSize)
+                                    .padding(.top, geo.size.width * Constants.smallGapSize)
                                 
                                 HStack {
                                     Spacer()
