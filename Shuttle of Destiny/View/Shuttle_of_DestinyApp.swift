@@ -12,7 +12,7 @@ struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: Item.self)
+                .modelContainer(for: Gameplay.self)
         }
     }
 }

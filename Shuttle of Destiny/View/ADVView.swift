@@ -18,7 +18,7 @@ struct ADVView: View {
     
     var body: some View {
         
-        if showDailyPlayViewForPrologue {
+        if showDailyPlayViewForPrologue && gameplayRun.first(where: { $0.dayLapsed == 0 }) {
             EventView()
         } else if showDailyPlayView {
             EventView()
