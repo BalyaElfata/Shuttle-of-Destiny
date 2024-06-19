@@ -4,10 +4,13 @@ struct ContentView: View {
     
     @State private var animateScreenViews = false
     @State private var showPrologueForStart = false
+    @State private var showCredits = false
     
     var body: some View {
         if showPrologueForStart {
             ADVView()
+        } else if showCredits {
+            CreditsView()
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -17,7 +20,7 @@ struct ContentView: View {
                         if animateScreenViews {
                             HStack {
                                 Text("Shuttle of Destiny")
-                                    .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.titleSize))
+                                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.titleSize))
                                     .multilineTextAlignment(.center)
                                 
                                 Spacer()
@@ -30,7 +33,7 @@ struct ContentView: View {
                                         showPrologueForStart = true
                                     } label: {
                                         Text("Start Game")
-                                            .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.textSize))
+                                            .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
                                     }
                                     .padding(geo.size.height * Constants.smallGapSize)
                                     .background(Color.secondary)
@@ -38,9 +41,11 @@ struct ContentView: View {
                                     
                                     Button {
                                         Helper.sharedHelper.playClickSfx()
+                                        
+                                        showCredits = true
                                     } label: {
                                         Text("DRIM!")
-                                            .font(.custom("PressStart2P-Regular", size: geo.size.height * Constants.textSize))
+                                            .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
                                     }
                                     .padding(geo.size.height * Constants.smallGapSize)
                                     .background(Color.secondary)

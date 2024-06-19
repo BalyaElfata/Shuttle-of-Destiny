@@ -25,4 +25,5 @@ enum Constants {
     static let extraMediumGapSize =  0.15
     static let mediumGapSize =  0.12
     static let smallGapSize = 0.06
+    static let verySmallGapSize = 0.006
 }

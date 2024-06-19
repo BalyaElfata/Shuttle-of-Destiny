@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EndingView: View {
-    @State private var showBadEnding = false
+    @State private var showBadEnding = true
     @State private var showGoodEnding = false
     @State private var showNeutralEnding = false
     @State private var showCreditsMainMenu = false
