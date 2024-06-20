@@ -40,7 +40,7 @@ struct ADVView: View {
                                 .offset(x: -25, y: -25)
                                 .opacity(0.8)
                                 .overlay(alignment: .topLeading) {
-                                    Text("Hello!")
+                                    Text("Hello, John! This is Shuttle of Destiny.")
                                         .frame(alignment: .topLeading)
                                         .foregroundStyle(.white)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
