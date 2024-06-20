@@ -1,65 +1,55 @@
 import SwiftUI
+import Foundation
 
 struct TypingAnimationView: View {
-    @State var conversation_index = 1
+    @State var conversation_index = 0
+    var conversation_list: [String] = []
     let conversation_1_alex = "Dad, look! I got it!"
     let conversation_2_dad = "I'm so proud of you, my son"
+    
     @State private var animatedText: String = ""
+    
+    init() {
+        // Conversation list
+        conversation_list = [
+            conversation_1_alex,
+            conversation_2_dad,
+        ]
+    }
 
     var body: some View {
-        HStack{
-            VStack (alignment: .leading){
-                Text(animatedText)
-                    .font(.title)
-                    .padding()
-                
-                // Choice Button
-                if conversation_index > 2 {
-                    HStack {
-                        Spacer()
-                        Rectangle()
-                            .frame(width: 160, height: 120)
-                            .cornerRadius(50)
-                            .foregroundColor(.blue)
-                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        Rectangle()
-                            .frame(width: 160, height: 120)
-                            .cornerRadius(50)
-                            .foregroundColor(.blue)
-                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                    }
-                }
-            }
-            Spacer()
+        VStack (){
+            Image("park")
+                .resizable()
+                .ignoresSafeArea(.all)
+            
+            Text(animatedText)
+                .font(.title)
+                .padding()
         }
-        .onAppear {
-            switch conversation_index {
-            case 1:
-                animateText(text: conversation_1_alex)
-            case 2:
-                animateText(text: conversation_2_dad)
-            default:
-                animateText(text: "Error!")
+        .onTapGesture {
+            if conversation_index < conversation_list.count{
+                animateText(text: conversation_list[conversation_index])
+                conversation_index+=1
+            }
+            else {
+                animateText(text: "Conversation is Completed")
             }
         }
     }
 
     func animateText(text: String) {
+        animatedText = ""
         for (index, character) in text.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.11) {
                 animatedText.append(character)
-                // You can add haptic feedback to support typing animation.(optional)
-//                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            }
-            if animatedText == text {
-                conversation_index += 1
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
         }
     }
     
     func nextConversation() {
-        conversation_index += 1
+        conversation_index+=1
     }
 }
 
