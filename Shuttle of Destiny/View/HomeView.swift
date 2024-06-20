@@ -8,17 +8,22 @@ struct HomeView: View {
     @State var alreadyChoose: Bool = false
     
     var body: some View {
-        VStack {
+        ZStack {
             Spacer()
                 .frame(height: 20.0)
             
-            HStack {
-                Text("Day Counter: \(pointModels.Days)")
-                    .font(.title)
-                    .fontWeight(.semibold)
+            VStack {
+                HStack {
+                    Text("Day Counter: \(pointModels.Days)")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                
+                
                 Spacer()
+                    .frame(height: 275.0)
             }
-            .padding()
             
             if alreadyChoose == true {
                 DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)

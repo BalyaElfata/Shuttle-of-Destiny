@@ -19,6 +19,8 @@
 		F70AA4932C1AD0440081F425 /* PointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4922C1AD0440081F425 /* PointModel.swift */; };
 		F70AA4952C1AD04A0081F425 /* SuddenPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4942C1AD04A0081F425 /* SuddenPointModel.swift */; };
 		F70AA4972C1AE4680081F425 /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4962C1AE4680081F425 /* DaySummaryView.swift */; };
+		F74F4E5A2C23310C0075521F /* gitignore.txt in Resources */ = {isa = PBXBuildFile; fileRef = F74F4E592C23310C0075521F /* gitignore.txt */; };
+		F7D4A4402C240BA500E99262 /* SuddenEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D4A43F2C240BA500E99262 /* SuddenEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F70AA4922C1AD0440081F425 /* PointModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointModel.swift; sourceTree = "<group>"; };
 		F70AA4942C1AD04A0081F425 /* SuddenPointModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuddenPointModel.swift; sourceTree = "<group>"; };
 		F70AA4962C1AE4680081F425 /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
+		F74F4E592C23310C0075521F /* gitignore.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore.txt; sourceTree = "<group>"; };
+		F7D4A43F2C240BA500E99262 /* SuddenEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		212384B92C1980F50019D2D4 = {
 			isa = PBXGroup;
 			children = (
+				F74F4E592C23310C0075521F /* gitignore.txt */,
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
 			);
@@ -105,6 +110,7 @@
 				212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */,
 				212384C72C1980F50019D2D4 /* ContentView.swift */,
 				F70AA4962C1AE4680081F425 /* DaySummaryView.swift */,
+				F7D4A43F2C240BA500E99262 /* SuddenEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			files = (
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
+				F74F4E5A2C23310C0075521F /* gitignore.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +196,7 @@
 			files = (
 				F70AA4972C1AE4680081F425 /* DaySummaryView.swift in Sources */,
 				F70AA4952C1AD04A0081F425 /* SuddenPointModel.swift in Sources */,
+				F7D4A4402C240BA500E99262 /* SuddenEventView.swift in Sources */,
 				F70AA48A2C1ACFFF0081F425 /* DailyEvent.swift in Sources */,
 				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
 				F70AA4912C1AD0210081F425 /* Color.swift in Sources */,

@@ -1,31 +1,24 @@
-//
-//  SuddenPointModel.swift
-//  sudden_event
-//
-//  Created by Geraldo Pannanda Lutan on 12/06/24.
-//
-
 import Foundation
 import SwiftData
 
 @Model
 class Gameplay: Identifiable {
     
-    var SuddenEventTitle: String
-    var SuddenEventDesc: String
-    var SuddenPointPlus: Int
-    var SuddenPointMinus: Int
-    var SuddenPointPlusOther: Int
-    var SuddenPointMinusOther: Int
+    var SuddenEventTitles: [String]
+    var SuddenEventDescs: [String]
+    var SuddenPointPluses: [Int]
+    var SuddenPointMinuses: [Int]
+    var SuddenPointPlusesOther: [Int]
+    var SuddenPointMinusesOther: [Int]
     var Used: Bool
     
-    init(SuddenEventTitle: String, SuddenEventDesc: String, SuddenPointPlus: Int, SuddenPointMinus: Int, SuddenPointPlusOther: Int, SuddenPointMinusOther: Int, Used: Bool) {
-        self.SuddenEventTitle = SuddenEventTitle
-        self.SuddenEventDesc = SuddenEventDesc
-        self.SuddenPointPlus = SuddenPointPlus
-        self.SuddenPointMinus = SuddenPointMinus
-        self.SuddenPointPlusOther = SuddenPointPlusOther
-        self.SuddenPointMinusOther = SuddenPointMinusOther
+    init(SuddenEventTitles: [String], SuddenEventDescs: [String], SuddenPointPluses: [Int], SuddenPointMinuses: [Int], SuddenPointPlusesOther: [Int], SuddenPointMinusesOther: [Int], Used: Bool) {
+        self.SuddenEventTitles = SuddenEventTitles
+        self.SuddenEventDescs = SuddenEventDescs
+        self.SuddenPointPluses = SuddenPointPluses
+        self.SuddenPointMinuses = SuddenPointMinuses
+        self.SuddenPointPlusesOther = SuddenPointPlusesOther
+        self.SuddenPointMinusesOther = SuddenPointMinusesOther
         self.Used = Used
     }
 }
