@@ -110,7 +110,6 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
-				E99A23F22C2414B400CF2FE0 /* models */,
 				211A34362C22F53E00F76A47 /* Utilities */,
 				E960D0FF2C1A89DE00C3979B /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
@@ -134,6 +133,7 @@
 		212384D62C1989D90019D2D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
 				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
 				212384D42C1982780019D2D4 /* TypingAnimationView.swift */,
 			);
@@ -194,14 +194,6 @@
 				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E99A23F22C2414B400CF2FE0 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
