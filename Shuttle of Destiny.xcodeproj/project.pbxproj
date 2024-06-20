@@ -28,10 +28,10 @@
 		E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */; };
 		E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FD2C1A89DE00C3979B /* ContentView.swift */; };
 		E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */; };
+		E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A23F12C2414B400CF2FE0 /* Conversation.swift */; };
 		E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4262C22B6AD008FD08C /* CreditsView.swift */; };
 		E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */; };
 		E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D42C2C22CD80008FD08C /* Gameplay.swift */; };
-		E9FCDDD12C241041005B8980 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCDDD02C241041005B8980 /* Conversation.swift */; };
 		E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FD79432C20FECF004D531E /* VT323-Regular.ttf */; };
 		E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD79452C20FF5E004D531E /* ADVView.swift */; };
 /* End PBXBuildFile section */
@@ -61,10 +61,10 @@
 		E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
 		E960D0FD2C1A89DE00C3979B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
+		E99A23F12C2414B400CF2FE0 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		E9C3D4262C22B6AD008FD08C /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
 		E9C3D42C2C22CD80008FD08C /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
-		E9FCDDD02C241041005B8980 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		E9FD79432C20FECF004D531E /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
 		E9FD79452C20FF5E004D531E /* ADVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +96,6 @@
 			children = (
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
-				E99A23EF2C24129F00CF2FE0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +110,7 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
+				E99A23F22C2414B400CF2FE0 /* models */,
 				211A34362C22F53E00F76A47 /* Utilities */,
 				E960D0FF2C1A89DE00C3979B /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
@@ -196,12 +196,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		E99A23EF2C24129F00CF2FE0 /* Recovered References */ = {
+		E99A23F22C2414B400CF2FE0 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				E9FCDDD02C241041005B8980 /* Conversation.swift */,
+				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
 			);
-			name = "Recovered References";
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +290,7 @@
 				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
 				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
+				E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
 				E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */,
@@ -298,7 +299,6 @@
 				E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */,
 				E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */,
 				E923D8362C2276DE003E3DCA /* EventView.swift in Sources */,
-				E9FCDDD12C241041005B8980 /* Conversation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
