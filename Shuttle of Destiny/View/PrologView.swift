@@ -108,7 +108,7 @@ struct PrologView: View {
         for (index, character) in text.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.11) {
                 animatedText.append(character)
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+//                UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
         }
     }
@@ -120,6 +120,6 @@ struct PrologView: View {
 
 struct TypingAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        TypingAnimationView()
+        PrologView()
     }
 }
