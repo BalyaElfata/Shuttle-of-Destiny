@@ -14,7 +14,7 @@
 		211A34402C22F57700F76A47 /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A343B2C22F57700F76A47 /* prologue_music.mp3 */; };
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
-		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
+		212384D52C1982780019D2D4 /* PrologView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* PrologView.swift */; };
 		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
 		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
 		E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8372C2276F4003E3DCA /* EndProgressView.swift */; };
@@ -45,7 +45,7 @@
 		212384C92C1980F60019D2D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
+		212384D42C1982780019D2D4 /* PrologView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologView.swift; sourceTree = "<group>"; };
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
-				212384D42C1982780019D2D4 /* TypingAnimationView.swift */,
+				212384D42C1982780019D2D4 /* PrologView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			files = (
 				E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */,
 				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
-				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
+				212384D52C1982780019D2D4 /* PrologView.swift in Sources */,
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
