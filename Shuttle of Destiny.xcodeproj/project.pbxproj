@@ -49,7 +49,7 @@
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
-		E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Shuttle-of-Destiny-Info.plist"; path = "Shuttle of Destiny/Shuttle-of-Destiny-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shuttle-of-Destiny-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		E960D0F32C1A89DE00C3979B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E960D0F42C1A89DE00C3979B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		212384B92C1980F50019D2D4 = {
 			isa = PBXGroup;
 			children = (
+				E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */,
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
 			);
@@ -109,11 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
-				211A34362C22F53E00F76A47 /* Utilities */,
-				E960D0FF2C1A89DE00C3979B /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
+				E960D0FF2C1A89DE00C3979B /* View */,
+				211A34362C22F53E00F76A47 /* Utilities */,
 				212384C92C1980F60019D2D4 /* Assets.xcassets */,
-				E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */,
 				212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */,
 				212384CC2C1980F60019D2D4 /* Preview Content */,
 			);
