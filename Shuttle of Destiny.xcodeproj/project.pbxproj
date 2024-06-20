@@ -32,10 +32,6 @@
 		E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */; };
 		E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D42C2C22CD80008FD08C /* Gameplay.swift */; };
 		E9FCDDD12C241041005B8980 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCDDD02C241041005B8980 /* Conversation.swift */; };
-		E9FD793F2C20FC24004D531E /* bad_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */; };
-		E9FD79402C20FC24004D531E /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793C2C20FC24004D531E /* prologue_music.mp3 */; };
-		E9FD79412C20FC24004D531E /* neutral_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */; };
-		E9FD79422C20FC24004D531E /* good_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */; };
 		E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FD79432C20FECF004D531E /* VT323-Regular.ttf */; };
 		E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD79452C20FF5E004D531E /* ADVView.swift */; };
 /* End PBXBuildFile section */
@@ -69,10 +65,6 @@
 		E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
 		E9C3D42C2C22CD80008FD08C /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		E9FCDDD02C241041005B8980 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		E9FD793B2C20FC24004D531E /* bad_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bad_ed_music.mp3; path = "Shuttle of Destiny/music/bad_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
-		E9FD793C2C20FC24004D531E /* prologue_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = prologue_music.mp3; path = "Shuttle of Destiny/music/prologue_music.mp3"; sourceTree = SOURCE_ROOT; };
-		E9FD793D2C20FC24004D531E /* neutral_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = neutral_ed_music.mp3; path = "Shuttle of Destiny/music/neutral_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
-		E9FD793E2C20FC24004D531E /* good_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = good_ed_music.mp3; path = "Shuttle of Destiny/music/good_ed_music.mp3"; sourceTree = SOURCE_ROOT; };
 		E9FD79432C20FECF004D531E /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
 		E9FD79452C20FF5E004D531E /* ADVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +96,7 @@
 			children = (
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
+				E99A23EF2C24129F00CF2FE0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +111,6 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
-				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
 				211A34362C22F53E00F76A47 /* Utilities */,
 				E960D0FF2C1A89DE00C3979B /* View */,
 				212384D62C1989D90019D2D4 /* Model */,
@@ -204,13 +196,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		E9C3D42A2C22CD66008FD08C /* models */ = {
+		E99A23EF2C24129F00CF2FE0 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				E9FCDDD02C241041005B8980 /* Conversation.swift */,
-				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
 			);
-			path = models;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
