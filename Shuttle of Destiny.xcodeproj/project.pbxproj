@@ -135,7 +135,6 @@
 			children = (
 				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
 				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
-				212384D42C1982780019D2D4 /* PrologView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		E960D0FF2C1A89DE00C3979B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				212384D42C1982780019D2D4 /* PrologView.swift */,
 				E9039FAC2C21B280006182F6 /* EndingView.swift */,
 				E9FD79452C20FF5E004D531E /* ADVView.swift */,
 				E960D0FD2C1A89DE00C3979B /* ContentView.swift */,
