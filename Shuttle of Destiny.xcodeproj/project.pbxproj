@@ -12,7 +12,7 @@
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
-		E95E86502C25815500855500 /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E95E864F2C25815500855500 /* gitignore */; };
+		E95E86522C2581DE00855500 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E95E86512C2581DE00855500 /* .gitignore */; };
 		F70AA48A2C1ACFFF0081F425 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA4892C1ACFFF0081F425 /* DailyEvent.swift */; };
 		F70AA48C2C1AD00A0081F425 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA48B2C1AD0090081F425 /* HomeView.swift */; };
 		F70AA48F2C1AD0150081F425 /* SuddenEventLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AA48E2C1AD0150081F425 /* SuddenEventLogic.swift */; };
@@ -31,7 +31,7 @@
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
-		E95E864F2C25815500855500 /* gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
+		E95E86512C2581DE00855500 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F70AA4892C1ACFFF0081F425 /* DailyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
 		F70AA48B2C1AD0090081F425 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F70AA48E2C1AD0150081F425 /* SuddenEventLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuddenEventLogic.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		212384B92C1980F50019D2D4 = {
 			isa = PBXGroup;
 			children = (
-				E95E864F2C25815500855500 /* gitignore */,
+				E95E86512C2581DE00855500 /* .gitignore */,
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
 			);
@@ -182,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
-				E95E86502C25815500855500 /* gitignore in Resources */,
+				E95E86522C2581DE00855500 /* .gitignore in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
