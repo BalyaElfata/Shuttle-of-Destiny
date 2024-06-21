@@ -37,13 +37,15 @@ struct ADVView: View {
                             
                             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                                 .frame(width: geo.size.width * 1, height: geo.size.height * 0.4)
-                                .offset(x: -25, y: -25)
+                                .offset(y: -25)
                                 .opacity(0.8)
                                 .overlay(alignment: .topLeading) {
                                     Text("Hello, John! This is Shuttle of Destiny.")
                                         .frame(alignment: .topLeading)
                                         .foregroundStyle(.white)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
+                                        .offset(y:-20)
+                                        .padding(15)
                                 }
                                 .overlay(alignment: .bottomTrailing) {
                                     Image(systemName: "tennis.racket")
