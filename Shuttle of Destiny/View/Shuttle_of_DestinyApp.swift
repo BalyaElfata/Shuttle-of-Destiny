@@ -25,6 +25,7 @@ struct Shuttle_of_DestinyApp: App {
         WindowGroup {
             let container = try! ModelContainer(for: DataItem.self)
             
+            
             HomeView(pointModels: DataItem(), alreadyChoose: false).modelContainer(container)
                 
         }

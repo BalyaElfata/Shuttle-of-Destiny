@@ -20,32 +20,37 @@ struct HomeView: View {
                     Spacer()
                 }
                 
-                
                 Spacer()
                     .frame(height: 275.0)
             }
             
-            if alreadyChoose == true {
+            if alreadyChoose {
                 DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
             } else {
-                DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                DailyEvents(pointModels: pointModels, viewModel: GameplayViewModel(), alreadyChoose: $alreadyChoose)
+                
+                
             }
             
             Spacer()
         }
+        .onAppear {
+            randomizeSuddenDaysForPointModels()
+        }
     }
+}
+
+// Example function to be called on view appear
+func randomizeSuddenDaysForPointModels() {
+    Randomizer.randomizeSuddenDays(for: pointModels)
+    print("\(pointModels.SuddenDays)")
 }
 
 #Preview {
-    
     let container = try! ModelContainer(for: DataItem.self)
     
-    do{
-        return HomeView(pointModels: DataItem(), alreadyChoose: false)
-            .modelContainer(container)
-    }catch{
-        print("Error")
-    }
     
-
+    return HomeView(pointModels: DataItem(), alreadyChoose: false)
+        .modelContainer(container)
 }
+

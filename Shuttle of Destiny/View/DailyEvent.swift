@@ -5,6 +5,7 @@ struct DailyEvents: View {
     
     var pointModels: DataItem
     @Environment(\.modelContext) private var context
+    @ObservedObject var viewModel: GameplayViewModel()
     @Binding var alreadyChoose: Bool
     
     var body: some View {
@@ -81,11 +82,27 @@ struct DailyEvents: View {
     private func updatePoints(for category: PointCategory) {
         switch category {
         case .relationship:
-            pointModels.RelationPoint += 1
+            pointModels.ChoiceID = 1
+            
+            if pointModels.SuddenDays.contains(pointModels.Days) {
+                SuddenEventListView(viewModel: GameplayViewModel, pointModels: pointModels)
+            } else {
+                pointModels.RelationPoint += 1
+                
+            }
+        
         case .training:
             pointModels.TrainingPoint += 1
+            pointModels.ChoiceID = 2
+            
+            
+            
         case .family:
             pointModels.FamilyPoint += 1
+            pointModels.ChoiceID = 3
+            
+            
+            
         }
         
         pointModels.Days += 1
@@ -106,8 +123,16 @@ enum PointCategory {
 
 #Preview {
     let container = try! ModelContainer(for: DataItem.self)
+    let container2 = try! ModelContainer(for: DataItem.self)
     let dataItem = DataItem()
     
-    return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false))
-        .modelContainer(container)
+    let event = [
+        Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1], Used: false)
+    ]
+    
+    let viewModel = GameplayViewModel()
+            viewModel.gameplays = event
+    
+    return DailyEvents(pointModels: dataItem, viewModel: viewModel, alreadyChoose: .constant(false))
+        .modelContainer(container).modelContainer(container2)
 }
