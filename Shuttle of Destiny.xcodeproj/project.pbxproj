@@ -15,6 +15,14 @@
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* PrologView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* PrologView.swift */; };
+		21AA40082C26E87C004935D2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40072C26E87C004935D2 /* Color.swift */; };
+		21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */; };
+		21AA400D2C26E932004935D2 /* PointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400C2C26E932004935D2 /* PointModel.swift */; };
+		21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */; };
+		21AA40112C26EA73004935D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40102C26EA73004935D2 /* HomeView.swift */; };
+		21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40122C26EAC0004935D2 /* DailyEvent.swift */; };
+		21AA40152C26EAFC004935D2 /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40142C26EAFC004935D2 /* DaySummaryView.swift */; };
+		21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40162C26EB3A004935D2 /* SuddenEventView.swift */; };
 		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
 		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
 		E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8372C2276F4003E3DCA /* EndProgressView.swift */; };
@@ -47,6 +55,14 @@
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* PrologView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologView.swift; sourceTree = "<group>"; };
+		21AA40072C26E87C004935D2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventLogic.swift; sourceTree = "<group>"; };
+		21AA400C2C26E932004935D2 /* PointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointModel.swift; sourceTree = "<group>"; };
+		21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenPointModel.swift; sourceTree = "<group>"; };
+		21AA40102C26EA73004935D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		21AA40122C26EAC0004935D2 /* DailyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
+		21AA40142C26EAFC004935D2 /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
+		21AA40162C26EB3A004935D2 /* SuddenEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventView.swift; sourceTree = "<group>"; };
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
@@ -114,6 +130,7 @@
 				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
 				212384D62C1989D90019D2D4 /* Model */,
 				E960D0FF2C1A89DE00C3979B /* View */,
+				21AA40092C26E8AA004935D2 /* View Model */,
 				211A34362C22F53E00F76A47 /* Utilities */,
 				212384C92C1980F60019D2D4 /* Assets.xcassets */,
 				212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */,
@@ -135,8 +152,18 @@
 			children = (
 				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
 				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
+				21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */,
+				21AA400C2C26E932004935D2 /* PointModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		21AA40092C26E8AA004935D2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		E960D0F22C1A89DE00C3979B /* Fonts */ = {
@@ -153,6 +180,7 @@
 			children = (
 				E960D0F32C1A89DE00C3979B /* Constants.swift */,
 				E960D0F42C1A89DE00C3979B /* Helper.swift */,
+				21AA40072C26E87C004935D2 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -192,6 +220,10 @@
 				E923D8372C2276F4003E3DCA /* EndProgressView.swift */,
 				E9C3D4262C22B6AD008FD08C /* CreditsView.swift */,
 				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
+				21AA40102C26EA73004935D2 /* HomeView.swift */,
+				21AA40122C26EAC0004935D2 /* DailyEvent.swift */,
+				21AA40142C26EAFC004935D2 /* DaySummaryView.swift */,
+				21AA40162C26EB3A004935D2 /* SuddenEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,12 +312,20 @@
 			files = (
 				E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */,
 				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
+				21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */,
 				212384D52C1982780019D2D4 /* PrologView.swift in Sources */,
+				21AA40082C26E87C004935D2 /* Color.swift in Sources */,
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */,
+				21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */,
+				21AA400D2C26E932004935D2 /* PointModel.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
+				21AA40152C26EAFC004935D2 /* DaySummaryView.swift in Sources */,
+				21AA40112C26EA73004935D2 /* HomeView.swift in Sources */,
+				21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
 				E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */,
+				21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */,
 				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
 				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
 				E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */,
