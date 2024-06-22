@@ -40,6 +40,7 @@ struct DaySummaryView: View {
                     
                     Button(action: {
                         alreadyChoose = false
+                        pointModels.Days += 1
                         do {
                             try context.save()
                         } catch {

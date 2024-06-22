@@ -3,10 +3,13 @@ import SwiftData
 
 struct DailyEvents: View {
     
+    @EnvironmentObject private var gameplay: GameplayViewModel
+    var suddenEvent = GameplayViewModel()
     var pointModels: DataItem
     @Environment(\.modelContext) private var context
-    @ObservedObject var viewModel: GameplayViewModel()
     @Binding var alreadyChoose: Bool
+    @Binding var suddenDays: Bool
+    
     
     var body: some View {
         VStack {
@@ -85,27 +88,41 @@ struct DailyEvents: View {
             pointModels.ChoiceID = 1
             
             if pointModels.SuddenDays.contains(pointModels.Days) {
-                SuddenEventListView(viewModel: GameplayViewModel, pointModels: pointModels)
+                suddenDays = true
+                
             } else {
                 pointModels.RelationPoint += 1
                 
             }
         
         case .training:
-            pointModels.TrainingPoint += 1
             pointModels.ChoiceID = 2
             
+            if pointModels.SuddenDays.contains(pointModels.Days) {
+                suddenDays = true
+                
+            } else {
+                pointModels.TrainingPoint += 1
+                
+            }
             
             
         case .family:
-            pointModels.FamilyPoint += 1
             pointModels.ChoiceID = 3
+            
+            if pointModels.SuddenDays.contains(pointModels.Days) {
+                suddenDays = true
+                
+            } else {
+                pointModels.FamilyPoint += 1
+                
+            }
             
             
             
         }
         
-        pointModels.Days += 1
+        
         alreadyChoose = true
         
         
@@ -123,16 +140,13 @@ enum PointCategory {
 
 #Preview {
     let container = try! ModelContainer(for: DataItem.self)
-    let container2 = try! ModelContainer(for: DataItem.self)
+    let container2 = try! ModelContainer(for: Gameplay.self)
     let dataItem = DataItem()
     
-    let event = [
-        Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1], Used: false)
-    ]
     
-    let viewModel = GameplayViewModel()
-            viewModel.gameplays = event
     
-    return DailyEvents(pointModels: dataItem, viewModel: viewModel, alreadyChoose: .constant(false))
-        .modelContainer(container).modelContainer(container2)
+    return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false), suddenDays: .constant(false))
+        .modelContainer(container)
+        .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
 }

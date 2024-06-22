@@ -3,9 +3,12 @@ import SwiftData
 
 struct HomeView: View {
     
+    @EnvironmentObject private var gameplay: GameplayViewModel
     @Environment(\.modelContext) private var context
     var pointModels: DataItem
+    var gamePlay: Gameplay
     @State var alreadyChoose: Bool = false
+    @State var suddenDays: Bool = false
     
     var body: some View {
         ZStack {
@@ -25,32 +28,41 @@ struct HomeView: View {
             }
             
             if alreadyChoose {
-                DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                
+                if suddenDays {
+                    SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gamePlay: gamePlay)
+                } else {
+                    DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                }
+            
             } else {
-                DailyEvents(pointModels: pointModels, viewModel: GameplayViewModel(), alreadyChoose: $alreadyChoose)
-                
-                
+                DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
             }
+            
+            
+            
+            
             
             Spacer()
         }
         .onAppear {
-            randomizeSuddenDaysForPointModels()
+            Randomizer.randomizeSuddenDays(for: pointModels)
         }
     }
 }
 
-// Example function to be called on view appear
-func randomizeSuddenDaysForPointModels() {
-    Randomizer.randomizeSuddenDays(for: pointModels)
-    print("\(pointModels.SuddenDays)")
-}
-
 #Preview {
     let container = try! ModelContainer(for: DataItem.self)
+    let container2 = try! ModelContainer(for: Gameplay.self)
     
     
-    return HomeView(pointModels: DataItem(), alreadyChoose: false)
+    let event = [
+        Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+    ]
+    
+    return HomeView(pointModels: DataItem(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)
         .modelContainer(container)
+        .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
 }
 
