@@ -225,6 +225,7 @@ struct PrologView: View {
                         .animation(.easeInOut(duration: 1.0))
                 }
                 .onTapGesture {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     nextConversation()
                     switch conversationIndex {
                     case 0:
@@ -277,7 +278,7 @@ struct PrologView: View {
     }
 }
 
-struct TypingAnimationView_Previews: PreviewProvider {
+struct PrologView_Previews: PreviewProvider {
     static var previews: some View {
         PrologView()
     }
