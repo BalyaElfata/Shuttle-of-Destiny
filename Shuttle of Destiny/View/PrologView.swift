@@ -213,6 +213,7 @@ struct PrologView: View {
                                 .opacity(conversationList[conversationIndex] == blackScreen || conversationList[conversationIndex] == noConversation ? 0 : 0.9)
                                 .overlay(alignment: .leading){
                                     Text(conversationList[conversationIndex])
+                                        .foregroundStyle(.black)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
                                         .padding(.horizontal, 50)
                                         .padding(.vertical, 15)
