@@ -6,7 +6,7 @@ struct HomeView: View {
     @EnvironmentObject private var gameplay: GameplayViewModel
     @Environment(\.modelContext) private var context
     var pointModels: DataItem
-    var gamePlay: Gameplay
+    var gamePlay: SuddenPointModel
     @State var alreadyChoose: Bool = false
     @State var suddenDays: Bool = false
     
@@ -57,7 +57,7 @@ struct HomeView: View {
     
     
     let event = [
-        Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+        SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
     ]
     
     return HomeView(pointModels: DataItem(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)

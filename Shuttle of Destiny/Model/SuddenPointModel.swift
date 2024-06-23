@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Gameplay: Identifiable {
+class SuddenPointModel: Identifiable {
     
     var SuddenEventTitles: [String]
     var SuddenEventDescs: [String]

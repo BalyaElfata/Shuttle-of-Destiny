@@ -13,10 +13,10 @@ import SwiftData
 var pointModels: DataItem = DataItem() // SwiftData Variable
 
 let event = [
-    Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+    SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
 ]
 
-var gameplay: Gameplay = event[0]
+var gameplay: SuddenPointModel = event[0]
 
 class Randomizer {
     static func randomizeSuddenDays(for dataItem: DataItem) {
@@ -26,11 +26,14 @@ class Randomizer {
         }
     }
     
-    static func randomizeSuddenEvent(for gamePlay: Gameplay){
+    static func randomizeSuddenEvent(for gamePlay: [SuddenPointModel]) -> SuddenPointModel {
         let shuffledIds = Array(1...10).shuffled()
-        gamePlay.id = shuffledIds.first ?? 1
         
+        guard let filteredEvent = gamePlay.filter ({ event in
+            event.id == shuffledIds.first
+        }).first else { return event[0] }
         
+        return filteredEvent
     }
 }
 

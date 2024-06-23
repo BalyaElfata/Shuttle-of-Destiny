@@ -11,17 +11,16 @@ import SwiftData
 
 @MainActor
 class GameplayViewModel: ObservableObject {
-    @Published var gameplays: [Gameplay] = []
-    
+    @Published var gameplays: [SuddenPointModel] = []
     
     init() {
         // Load or create initial data
         self.gameplays = [
-            Gameplay(SuddenEventTitles: ["Bapak kepleset"], SuddenEventDescs: ["Bapak lu kepleset apa yang anda harus lakukan?"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 3, id: 1 ,Used: false),
+            SuddenPointModel(SuddenEventTitles: ["Bapak kepleset"], SuddenEventDescs: ["Bapak lu kepleset apa yang anda harus lakukan?"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 3, id: 1 ,Used: false),
             
-            Gameplay(SuddenEventTitles: ["Pacar ngajak jalan"], SuddenEventDescs: ["Ajak jalan gak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2],SuddenEventType: 1, id: 2 ,Used: false),
+            SuddenPointModel(SuddenEventTitles: ["Pacar ngajak jalan"], SuddenEventDescs: ["Ajak jalan gak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2],SuddenEventType: 1, id: 2 ,Used: false),
             
-            Gameplay(SuddenEventTitles: ["Hans ajak gym"], SuddenEventDescs: ["Mau ikut ato enggak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2], SuddenEventType: 2, id: 3, Used: false)
+            SuddenPointModel(SuddenEventTitles: ["Hans ajak gym"], SuddenEventDescs: ["Mau ikut ato enggak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2], SuddenEventType: 2, id: 3, Used: false)
             
         ]
     }
@@ -31,7 +30,8 @@ struct SuddenEventListView: View {
     
     @ObservedObject var viewModel: GameplayViewModel
     var pointModels: DataItem
-    var gameplays: [Gameplay]
+    var gameplays: [SuddenPointModel]
+    var gotEvent: SuddenPointModel
     
     init(){
         gameplays = viewModel.gameplays
@@ -41,14 +41,14 @@ struct SuddenEventListView: View {
         VStack {
             VStack {
                 
-                Text("\(gameplays.SuddenEventTitles.first ?? "Unknown Title")")
+                Text("\(gotEvent.SuddenEventTitles.first ?? "Unknown Title")")
                     .font(.title)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                 
                 Spacer().frame(height: 10.0)
                 
-                Text("\(gameplays.SuddenEventDescs.first ?? "No Description")")
+                Text("\(gotEvent.SuddenEventDescs.first ?? "No Description")")
                 
                 Spacer().frame(height: 30.0)
                 
@@ -92,16 +92,16 @@ struct SuddenEventListView: View {
             .padding()
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
         }.onAppear {
-            randomizeSuddenEventId()
+            randomizeSuddenEventId(gameplay: gameplays)
             
-            while (pointModels.ChoiceID == gameplays.SuddenEventType) && (gameplays.Used == true) {
-                randomizeSuddenEventId()
+            while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                randomizeSuddenEventId(gameplay: gameplays)
             }
         }
     }
     
-    func randomizeSuddenEventId() {
-        Randomizer.randomizeSuddenEvent(for: gameplays)
+    func randomizeSuddenEventId(gameplay: [SuddenPointModel]) -> SuddenPointModel {
+        return Randomizer.randomizeSuddenEvent(for: gameplays)
     }
     
 }
@@ -113,12 +113,12 @@ struct SuddenEventListView: View {
     let container2 = try! ModelContainer(for: DataItem.self)
     
     let event = [
-        Gameplay(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 0, id: 0, Used: false)
+        SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 0, id: 0, Used: false)
     ]
     
     let viewModel = GameplayViewModel()
             viewModel.gameplays = event
     
-    return SuddenEventListView(viewModel: viewModel, pointModels: DataItem(), gamePlay: event[0]).modelContainer(container).modelContainer(container2)
+    SuddenEventListView(viewModel: viewModel, pointModels: DataItem(), gamePlay: event[0], gotEvent: event).modelContainer(container).modelContainer(container2)
         
 }
