@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         if showPrologueForStart {
-            ADVView()
+            PrologView()
         } else if showCredits {
             CreditsView()
         } else {
