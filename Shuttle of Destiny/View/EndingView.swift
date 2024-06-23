@@ -18,7 +18,7 @@ struct EndingView: View {
     var body: some View {
         
         if showCreditsMainMenu {
-            ContentView()
+            HomeScreenView()
         } else {
             GeometryReader { geo in
                 ZStack {
