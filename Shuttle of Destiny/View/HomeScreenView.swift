@@ -20,11 +20,14 @@ struct HomeScreenView: View {
                 ZStack{
                     Image("Shuttle of Destiny Logo")
                         .offset(y: -30)
-                    Image("Start Button")
-                        .offset(y: 125)
-                        .onTapGesture {
-                            showPrologueForStart = true
-                        }
+                    Button{
+                        Helper.sharedHelper.playClickSfx()
+                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                        showPrologueForStart = true
+                    }label: {
+                        Image("Start Button")
+                    }
+                    .offset(y: 125)
                 }
             }
             .onAppear {
