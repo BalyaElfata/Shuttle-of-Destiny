@@ -14,7 +14,7 @@ class SuddenPointModel: Identifiable {
     var id: Int
     var Used: Bool
     
-    init(SuddenEventTitles: [String], SuddenEventDescs: [String], SuddenPointPluses: [Int], SuddenPointMinuses: [Int], SuddenPointPlusesOther: [Int], SuddenPointMinusesOther: [Int], SuddenEventType: Int, id: Int, Used: Bool) {
+    init(SuddenEventTitles: [String] = ["Ketemu Mia"], SuddenEventDescs:[String] = ["Mia ngajak ngedate di taman"], SuddenPointPluses:[Int] = [3], SuddenPointMinuses:[Int] = [3], SuddenPointPlusesOther:[Int] = [3], SuddenPointMinusesOther:[Int] = [3], SuddenEventType: Int = 0, id: Int = 0, Used: Bool = false) {
         self.SuddenEventTitles = SuddenEventTitles
         self.SuddenEventDescs = SuddenEventDescs
         self.SuddenPointPluses = SuddenPointPluses
