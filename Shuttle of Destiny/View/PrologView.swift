@@ -6,7 +6,8 @@ import SwiftData
 struct PrologView: View {
     @State var conversationIndex = 0
     
-    var pointModels: DataItem
+    var pointModels: PointModel
+    var suddenPointModels: SuddenPointModel
     
     var conversationList: [String] = []
     var alexConversation: [String] = []
@@ -51,7 +52,8 @@ struct PrologView: View {
     @State private var animatedText: String = ""
     
     init() {
-        pointModels = DataItem()
+        pointModels = PointModel()
+        suddenPointModels = SuddenPointModel()
         
         // Conversation list
         conversationList = [
@@ -135,7 +137,8 @@ struct PrologView: View {
 
     var body: some View {
         if showDailyPlayView {
-            DailyEvents(pointModels: pointModels, alreadyChoose: .constant(false), suddenDays: pointModels.SuddenDays.contains(1) ? .constant(true) : .constant(false))
+            HomeView(pointModels: pointModels, gamePlay: suddenPointModels)
+                .environmentObject(GameplayViewModel())
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -233,6 +236,7 @@ struct PrologView: View {
                         .animation(.easeInOut(duration: 1.0))
                 }
                 .onTapGesture {
+                    Helper.sharedHelper.playClickSfx()
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     nextConversation()
                     switch conversationIndex {
@@ -287,8 +291,11 @@ struct PrologView: View {
 }
 
 #Preview {
-    let container = try! ModelContainer(for: DataItem.self)
+    let container = try! ModelContainer(for: PointModel.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
     
     return PrologView()
         .modelContainer(container)
+        .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
 }
