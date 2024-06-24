@@ -13,6 +13,7 @@ struct Shuttle_of_DestinyApp: App {
         WindowGroup {
             HomeScreenView()
                 .modelContainer(for: SuddenPointModel.self)
+                .modelContainer(for: PointModel.self)
         }
     }
 }
