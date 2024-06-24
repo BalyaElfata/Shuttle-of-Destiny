@@ -12,8 +12,8 @@ import SwiftData
 // Assuming DataItem is defined elsewhere in your project
 var pointModels: PointModel = PointModel() // SwiftData Variable
 
-let events = [
-    SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+let event = [
+    SuddenPointModel(SuddenEventTitles: "Sudden Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 1, id: 0, Used: false)
 ]
 
 var gameplay: SuddenPointModel = event[0]

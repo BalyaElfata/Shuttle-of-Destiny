@@ -17,6 +17,15 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFill()
                 
+                Spacer()
+                    .frame(height: geo.size.height * Constants.mediumGapSize)
+                
+                VStack {
+                    
+                    Spacer()
+                        .frame(height: geo.size.height * Constants.mediumGapSize)
+                }
+                
                 if alreadyChoose {
                     
                     if suddenDays {
@@ -43,7 +52,7 @@ struct HomeView: View {
     
     
     let event = [
-        SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+        SuddenPointModel(SuddenEventTitles: "Sudden Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 1, id: 0, Used: false)
     ]
     
     return HomeView(pointModels: PointModel(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)

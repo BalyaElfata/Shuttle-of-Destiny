@@ -150,6 +150,8 @@ struct DailyEvents: View {
             print("Failed to save data item: \(error.localizedDescription)")
         }
     }
+    
+    
 }
 
 enum PointCategory {
