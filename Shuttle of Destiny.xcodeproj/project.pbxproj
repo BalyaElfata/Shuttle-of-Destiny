@@ -23,6 +23,7 @@
 		21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40122C26EAC0004935D2 /* DailyEvent.swift */; };
 		21AA40152C26EAFC004935D2 /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40142C26EAFC004935D2 /* DaySummaryView.swift */; };
 		21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40162C26EB3A004935D2 /* SuddenEventView.swift */; };
+		21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40182C28A441004935D2 /* HomeScreenView.swift */; };
 		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
 		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
 		E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8372C2276F4003E3DCA /* EndProgressView.swift */; };
@@ -63,6 +64,7 @@
 		21AA40122C26EAC0004935D2 /* DailyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
 		21AA40142C26EAFC004935D2 /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
 		21AA40162C26EB3A004935D2 /* SuddenEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventView.swift; sourceTree = "<group>"; };
+		21AA40182C28A441004935D2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		E960D0FF2C1A89DE00C3979B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21AA40182C28A441004935D2 /* HomeScreenView.swift */,
 				212384D42C1982780019D2D4 /* PrologView.swift */,
 				E9039FAC2C21B280006182F6 /* EndingView.swift */,
 				E9FD79452C20FF5E004D531E /* ADVView.swift */,
@@ -317,6 +320,7 @@
 				21AA40082C26E87C004935D2 /* Color.swift in Sources */,
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */,
+				21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */,
 				21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */,
 				21AA400D2C26E932004935D2 /* PointModel.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
