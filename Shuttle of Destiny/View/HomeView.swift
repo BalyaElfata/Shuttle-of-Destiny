@@ -53,7 +53,7 @@ struct HomeView: View {
 
 #Preview {
     let container = try! ModelContainer(for: DataItem.self)
-    let container2 = try! ModelContainer(for: Gameplay.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
     
     
     let event = [

@@ -82,5 +82,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Gameplay.self)
+        .modelContainer(for: SuddenPointModel.self)
 }

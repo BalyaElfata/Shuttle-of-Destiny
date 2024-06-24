@@ -18,6 +18,7 @@ enum Constants {
     
     static let bigTitleSize =  0.18
     static let titleSize =  0.108
+    static let largeTextSize =  0.0798
     static let textSize =  0.0492
     static let smallTextSize =  0.0360
 

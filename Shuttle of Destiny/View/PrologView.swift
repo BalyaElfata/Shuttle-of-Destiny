@@ -44,7 +44,7 @@ struct PrologView: View {
     
     @State private var showDailyPlayView = false
     
-//    @State private var animatedText: String = ""
+    @State private var animatedText: String = ""
     
     init() {
         // Conversation list
@@ -260,7 +260,7 @@ struct PrologView: View {
     }
 
     func animateText(text: String) {
-        var animatedText = ""
+        animatedText = ""
         for (index, character) in text.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.11) {
                 animatedText.append(character)
@@ -271,7 +271,7 @@ struct PrologView: View {
     
     func nextConversation() {
         if conversationIndex < conversationList.count-1{
-//            animateText(text: conversationList[conversationIndex])
+            animateText(text: conversationList[conversationIndex])
             conversationIndex+=1
         }
         else {

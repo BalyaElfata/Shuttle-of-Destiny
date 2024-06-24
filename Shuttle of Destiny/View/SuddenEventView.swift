@@ -112,7 +112,7 @@ struct SuddenEventListView: View {
 
 
 #Preview {
-    let container = try! ModelContainer(for: Gameplay.self)
+    let container = try! ModelContainer(for: SuddenPointModel.self)
     let container2 = try! ModelContainer(for: DataItem.self)
     
     let event = [

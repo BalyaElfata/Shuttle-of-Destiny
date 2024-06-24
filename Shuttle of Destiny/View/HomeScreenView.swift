@@ -18,6 +18,9 @@ struct HomeScreenView: View {
         } else {
             ZStack {
                 Image("Home Screen Background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 ZStack{
                     Image("Shuttle of Destiny Logo")
                         .offset(y: -30)
@@ -34,6 +37,7 @@ struct HomeScreenView: View {
             .onAppear {
                 Helper.sharedHelper.playMenuMusic()
             }
+            
         }
     }
 }

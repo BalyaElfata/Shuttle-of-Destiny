@@ -10,76 +10,64 @@ struct DailyEvents: View {
     @Binding var alreadyChoose: Bool
     @Binding var suddenDays: Bool
     
-    
     var body: some View {
-        VStack {
-            Text("What should I do?")
-                .font(.title)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
+        GeometryReader { geo in
             
-            Spacer().frame(height: 10.0)
+            Image("room_day")
+                .resizable()
+                .scaledToFill()
             
-            Text("Choose one to focus on this day")
-            
-            Spacer().frame(height: 30.0)
-            
-            HStack {
-                ZStack {
-                    Rectangle()
-                        .fill(Color(hex: "#85292B"))
-                        .cornerRadius(30)
-                        .frame(width: 140, height: 170)
+            VStack {
+                Text("What should I do?")
+                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.largeTextSize))
+                    .shadow(color: .black, radius: 15)
+                    .multilineTextAlignment(.center)
                     
-                    Button(action: {
-                        updatePoints(for: .relationship)
-                    }) {
-                        Text("Relationship")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .frame(width: 140, height: 170)
+                
+                Spacer().frame(height: geo.size.height * Constants.smallGapSize)
+                
+                HStack {
+                    ZStack {
+                        
+                        Button(action: {
+                            updatePoints(for: .relationship)
+                        }) {
+                            Image("love_button")
+                        }
                     }
-                }
-                
-                Spacer().frame(width: 80.0, height: 0.0)
-                
-                ZStack {
-                    Rectangle()
-                        .fill(Color(hex: "#85292B"))
-                        .cornerRadius(30)
-                        .frame(width: 140, height: 170)
                     
-                    Button(action: {
-                        updatePoints(for: .training)
-                    }) {
-                        Text("Training")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .frame(width: 140, height: 170)
+                    Spacer().frame(width: 80.0, height: 0.0)
+                    
+                    ZStack {
+                        
+                        Button(action: {
+                            updatePoints(for: .training)
+                        }) {
+                            Image("train_button")
+                        }
                     }
-                }
-                
-                Spacer().frame(width: 80.0, height: 0.0)
-                
-                ZStack {
-                    Rectangle()
-                        .fill(Color(hex: "#85292B"))
-                        .cornerRadius(30)
-                        .frame(width: 140, height: 170)
                     
-                    Button(action: {
-                        updatePoints(for: .family)
-                    }) {
-                        Text("Family")
-                            .font(.title2)
-                            .foregroundColor(.white)
+                    Spacer().frame(width: 80.0, height: 0.0)
+                    
+                    ZStack {
+                        Rectangle()
+                            .fill(Color(hex: "#85292B"))
+                            .cornerRadius(30)
                             .frame(width: 140, height: 170)
+                        
+                        Button(action: {
+                            updatePoints(for: .family)
+                        }) {
+                            Image("family_button")
+                        }
                     }
                 }
             }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
         .padding()
         .preferredColorScheme(.dark)
+        .ignoresSafeArea()
     }
     
     private func updatePoints(for category: PointCategory) {
@@ -140,10 +128,8 @@ enum PointCategory {
 
 #Preview {
     let container = try! ModelContainer(for: DataItem.self)
-    let container2 = try! ModelContainer(for: Gameplay.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
     let dataItem = DataItem()
-    
-    
     
     return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)

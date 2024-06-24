@@ -12,7 +12,7 @@ struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
             HomeScreenView()
-                .modelContainer(for: Gameplay.self)
+                .modelContainer(for: SuddenPointModel.self)
         }
     }
 }
