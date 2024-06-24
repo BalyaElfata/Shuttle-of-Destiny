@@ -30,12 +30,12 @@ struct SuddenEventListView: View {
     
     @ObservedObject var viewModel: GameplayViewModel
     var pointModels: DataItem
-    var gameplays: [SuddenPointModel]
-    var gotEvent: SuddenPointModel
+    @State var gameplays: [SuddenPointModel]
+    @State var gotEvent: SuddenPointModel
     
-    init(){
-        gameplays = viewModel.gameplays
-    }
+//    init(){
+//        gameplays = viewModel.gameplays
+//    }
     
     var body: some View {
         VStack {
@@ -91,11 +91,14 @@ struct SuddenEventListView: View {
             }
             .padding()
             .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
-        }.onAppear {
-            randomizeSuddenEventId(gameplay: gameplays)
+        }
+        .onAppear {
+            gameplays = viewModel.gameplays
+            
+            gotEvent = randomizeSuddenEventId(gameplay: gameplays)
             
             while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
-                randomizeSuddenEventId(gameplay: gameplays)
+                gotEvent = randomizeSuddenEventId(gameplay: gameplays)
             }
         }
     }
@@ -119,6 +122,7 @@ struct SuddenEventListView: View {
     let viewModel = GameplayViewModel()
             viewModel.gameplays = event
     
-    SuddenEventListView(viewModel: viewModel, pointModels: DataItem(), gamePlay: event[0], gotEvent: event).modelContainer(container).modelContainer(container2)
+    return SuddenEventListView(viewModel: viewModel, pointModels: DataItem(), gameplays: event, gotEvent: event[0]).modelContainer(container)
+        .modelContainer(container2)
         
 }

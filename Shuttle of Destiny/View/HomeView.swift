@@ -30,7 +30,7 @@ struct HomeView: View {
             if alreadyChoose {
                 
                 if suddenDays {
-                    SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gamePlay: gamePlay)
+                    SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: gamePlay, gotEvent: gamePlay)
                 } else {
                     DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
                 }
