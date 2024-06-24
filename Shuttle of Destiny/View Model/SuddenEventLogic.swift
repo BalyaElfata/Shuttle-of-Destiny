@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftData
 
 // Assuming DataItem is defined elsewhere in your project
-var pointModels: DataItem = DataItem() // SwiftData Variable
+var pointModels: PointModel = PointModel() // SwiftData Variable
 
 let event = [
     SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
@@ -19,7 +19,7 @@ let event = [
 var gameplay: SuddenPointModel = event[0]
 
 class Randomizer {
-    static func randomizeSuddenDays(for dataItem: DataItem) {
+    static func randomizeSuddenDays(for dataItem: PointModel) {
         dataItem.SuddenDays.shuffle()
         if dataItem.SuddenDays.count > 8 {
             dataItem.SuddenDays = Array(dataItem.SuddenDays.prefix(8))
