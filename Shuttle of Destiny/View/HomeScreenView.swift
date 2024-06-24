@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeScreenView: View {
     @State private var animateScreenViews = false
