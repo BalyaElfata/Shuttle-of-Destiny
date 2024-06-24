@@ -5,7 +5,7 @@ struct DailyEvents: View {
     
     @EnvironmentObject private var gameplay: GameplayViewModel
     var suddenEvent = GameplayViewModel()
-    var pointModels: DataItem
+    var pointModels: PointModel
     @Environment(\.modelContext) private var context
     @Binding var alreadyChoose: Bool
     @Binding var suddenDays: Bool
@@ -133,9 +133,9 @@ enum PointCategory {
 }
 
 #Preview {
-    let container = try! ModelContainer(for: DataItem.self)
+    let container = try! ModelContainer(for: PointModel.self)
     let container2 = try! ModelContainer(for: SuddenPointModel.self)
-    let dataItem = DataItem()
+    let dataItem = PointModel()
     
     return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)

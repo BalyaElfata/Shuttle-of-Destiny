@@ -4,7 +4,7 @@ import SwiftData
 struct DaySummaryView: View {
 
     @Environment(\.modelContext) private var context
-    var pointModels: DataItem
+    var pointModels: PointModel
     @Binding var alreadyChoose: Bool
 
     var body: some View {
@@ -64,8 +64,9 @@ struct DaySummaryView: View {
 }
 
 #Preview {
-    let container = try! ModelContainer(for: DataItem.self)
+    let container = try! ModelContainer(for: PointModel.self)
     
-    return DaySummaryView(pointModels: DataItem(), alreadyChoose: .constant(false))
+    return DaySummaryView(pointModels: PointModel(), alreadyChoose: .constant(false))
         .modelContainer(container)
+        .environmentObject(GameplayViewModel())
 }

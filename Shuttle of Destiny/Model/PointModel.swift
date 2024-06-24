@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class DataItem: Identifiable {
+class PointModel: Identifiable {
     
     var RelationPoint: Int
     var FamilyPoint: Int
