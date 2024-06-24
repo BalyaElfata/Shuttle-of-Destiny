@@ -15,7 +15,7 @@ struct EventView: View {
     
     var body: some View {
         if showEoD {
-            EndProgressView()
+//            EndProgressView()
         } else if showSuddenEvent {
             // show sudden event choices!
         } else {

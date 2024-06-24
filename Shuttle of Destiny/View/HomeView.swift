@@ -17,36 +17,18 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFill()
                 
-                Spacer()
-                    .frame(height: geo.size.height * Constants.mediumGapSize)
-                
-                VStack {
-                    HStack {
-                        Text("Day Counter: \(pointModels.Days)")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                        Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: geo.size.height * Constants.mediumGapSize)
-                }
-                
                 if alreadyChoose {
                     
                     if suddenDays {
                         SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay)
                     } else {
-                        DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                        EndProgressView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
                     }
                 
                 } else {
                     DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                 }
-                
-                Spacer()
             }
-            .frame(width: geo.size.width, height: geo.size.height)
             .onAppear {
                 Randomizer.randomizeSuddenDays(for: pointModels)
             }

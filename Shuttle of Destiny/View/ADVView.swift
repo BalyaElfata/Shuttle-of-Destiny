@@ -23,7 +23,7 @@ struct ADVView: View {
         } else if showDailyPlayView {
             EventView()
         } else if showEODProgressView {
-            EndProgressView()
+//            EndProgressView()
         } else if showEndingView {
             EndingView()
         } else {

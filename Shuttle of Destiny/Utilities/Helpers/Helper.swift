@@ -20,7 +20,7 @@ class Helper {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
             audioPlayer?.prepareToPlay()
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the menu music part couldn't be played, due to error: \(error).")
@@ -33,7 +33,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the prologue music part couldn't be played, due to error: \(error).")
@@ -46,7 +46,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the gameplay music part couldn't be played, due to error: \(error).")
@@ -59,7 +59,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the good ending music part couldn't be played, due to error: \(error).")
@@ -72,7 +72,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the bad ending music part couldn't be played, due to error: \(error).")
@@ -85,7 +85,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the neutral ending music part couldn't be played, due to error: \(error).")
@@ -98,7 +98,7 @@ class Helper {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.setVolume(0.65, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
             audioPlayer?.play()
         } catch {
             print("The audio file for the ADV music part couldn't be played, due to error: \(error).")
@@ -110,7 +110,7 @@ class Helper {
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
-            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
+            sfxPlayer?.setVolume(0.35, fadeDuration: 2)
             sfxPlayer?.play()
         } catch {
             print("The audio file for the Click SFX part couldn't be played, due to error: \(error).")
@@ -122,7 +122,7 @@ class Helper {
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
-            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
+            sfxPlayer?.setVolume(0.35, fadeDuration: 2)
             sfxPlayer?.play()
         } catch {
             print("The audio file for the End of Day SFX part couldn't be played, due to error: \(error).")
@@ -134,7 +134,7 @@ class Helper {
         
         do {
             sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
-            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
+            sfxPlayer?.setVolume(0.35, fadeDuration: 2)
             sfxPlayer?.play()
         } catch {
             print("The audio file for the Start of Day SFX part couldn't be played, due to error: \(error).")

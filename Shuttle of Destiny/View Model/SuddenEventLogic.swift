@@ -12,7 +12,7 @@ import SwiftData
 // Assuming DataItem is defined elsewhere in your project
 var pointModels: PointModel = PointModel() // SwiftData Variable
 
-let event = [
+let events = [
     SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
 ]
 
@@ -31,7 +31,7 @@ class Randomizer {
         
         guard let filteredEvent = gamePlay.filter ({ event in
             event.id == shuffledIds.first
-        }).first else { return event[0] }
+        }).first else { return events[0] }
         
         return filteredEvent
     }

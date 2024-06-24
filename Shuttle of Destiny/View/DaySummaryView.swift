@@ -65,8 +65,10 @@ struct DaySummaryView: View {
 
 #Preview {
     let container = try! ModelContainer(for: PointModel.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
     
     return DaySummaryView(pointModels: PointModel(), alreadyChoose: .constant(false))
         .modelContainer(container)
+        .modelContainer(container2)
         .environmentObject(GameplayViewModel())
 }
