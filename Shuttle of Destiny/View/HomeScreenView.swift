@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import SwiftData
 
 struct HomeScreenView: View {
     @State private var animateScreenViews = false
@@ -15,6 +16,7 @@ struct HomeScreenView: View {
     var body: some View {
         if showPrologueForStart {
             PrologView()
+//                .environmentObject(GameplayViewModel())
         } else {
             ZStack {
                 Image("Home Screen Background")
@@ -43,5 +45,11 @@ struct HomeScreenView: View {
 }
 
 #Preview {
-    HomeScreenView()
+    let container = try! ModelContainer(for: PointModel.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
+    
+    return HomeScreenView()
+        .modelContainer(container)
+        .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
 }
