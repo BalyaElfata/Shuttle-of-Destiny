@@ -11,43 +11,47 @@ struct HomeView: View {
     @State var suddenDays: Bool = false
     
     var body: some View {
-        ZStack {
-            Spacer()
-                .frame(height: 20.0)
-            
-            VStack {
-                HStack {
-                    Text("Day Counter: \(pointModels.Days)")
-                        .font(.title)
-                        .fontWeight(.semibold)
+        GeometryReader { geo in
+            ZStack {
+                Image("room_day")
+                    .resizable()
+                    .scaledToFill()
+                
+                Spacer()
+                    .frame(height: geo.size.height * Constants.mediumGapSize)
+                
+                VStack {
+                    HStack {
+                        Text("Day Counter: \(pointModels.Days)")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        Spacer()
+                    }
+                    
                     Spacer()
+                        .frame(height: geo.size.height * Constants.mediumGapSize)
+                }
+                
+                if alreadyChoose {
+                    
+                    if suddenDays {
+                        SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay)
+                    } else {
+                        DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                    }
+                
+                } else {
+                    DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                 }
                 
                 Spacer()
-                    .frame(height: 275.0)
             }
-            
-            if alreadyChoose {
-                
-                if suddenDays {
-                    SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay)
-                } else {
-                    DaySummaryView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
-                }
-            
-            } else {
-                DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+            .frame(width: geo.size.width, height: geo.size.height)
+            .onAppear {
+                Randomizer.randomizeSuddenDays(for: pointModels)
             }
-            
-            
-            
-            
-            
-            Spacer()
         }
-        .onAppear {
-            Randomizer.randomizeSuddenDays(for: pointModels)
-        }
+        
     }
 }
 

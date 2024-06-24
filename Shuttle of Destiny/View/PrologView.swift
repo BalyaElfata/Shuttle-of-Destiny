@@ -1,9 +1,13 @@
 import SwiftUI
 import Foundation
 import UIKit
+import SwiftData
 
 struct PrologView: View {
     @State var conversationIndex = 0
+    
+    var pointModels: DataItem
+    
     var conversationList: [String] = []
     var alexConversation: [String] = []
     var dadConversation: [String] = []
@@ -47,6 +51,8 @@ struct PrologView: View {
     @State private var animatedText: String = ""
     
     init() {
+        pointModels = DataItem()
+        
         // Conversation list
         conversationList = [
             noConversation,
@@ -129,7 +135,7 @@ struct PrologView: View {
 
     var body: some View {
         if showDailyPlayView {
-            EventView()
+            DailyEvents(pointModels: pointModels, alreadyChoose: .constant(false), suddenDays: pointModels.SuddenDays.contains(1) ? .constant(true) : .constant(false))
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -280,8 +286,9 @@ struct PrologView: View {
     }
 }
 
-struct PrologView_Previews: PreviewProvider {
-    static var previews: some View {
-        PrologView()
-    }
+#Preview {
+    let container = try! ModelContainer(for: DataItem.self)
+    
+    return PrologView()
+        .modelContainer(container)
 }

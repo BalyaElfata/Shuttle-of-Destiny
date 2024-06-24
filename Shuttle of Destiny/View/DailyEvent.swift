@@ -10,6 +10,8 @@ struct DailyEvents: View {
     @Binding var alreadyChoose: Bool
     @Binding var suddenDays: Bool
     
+    @State private var animateScreenViews = false
+    
     var body: some View {
         GeometryReader { geo in
             
@@ -17,53 +19,64 @@ struct DailyEvents: View {
                 .resizable()
                 .scaledToFill()
             
-            VStack {
-                Text("What should I do?")
-                    .font(.custom(Constants.psFont, size: geo.size.height * Constants.largeTextSize))
-                    .shadow(color: .black, radius: 15)
-                    .multilineTextAlignment(.center)
-                    
-                
-                Spacer().frame(height: geo.size.height * Constants.smallGapSize)
-                
-                HStack {
-                    ZStack {
+            HStack {
+                if animateScreenViews {
+                    VStack {
+                        Text("A new day is a new day, too. \nWhat's should I do today?")
+                            .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
+                            .shadow(color: .black, radius: 15)
+                            .multilineTextAlignment(.center)
+                            
                         
-                        Button(action: {
-                            updatePoints(for: .relationship)
-                        }) {
-                            Image("love_button")
+                        Spacer().frame(height: geo.size.height * Constants.smallGapSize)
+                        
+                        HStack {
+                            ZStack {
+                                
+                                Button(action: {
+                                    updatePoints(for: .relationship)
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                }) {
+                                    Image("love_button")
+                                }
+                            }
+                            
+                            Spacer().frame(width: 80.0, height: 0.0)
+                            
+                            ZStack {
+                                
+                                Button(action: {
+                                    updatePoints(for: .training)
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                }) {
+                                    Image("train_button")
+                                }
+                            }
+                            
+                            Spacer().frame(width: 80.0, height: 0.0)
+                            
+                            ZStack {
+                         
+                                Button(action: {
+                                    Helper.sharedHelper.playClickSfx()
+                                    updatePoints(for: .family)
+                                }) {
+                                    Image("family_button")
+                                }
+                            }
                         }
                     }
-                    
-                    Spacer().frame(width: 80.0, height: 0.0)
-                    
-                    ZStack {
-                        
-                        Button(action: {
-                            updatePoints(for: .training)
-                        }) {
-                            Image("train_button")
-                        }
-                    }
-                    
-                    Spacer().frame(width: 80.0, height: 0.0)
-                    
-                    ZStack {
-                        Rectangle()
-                            .fill(Color(hex: "#85292B"))
-                            .cornerRadius(30)
-                            .frame(width: 140, height: 170)
-                        
-                        Button(action: {
-                            updatePoints(for: .family)
-                        }) {
-                            Image("family_button")
-                        }
-                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
                 }
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .onAppear {
+            Helper.sharedHelper.playGameplayMusic()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                animateScreenViews = true
+            }
         }
         .padding()
         .preferredColorScheme(.dark)
@@ -74,7 +87,7 @@ struct DailyEvents: View {
         switch category {
         case .relationship:
             pointModels.ChoiceID = 1
-            
+
             if pointModels.SuddenDays.contains(pointModels.Days) {
                 suddenDays = true
                 
@@ -85,7 +98,6 @@ struct DailyEvents: View {
         
         case .training:
             pointModels.ChoiceID = 2
-            
             if pointModels.SuddenDays.contains(pointModels.Days) {
                 suddenDays = true
                 
@@ -105,14 +117,8 @@ struct DailyEvents: View {
                 pointModels.FamilyPoint += 1
                 
             }
-            
-            
-            
         }
-        
-        
         alreadyChoose = true
-        
         
         do {
             try context.save()
