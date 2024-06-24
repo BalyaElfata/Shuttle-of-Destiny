@@ -29,7 +29,7 @@ class GameplayViewModel: ObservableObject {
 struct SuddenEventListView: View {
     
     @ObservedObject var viewModel: GameplayViewModel
-    var pointModels: DataItem
+    var pointModels: PointModel
     @State var gameplays: [SuddenPointModel]
     @State var gotEvent: SuddenPointModel
     
@@ -38,67 +38,72 @@ struct SuddenEventListView: View {
 //    }
     
     var body: some View {
-        VStack {
+        ZStack {
+            Image("background overlay")
+                .resizable()
+                .frame(width: 650)
             VStack {
-                
-                Text("\(gotEvent.SuddenEventTitles.first ?? "Unknown Title")")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                
-                Spacer().frame(height: 10.0)
-                
-                Text("\(gotEvent.SuddenEventDescs.first ?? "No Description")")
-                
-                Spacer().frame(height: 30.0)
-                
-                HStack {
-                    ZStack {
-                        Rectangle()
-                            .fill(Color(hex: "#85292B"))
-                            .cornerRadius(30)
-                            .frame(width: 140, height: 170)
-                        
-                        Button(action: {
-                            
-                        }) {
-                            Text("Yes")
-                                .font(.title2)
-                                .foregroundColor(.white)
+                VStack {
+                    
+                    Text("\(gotEvent.SuddenEventTitles.first ?? "Unknown Title")")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                    
+                    Spacer().frame(height: 10.0)
+                    
+                    Text("\(gotEvent.SuddenEventDescs.first ?? "No Description")")
+                    
+                    Spacer().frame(height: 30.0)
+                    
+                    HStack {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color(hex: "#85292B"))
+                                .cornerRadius(30)
                                 .frame(width: 140, height: 170)
+                            
+                            Button(action: {
+                                
+                            }) {
+                                Text("Yes")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                                    .frame(width: 140, height: 170)
+                            }
+                        }
+                        
+                        Spacer().frame(width: 80.0, height: 0.0)
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(Color(hex: "#85292B"))
+                                .cornerRadius(30)
+                                .frame(width: 140, height: 170)
+                            
+                            Button(action: {
+                                
+                            }) {
+                                Text("No")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                                    .frame(width: 140, height: 170)
+                            }
                         }
                     }
                     
-                    Spacer().frame(width: 80.0, height: 0.0)
-                    
-                    ZStack {
-                        Rectangle()
-                            .fill(Color(hex: "#85292B"))
-                            .cornerRadius(30)
-                            .frame(width: 140, height: 170)
-                        
-                        Button(action: {
-                            
-                        }) {
-                            Text("No")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                                .frame(width: 140, height: 170)
-                        }
-                    }
                 }
-                
+                .padding()
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             }
-            .padding()
-            .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
-        }
-        .onAppear {
-            gameplays = viewModel.gameplays
-            
-            gotEvent = randomizeSuddenEventId(gameplay: gameplays)
-            
-            while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+            .onAppear {
+                gameplays = viewModel.gameplays
+                
                 gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                
+                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                    gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                }
             }
         }
     }
@@ -113,7 +118,7 @@ struct SuddenEventListView: View {
 
 #Preview {
     let container = try! ModelContainer(for: SuddenPointModel.self)
-    let container2 = try! ModelContainer(for: DataItem.self)
+    let container2 = try! ModelContainer(for: PointModel.self)
     
     let event = [
         SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 0, id: 0, Used: false)
@@ -122,7 +127,8 @@ struct SuddenEventListView: View {
     let viewModel = GameplayViewModel()
             viewModel.gameplays = event
     
-    return SuddenEventListView(viewModel: viewModel, pointModels: DataItem(), gameplays: event, gotEvent: event[0]).modelContainer(container)
+    return SuddenEventListView(viewModel: viewModel, pointModels: PointModel(), gameplays: event, gotEvent: event[0]).modelContainer(container)
         .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
         
 }
