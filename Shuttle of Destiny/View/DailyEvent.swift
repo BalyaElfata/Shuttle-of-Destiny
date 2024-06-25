@@ -97,6 +97,7 @@ struct DailyEvents: View {
             }
         }
         .onAppear {
+            EndingViewModel.calculateEndingTypes(for: pointModels)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 animateScreenViews = true
             }
