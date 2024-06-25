@@ -16,7 +16,7 @@
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
 		212384D52C1982780019D2D4 /* PrologView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* PrologView.swift */; };
 		21AA40082C26E87C004935D2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40072C26E87C004935D2 /* Color.swift */; };
-		21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */; };
+		21AA400B2C26E900004935D2 /* SuddenEventRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400A2C26E900004935D2 /* SuddenEventRandomizer.swift */; };
 		21AA400D2C26E932004935D2 /* PointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400C2C26E932004935D2 /* PointModel.swift */; };
 		21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */; };
 		21AA40112C26EA73004935D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40102C26EA73004935D2 /* HomeView.swift */; };
@@ -57,7 +57,7 @@
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		212384D42C1982780019D2D4 /* PrologView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologView.swift; sourceTree = "<group>"; };
 		21AA40072C26E87C004935D2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventLogic.swift; sourceTree = "<group>"; };
+		21AA400A2C26E900004935D2 /* SuddenEventRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventRandomizer.swift; sourceTree = "<group>"; };
 		21AA400C2C26E932004935D2 /* PointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointModel.swift; sourceTree = "<group>"; };
 		21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenPointModel.swift; sourceTree = "<group>"; };
 		21AA40102C26EA73004935D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		21AA40092C26E8AA004935D2 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */,
+				21AA400A2C26E900004935D2 /* SuddenEventRandomizer.swift */,
 				E9DD7FC82C2A999F00576C2E /* EndingViewModel.swift */,
 				21AA401A2C2B29C1004935D2 /* SuddenEventViewModel.swift */,
 			);
@@ -327,7 +327,7 @@
 				21AA400D2C26E932004935D2 /* PointModel.swift in Sources */,
 				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
 				21AA40112C26EA73004935D2 /* HomeView.swift in Sources */,
-				21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */,
+				21AA400B2C26E900004935D2 /* SuddenEventRandomizer.swift in Sources */,
 				E9DD7FC92C2A999F00576C2E /* EndingViewModel.swift in Sources */,
 				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
 				21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */,

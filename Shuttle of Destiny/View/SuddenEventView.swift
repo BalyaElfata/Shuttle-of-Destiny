@@ -100,10 +100,10 @@ struct SuddenEventListView: View {
             .onAppear {
                 gameplays = viewModel.suddenPointModels
                 
-                gotEvent = Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+                gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 
                 while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
-                    gotEvent = Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+                    gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 }
             }
         }

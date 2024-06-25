@@ -13,7 +13,7 @@ let events = [
     SuddenPointModel(SuddenEventTitles: "Sudden Event Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1, Used: false)
 ]
 
-class Randomizer {
+class SuddenEventRandomizer {
     static func randomizeSuddenDays(for pointModel: PointModel) {
         pointModel.SuddenDays.shuffle()
         if pointModel.SuddenDays.count > 8 {

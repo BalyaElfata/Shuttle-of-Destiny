@@ -34,7 +34,7 @@ struct HomeView: View {
             .onAppear {
                 EndingViewModel.calculateEndingTypes(for: pointModels)
                 Helper.sharedHelper.playGameplayMusic()
-                Randomizer.randomizeSuddenDays(for: pointModels)
+                SuddenEventRandomizer.randomizeSuddenDays(for: pointModels)
             }
         }
         
