@@ -3,8 +3,8 @@ import SwiftData
 
 struct DailyEvents: View {
     
-    @EnvironmentObject private var gameplay: GameplayViewModel
-    var suddenEvent = GameplayViewModel()
+    @EnvironmentObject private var gameplay: SuddenEventViewModel
+    var suddenEvent = SuddenEventViewModel()
     var pointModels: PointModel
     @Environment(\.modelContext) private var context
     @Binding var alreadyChoose: Bool
@@ -164,5 +164,5 @@ enum PointCategory {
     return DailyEvents(pointModels: dataItem, alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

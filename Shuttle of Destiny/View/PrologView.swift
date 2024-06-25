@@ -141,7 +141,7 @@ struct PrologView: View {
     var body: some View {
         if showDailyPlayView {
             HomeView(pointModels: pointModels, gamePlay: suddenPointModels)
-                .environmentObject(GameplayViewModel())
+                .environmentObject(SuddenEventViewModel())
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -311,5 +311,5 @@ struct PrologView: View {
     return PrologView()
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

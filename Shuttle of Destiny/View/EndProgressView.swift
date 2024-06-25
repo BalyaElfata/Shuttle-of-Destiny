@@ -111,5 +111,5 @@ struct EndProgressView: View {
     return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false))
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

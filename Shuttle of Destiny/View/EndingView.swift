@@ -95,5 +95,5 @@ struct EndingView: View {
     return EndingView(pointModels: dataItem)
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

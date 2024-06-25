@@ -3,7 +3,7 @@ import SwiftData
 
 struct HomeView: View {
     
-    @EnvironmentObject private var gameplay: GameplayViewModel
+    @EnvironmentObject private var gameplay: SuddenEventViewModel
     @Environment(\.modelContext) private var context
     var pointModels: PointModel
     var gamePlay: SuddenPointModel
@@ -53,6 +53,6 @@ struct HomeView: View {
     return HomeView(pointModels: PointModel(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }
 
