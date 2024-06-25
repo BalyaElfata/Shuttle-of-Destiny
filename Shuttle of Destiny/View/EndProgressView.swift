@@ -97,7 +97,7 @@ struct EndProgressView: View {
             }
             .onTapGesture {
 //                showADV = true
-                showEndingView = true
+//                showEndingView = true
 //                showDailyEventView = true
             }
             .preferredColorScheme(.dark)
