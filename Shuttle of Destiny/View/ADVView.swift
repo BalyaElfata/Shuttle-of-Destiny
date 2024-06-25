@@ -14,8 +14,6 @@ struct ADVView: View {
     @State private var showEODProgressView = false
     @State private var showEndingView = false
     
-    @Query private var gameplayRun: [Gameplay]
-    
     var body: some View {
         
         if showDailyPlayViewForPrologue {
@@ -25,7 +23,7 @@ struct ADVView: View {
         } else if showEODProgressView {
 //            EndProgressView()
         } else if showEndingView {
-            EndingView()
+//            EndingView(pointModels: gameplayRun)
         } else {
             GeometryReader { geo in
                 ZStack {

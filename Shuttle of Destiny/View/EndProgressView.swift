@@ -23,7 +23,7 @@ struct EndProgressView: View {
         if showADV {
             ADVView()
         } else if showEndingView {
-            EndingView()
+            EndingView(pointModels: pointModels)
         } else if showDailyEventView {
             EventView()
         } else {
@@ -46,8 +46,6 @@ struct EndProgressView: View {
                                     .frame(width: geo.size.width * Constants.verySmallGapSize, height: geo.size.height * Constants.verySmallGapSize)
                                 
                                 VStack {
-                                
-                                    
                                     Text("DAY-\(pointModels.Days)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.largeTextSize))
                                     

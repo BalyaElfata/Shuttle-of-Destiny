@@ -97,7 +97,6 @@ struct DailyEvents: View {
             }
         }
         .onAppear {
-//            Helper.sharedHelper.playGameplayMusic()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 animateScreenViews = true
             }
@@ -107,7 +106,7 @@ struct DailyEvents: View {
         .ignoresSafeArea()
     }
     
-    private func updatePoints(for category: PointCategory) {
+     private func updatePoints(for category: PointCategory) {
         switch category {
         case .relationship:
             pointModels.ChoiceID = 1

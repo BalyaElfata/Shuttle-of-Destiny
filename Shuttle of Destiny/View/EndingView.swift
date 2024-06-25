@@ -6,23 +6,28 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct EndingView: View {
-    @State private var showBadEnding = true
+    @State private var showBadEnding = false
     @State private var showGoodEnding = false
     @State private var showNeutralEnding = false
+    @State private var showDefaultEnding = false
     @State private var showCreditsMainMenu = false
     
     @State private var animateScreenViews = false
     
+    var pointModels: PointModel
+    @Environment(\.modelContext) private var context
+    
     var body: some View {
         
         if showCreditsMainMenu {
-            HomeScreenView()
+            CreditsView()
         } else {
             GeometryReader { geo in
                 ZStack {
-                    showGoodEnding ? Color.colorPaletteTwo : showNeutralEnding ? Color.colorPaletteThree : showBadEnding ? Color.red : Color.colorPaletteTwo
+                    showGoodEnding ? Color.colorPaletteTwo : showNeutralEnding ? Color.colorPaletteThree : showBadEnding ? Color.red : showDefaultEnding ? Color.gray : Color.black
                     HStack {
                         if animateScreenViews {
                             HStack {
@@ -35,7 +40,7 @@ struct EndingView: View {
                                             "Ending 2 \n Okay Ending. Okay?"
                                          : showBadEnding ?
                                             "Ending 3 \n BAD ENDING \n Why? Why? Why you...?"
-                                         : "Ending 1 \n Golden Ending \n CONGRATULATIONS!")
+                                         : "Ending X \n The Ending? \n Hmm..... You found it.")
                                         .multilineTextAlignment(.center)
                                         .foregroundStyle(.white)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.textSize))
@@ -47,6 +52,17 @@ struct EndingView: View {
                     }
                 }
                 .onAppear {
+                    
+                    if pointModels.EndingGet == 1 {
+                        showGoodEnding = true
+                    } else if pointModels.EndingGet == 2 {
+                        showNeutralEnding = true
+                    } else if pointModels.EndingGet == 3 {
+                        showBadEnding = true
+                    } else {
+                        showGoodEnding = true
+                    }
+                    
                     if showGoodEnding {
                         Helper.sharedHelper.playGoodEDMusic()
                     } else if showNeutralEnding {
@@ -72,5 +88,12 @@ struct EndingView: View {
 }
 
 #Preview {
-    EndingView()
+    let container = try! ModelContainer(for: PointModel.self)
+    let container2 = try! ModelContainer(for: SuddenPointModel.self)
+    let dataItem = PointModel()
+    
+    return EndingView(pointModels: dataItem)
+        .modelContainer(container)
+        .modelContainer(container2)
+        .environmentObject(GameplayViewModel())
 }
