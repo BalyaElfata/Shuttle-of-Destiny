@@ -15,16 +15,22 @@ class Helper {
     
     func playMenuMusic() {
         let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "menu_audio", ofType: "mp3")!)
-        
+    
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
-            audioPlayer?.prepareToPlay()
+            
             audioPlayer?.setVolume(0.5, fadeDuration: 5)
-            audioPlayer?.play()
+            
+            if !audioPlayer.isPlaying {
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            }
+            
         } catch {
             print("The audio file for the menu music part couldn't be played, due to error: \(error).")
         }
+
     }
     
     func playPrologueMusic() {
@@ -47,7 +53,10 @@ class Helper {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
             audioPlayer?.setVolume(0.5, fadeDuration: 5)
-            audioPlayer?.play()
+            if !audioPlayer.isPlaying {
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            }
         } catch {
             print("The audio file for the gameplay music part couldn't be played, due to error: \(error).")
         }
