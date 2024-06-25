@@ -9,14 +9,9 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-// Assuming DataItem is defined elsewhere in your project
-var pointModels: PointModel = PointModel() // SwiftData Variable
-
 let events = [
     SuddenPointModel(SuddenEventTitles: "Sudden Event Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1, Used: false)
 ]
-
-var gameplay: SuddenPointModel = events[0]
 
 class Randomizer {
     static func randomizeSuddenDays(for pointModel: PointModel) {
