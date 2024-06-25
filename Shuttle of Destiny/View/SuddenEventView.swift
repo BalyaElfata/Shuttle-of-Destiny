@@ -17,6 +17,7 @@ struct SuddenEventListView: View {
     @State var gotEvent: SuddenPointModel
     @Binding var alreadyChoose: Bool
     @Binding var suddenDays: Bool
+    @State private var showPhoneCall: Bool = true
     
     var body: some View {
         ZStack {
@@ -97,14 +98,20 @@ struct SuddenEventListView: View {
                 .padding()
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             }
-            .onAppear {
-                gameplays = viewModel.suddenPointModels
-                
+            Image("Phone Call")
+                .opacity(showPhoneCall ? 1 : 0)
+        }
+        .onAppear {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                showPhoneCall = false
+            }
+            gameplays = viewModel.suddenPointModels
+            
+            gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+            
+            while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
                 gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
-                
-                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
-                    gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
-                }
             }
         }
     }
