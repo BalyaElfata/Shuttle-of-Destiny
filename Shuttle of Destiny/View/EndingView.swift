@@ -60,7 +60,7 @@ struct EndingView: View {
                     } else if pointModels.EndingGet == 3 {
                         showBadEnding = true
                     } else {
-                        showGoodEnding = true
+                        showDefaultEnding = true
                     }
                     
                     if showGoodEnding {
