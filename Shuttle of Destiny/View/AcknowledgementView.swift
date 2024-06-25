@@ -13,7 +13,7 @@ struct AcknowledgementView: View {
     
     var body: some View {
         if showMainMenu {
-            ContentView()
+            HomeScreenView()
         } else {
             GeometryReader { geo in
                 ZStack {
