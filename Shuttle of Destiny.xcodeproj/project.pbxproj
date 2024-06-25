@@ -7,21 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */; };
-		212384C82C1980F50019D2D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384C72C1980F50019D2D4 /* ContentView.swift */; };
+		211A343C2C22F57700F76A47 /* bad_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A34372C22F57700F76A47 /* bad_ed_music.mp3 */; };
+		211A343D2C22F57700F76A47 /* adv_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A34382C22F57700F76A47 /* adv_music.mp3 */; };
+		211A343E2C22F57700F76A47 /* neutral_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A34392C22F57700F76A47 /* neutral_ed_music.mp3 */; };
+		211A343F2C22F57700F76A47 /* good_ed_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A343A2C22F57700F76A47 /* good_ed_music.mp3 */; };
+		211A34402C22F57700F76A47 /* prologue_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 211A343B2C22F57700F76A47 /* prologue_music.mp3 */; };
 		212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384C92C1980F60019D2D4 /* Assets.xcassets */; };
 		212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */; };
-		212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* TypingAnimationView.swift */; };
+		212384D52C1982780019D2D4 /* PrologView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212384D42C1982780019D2D4 /* PrologView.swift */; };
+		21AA40082C26E87C004935D2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40072C26E87C004935D2 /* Color.swift */; };
+		21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */; };
+		21AA400D2C26E932004935D2 /* PointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400C2C26E932004935D2 /* PointModel.swift */; };
+		21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */; };
+		21AA40112C26EA73004935D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40102C26EA73004935D2 /* HomeView.swift */; };
+		21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40122C26EAC0004935D2 /* DailyEvent.swift */; };
+		21AA40152C26EAFC004935D2 /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40142C26EAFC004935D2 /* DaySummaryView.swift */; };
+		21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40162C26EB3A004935D2 /* SuddenEventView.swift */; };
+		21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40182C28A441004935D2 /* HomeScreenView.swift */; };
+		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
+		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
+		E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8372C2276F4003E3DCA /* EndProgressView.swift */; };
+		E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */; };
+		E960D1012C1A89DE00C3979B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F32C1A89DE00C3979B /* Constants.swift */; };
+		E960D1022C1A89DE00C3979B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0F42C1A89DE00C3979B /* Helper.swift */; };
+		E960D1032C1A89DE00C3979B /* game_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F62C1A89DE00C3979B /* game_audio.mp3 */; };
+		E960D1042C1A89DE00C3979B /* menu_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */; };
+		E960D1052C1A89DE00C3979B /* click_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */; };
+		E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */; };
+		E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */; };
+		E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FD2C1A89DE00C3979B /* ContentView.swift */; };
+		E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */; };
+		E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A23F12C2414B400CF2FE0 /* Conversation.swift */; };
+		E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4262C22B6AD008FD08C /* CreditsView.swift */; };
+		E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */; };
+		E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3D42C2C22CD80008FD08C /* Gameplay.swift */; };
+		E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FD79432C20FECF004D531E /* VT323-Regular.ttf */; };
+		E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD79452C20FF5E004D531E /* ADVView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211A34372C22F57700F76A47 /* bad_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bad_ed_music.mp3; sourceTree = "<group>"; };
+		211A34382C22F57700F76A47 /* adv_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adv_music.mp3; sourceTree = "<group>"; };
+		211A34392C22F57700F76A47 /* neutral_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = neutral_ed_music.mp3; sourceTree = "<group>"; };
+		211A343A2C22F57700F76A47 /* good_ed_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good_ed_music.mp3; sourceTree = "<group>"; };
+		211A343B2C22F57700F76A47 /* prologue_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = prologue_music.mp3; sourceTree = "<group>"; };
 		212384C22C1980F50019D2D4 /* Shuttle of Destiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shuttle of Destiny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
-		212384C72C1980F50019D2D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		212384C92C1980F60019D2D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuttle_of_Destiny.entitlements; sourceTree = "<group>"; };
 		212384CD2C1980F60019D2D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		212384D42C1982780019D2D4 /* TypingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingAnimationView.swift; sourceTree = "<group>"; };
+		212384D42C1982780019D2D4 /* PrologView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologView.swift; sourceTree = "<group>"; };
+		21AA40072C26E87C004935D2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventLogic.swift; sourceTree = "<group>"; };
+		21AA400C2C26E932004935D2 /* PointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointModel.swift; sourceTree = "<group>"; };
+		21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenPointModel.swift; sourceTree = "<group>"; };
+		21AA40102C26EA73004935D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		21AA40122C26EAC0004935D2 /* DailyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
+		21AA40142C26EAFC004935D2 /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
+		21AA40162C26EB3A004935D2 /* SuddenEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventView.swift; sourceTree = "<group>"; };
+		21AA40182C28A441004935D2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
+		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E923D8372C2276F4003E3DCA /* EndProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndProgressView.swift; sourceTree = "<group>"; };
+		E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shuttle-of-Destiny-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		E960D0F32C1A89DE00C3979B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E960D0F42C1A89DE00C3979B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E960D0F62C1A89DE00C3979B /* game_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_audio.mp3; sourceTree = "<group>"; };
+		E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu_audio.mp3; sourceTree = "<group>"; };
+		E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start_of_day_sfx.mp3; sourceTree = "<group>"; };
+		E960D0FD2C1A89DE00C3979B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuttle_of_DestinyApp.swift; sourceTree = "<group>"; };
+		E99A23F12C2414B400CF2FE0 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		E9C3D4262C22B6AD008FD08C /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
+		E9C3D42C2C22CD80008FD08C /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
+		E9FD79432C20FECF004D531E /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
+		E9FD79452C20FF5E004D531E /* ADVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,9 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211A34362C22F53E00F76A47 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F22C1A89DE00C3979B /* Fonts */,
+				E960D0F52C1A89DE00C3979B /* Helpers */,
+				E960D0F82C1A89DE00C3979B /* Music */,
+				E960D0FC2C1A89DE00C3979B /* SFX */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		212384B92C1980F50019D2D4 = {
 			isa = PBXGroup;
 			children = (
+				E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */,
 				212384C42C1980F50019D2D4 /* Shuttle of Destiny */,
 				212384C32C1980F50019D2D4 /* Products */,
 			);
@@ -54,8 +129,11 @@
 		212384C42C1980F50019D2D4 /* Shuttle of Destiny */ = {
 			isa = PBXGroup;
 			children = (
-				212384D72C1989E40019D2D4 /* View */,
+				E960D0FE2C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift */,
 				212384D62C1989D90019D2D4 /* Model */,
+				E960D0FF2C1A89DE00C3979B /* View */,
+				21AA40092C26E8AA004935D2 /* View Model */,
+				211A34362C22F53E00F76A47 /* Utilities */,
 				212384C92C1980F60019D2D4 /* Assets.xcassets */,
 				212384CB2C1980F60019D2D4 /* Shuttle_of_Destiny.entitlements */,
 				212384CC2C1980F60019D2D4 /* Preview Content */,
@@ -74,16 +152,81 @@
 		212384D62C1989D90019D2D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				212384D42C1982780019D2D4 /* TypingAnimationView.swift */,
+				E99A23F12C2414B400CF2FE0 /* Conversation.swift */,
+				E9C3D42C2C22CD80008FD08C /* Gameplay.swift */,
+				21AA400E2C26E9DA004935D2 /* SuddenPointModel.swift */,
+				21AA400C2C26E932004935D2 /* PointModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		212384D72C1989E40019D2D4 /* View */ = {
+		21AA40092C26E8AA004935D2 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				212384C52C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift */,
-				212384C72C1980F50019D2D4 /* ContentView.swift */,
+				21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		E960D0F22C1A89DE00C3979B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD79432C20FECF004D531E /* VT323-Regular.ttf */,
+				E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E960D0F52C1A89DE00C3979B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F32C1A89DE00C3979B /* Constants.swift */,
+				E960D0F42C1A89DE00C3979B /* Helper.swift */,
+				21AA40072C26E87C004935D2 /* Color.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E960D0F82C1A89DE00C3979B /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				211A34382C22F57700F76A47 /* adv_music.mp3 */,
+				211A343A2C22F57700F76A47 /* good_ed_music.mp3 */,
+				211A34372C22F57700F76A47 /* bad_ed_music.mp3 */,
+				211A34392C22F57700F76A47 /* neutral_ed_music.mp3 */,
+				211A343B2C22F57700F76A47 /* prologue_music.mp3 */,
+				E960D0F62C1A89DE00C3979B /* game_audio.mp3 */,
+				E960D0F72C1A89DE00C3979B /* menu_audio.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		E960D0FC2C1A89DE00C3979B /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				E960D0F92C1A89DE00C3979B /* click_sfx.mp3 */,
+				E960D0FA2C1A89DE00C3979B /* end_of_day_sfx.mp3 */,
+				E960D0FB2C1A89DE00C3979B /* start_of_day_sfx.mp3 */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		E960D0FF2C1A89DE00C3979B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21AA40182C28A441004935D2 /* HomeScreenView.swift */,
+				212384D42C1982780019D2D4 /* PrologView.swift */,
+				E9039FAC2C21B280006182F6 /* EndingView.swift */,
+				E9FD79452C20FF5E004D531E /* ADVView.swift */,
+				E960D0FD2C1A89DE00C3979B /* ContentView.swift */,
+				E923D8352C2276DE003E3DCA /* EventView.swift */,
+				E923D8372C2276F4003E3DCA /* EndProgressView.swift */,
+				E9C3D4262C22B6AD008FD08C /* CreditsView.swift */,
+				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
+				21AA40102C26EA73004935D2 /* HomeView.swift */,
+				21AA40122C26EAC0004935D2 /* DailyEvent.swift */,
+				21AA40142C26EAFC004935D2 /* DaySummaryView.swift */,
+				21AA40162C26EB3A004935D2 /* SuddenEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,8 +289,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E960D1062C1A89DE00C3979B /* end_of_day_sfx.mp3 in Resources */,
+				E960D1072C1A89DE00C3979B /* start_of_day_sfx.mp3 in Resources */,
+				E9FD79442C20FECF004D531E /* VT323-Regular.ttf in Resources */,
+				211A343E2C22F57700F76A47 /* neutral_ed_music.mp3 in Resources */,
+				211A343C2C22F57700F76A47 /* bad_ed_music.mp3 in Resources */,
+				211A34402C22F57700F76A47 /* prologue_music.mp3 in Resources */,
+				211A343F2C22F57700F76A47 /* good_ed_music.mp3 in Resources */,
+				E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */,
+				211A343D2C22F57700F76A47 /* adv_music.mp3 in Resources */,
 				212384CE2C1980F60019D2D4 /* Preview Assets.xcassets in Resources */,
+				E960D1042C1A89DE00C3979B /* menu_audio.mp3 in Resources */,
+				E960D1052C1A89DE00C3979B /* click_sfx.mp3 in Resources */,
 				212384CA2C1980F60019D2D4 /* Assets.xcassets in Resources */,
+				E960D1032C1A89DE00C3979B /* game_audio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +313,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212384C82C1980F50019D2D4 /* ContentView.swift in Sources */,
-				212384D52C1982780019D2D4 /* TypingAnimationView.swift in Sources */,
-				212384C62C1980F50019D2D4 /* Shuttle_of_DestinyApp.swift in Sources */,
+				E9C3D4292C22BADD008FD08C /* AcknowledgementView.swift in Sources */,
+				E960D1092C1A89DE00C3979B /* Shuttle_of_DestinyApp.swift in Sources */,
+				21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */,
+				212384D52C1982780019D2D4 /* PrologView.swift in Sources */,
+				21AA40082C26E87C004935D2 /* Color.swift in Sources */,
+				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
+				E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */,
+				21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */,
+				21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */,
+				21AA400D2C26E932004935D2 /* PointModel.swift in Sources */,
+				E960D1022C1A89DE00C3979B /* Helper.swift in Sources */,
+				21AA40152C26EAFC004935D2 /* DaySummaryView.swift in Sources */,
+				21AA40112C26EA73004935D2 /* HomeView.swift in Sources */,
+				21AA400B2C26E900004935D2 /* SuddenEventLogic.swift in Sources */,
+				E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */,
+				E9C3D42D2C22CD80008FD08C /* Gameplay.swift in Sources */,
+				21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */,
+				E9FD79462C20FF5E004D531E /* ADVView.swift in Sources */,
+				E960D1012C1A89DE00C3979B /* Constants.swift in Sources */,
+				E9C3D4272C22B6AD008FD08C /* CreditsView.swift in Sources */,
+				E923D8382C2276F4003E3DCA /* EndProgressView.swift in Sources */,
+				E923D8362C2276DE003E3DCA /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +468,29 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shuttle-of-Destiny-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "balya.Shuttle-of-Destiny";
+				PRODUCT_BUNDLE_IDENTIFIER = lonard.shuttleofdestiny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,25 +510,29 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shuttle-of-Destiny-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "balya.Shuttle-of-Destiny";
+				PRODUCT_BUNDLE_IDENTIFIER = lonard.shuttleofdestiny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
