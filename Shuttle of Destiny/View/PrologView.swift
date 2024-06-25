@@ -282,20 +282,9 @@ struct PrologView: View {
             }
         }
     }
-
-    func animateText(text: String) {
-        animatedText = ""
-        for (index, character) in text.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.11) {
-                animatedText.append(character)
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            }
-        }
-    }
     
     func nextConversation() {
         if conversationIndex < conversationList.count-1{
-            animateText(text: conversationList[conversationIndex])
             conversationIndex+=1
         }
         else {
