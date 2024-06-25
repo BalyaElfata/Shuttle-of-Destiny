@@ -13,7 +13,7 @@ import SwiftData
 var pointModels: PointModel = PointModel() // SwiftData Variable
 
 let events = [
-    SuddenPointModel(SuddenEventTitles: "Pacar ngajak jalan", SuddenEventDescs: "Ajak jalan gak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1, Used: false)
+    SuddenPointModel(SuddenEventTitles: "Error", SuddenEventDescs: "Sudden Event ID Error", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1, Used: false)
 ]
 
 var gameplay: SuddenPointModel = events[0]
