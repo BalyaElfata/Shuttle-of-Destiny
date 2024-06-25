@@ -10,7 +10,7 @@ import SwiftData
 
 struct SuddenEventListView: View {
     
-    @ObservedObject var viewModel: GameplayViewModel
+    @ObservedObject var viewModel: SuddenEventViewModel
     var pointModels: PointModel
     @Environment(\.modelContext) private var context
     @State var gameplays: [SuddenPointModel]
@@ -98,7 +98,7 @@ struct SuddenEventListView: View {
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             }
             .onAppear {
-                gameplays = viewModel.gameplays
+                gameplays = viewModel.suddenPointModels
                 
                 gotEvent = randomizeSuddenEventId(gameplay: gameplays)
                 
@@ -206,11 +206,11 @@ enum types {
         SuddenPointModel(SuddenEventTitles: "Sudden Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 0, id: 0, Used: false)
     ]
     
-    let viewModel = GameplayViewModel()
-            viewModel.gameplays = event
+    let viewModel = SuddenEventViewModel()
+            viewModel.suddenPointModels = event
     
     return SuddenEventListView(viewModel: viewModel, pointModels: PointModel(), gameplays: event, gotEvent: event[0], alreadyChoose: .constant(false), suddenDays: .constant(true)).modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
         
 }

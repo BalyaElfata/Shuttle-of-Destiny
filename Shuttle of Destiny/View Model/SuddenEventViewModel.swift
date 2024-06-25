@@ -9,12 +9,12 @@ import SwiftData
 import SwiftUI
 
 @MainActor
-class GameplayViewModel: ObservableObject {
-    @Published var gameplays: [SuddenPointModel] = []
+class SuddenEventViewModel: ObservableObject {
+    @Published var suddenPointModels: [SuddenPointModel] = []
     
     init() {
         // Load or create initial data
-        self.gameplays = [
+        self.suddenPointModels = [
             SuddenPointModel(SuddenEventTitles: "Pacar ngajak jalan", SuddenEventDescs: "Ajak jalan gak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1 ,Used: false),
             
             SuddenPointModel(SuddenEventTitles: "Hans ajak gym", SuddenEventDescs: "Mau ikut ato enggak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2, SuddenEventType: 2, id: 2, Used: false),
