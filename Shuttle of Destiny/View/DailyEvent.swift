@@ -14,86 +14,68 @@ struct DailyEvents: View {
     
     var body: some View {
         GeometryReader { geo in
-            
             Image("room_day")
                 .resizable()
                 .scaledToFill()
-            
-            HStack {
-                if animateScreenViews {
-                    
-                    ZStack {
+            if animateScreenViews {
+                ZStack {
+                    VStack {
                         HStack {
-                            VStack {
-                                HStack {
-                                    Text("DAY-\(pointModels.Days)")
-                                        .font(.custom(Constants.psFont, size: geo.size.width * Constants.smallTextSize))
-                                        .padding(.horizontal, geo.size.width * Constants.midiSmallGapSize)
-                                    Spacer()
-                                }
-                                
-                                Spacer()
-                                
-                                VStack {
-                                    Text("A new day is a new day, too. \nWhat's should I do today?")
-                                        .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
-                                        .shadow(color: .black, radius: 15)
-                                        .multilineTextAlignment(.center)
-                                        
-                                    
-                                    Spacer().frame(height: geo.size.height * Constants.smallGapSize)
-                                    
-                                    HStack {
-                                        ZStack {
-                                            
-                                            Button(action: {
-                                                updatePoints(for: .relationship)
-                                                
-                                                Helper.sharedHelper.playClickSfx()
-                                            }) {
-                                                Image("love_button")
-                                            }
-                                        }
-                                        
-                                        Spacer().frame(width: 80.0, height: 0.0)
-                                        
-                                        ZStack {
-                                            
-                                            Button(action: {
-                                                updatePoints(for: .training)
-                                                
-                                                Helper.sharedHelper.playClickSfx()
-                                            }) {
-                                                Image("train_button")
-                                            }
-                                        }
-                                        
-                                        Spacer().frame(width: 80.0, height: 0.0)
-                                        
-                                        ZStack {
-                                     
-                                            Button(action: {
-                                                Helper.sharedHelper.playClickSfx()
-                                                updatePoints(for: .family)
-                                            }) {
-                                                Image("family_button")
-                                            }
-                                        }
-                                    }
-                                }
-                                .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 50)
-                                        .opacity(0.6)
-                                        .foregroundColor(.black)
-                                }
-                            }
-                            
+                            Text("DAY-\(pointModels.Days)")
+                                .font(.custom(Constants.psFont, size: geo.size.width * Constants.smallTextSize))
+                                .padding(.horizontal, geo.size.width * Constants.midiSmallGapSize)
+                            Spacer()
                         }
                         
+                        Spacer()
+                        
+                        VStack {
+                            Text("A new day is a new day, too. \nWhat's should I do today?")
+                                .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
+                                .shadow(color: .black, radius: 15)
+                                .multilineTextAlignment(.center)
+                                
+                            
+                            Spacer().frame(height: geo.size.height * Constants.smallGapSize)
+                            
+                            HStack {
+                                Button(action: {
+                                    updatePoints(for: .relationship)
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                }) {
+                                    Image("love_button")
+                                }
+                                
+                                Spacer().frame(width: 80.0, height: 0.0)
+                                   
+                                Button(action: {
+                                    updatePoints(for: .training)
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                }) {
+                                    Image("train_button")
+                                }
+                                
+                                Spacer().frame(width: 80.0, height: 0.0)
+                                
+                                Button(action: {
+                                    Helper.sharedHelper.playClickSfx()
+                                    updatePoints(for: .family)
+                                }) {
+                                    Image("family_button")
+                                }
+                            }
+                        }
+                        .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
+                        .background {
+                            RoundedRectangle(cornerRadius: 50)
+                                .opacity(0.6)
+                                .foregroundColor(.black)
+                        }
                     }
-                    .frame(width: geo.size.width, height: geo.size.height)
                 }
+                .frame(width: geo.size.width, height: geo.size.height)
             }
         }
         .onAppear {
