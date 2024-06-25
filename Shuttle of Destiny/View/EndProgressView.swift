@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct EndProgressView: View {
-    @State var showADV = false
     @State var showEndingView = false
     @State var showDailyEventView = false
     
@@ -20,9 +19,7 @@ struct EndProgressView: View {
     @Binding var alreadyChoose: Bool
     
     var body: some View {
-        if showADV {
-            ADVView()
-        } else if showEndingView {
+        if showEndingView {
             EndingView(pointModels: pointModels)
         } else if showDailyEventView {
             EventView()
@@ -92,11 +89,6 @@ struct EndProgressView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     animateScreenViews = true
                 }
-            }
-            .onTapGesture {
-//                showADV = true
-//                showEndingView = true
-//                showDailyEventView = true
             }
             .preferredColorScheme(.dark)
             .ignoresSafeArea()
