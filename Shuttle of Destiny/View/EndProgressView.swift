@@ -52,11 +52,11 @@ struct EndProgressView: View {
                                     Spacer()
                                         .frame(height: geo.size.width * Constants.verySmallGapSize)
                                     
+                                    Text("Relationship: \(pointModels.RelationPoint)")
+                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Training: \(pointModels.TrainingPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Family: \(pointModels.FamilyPoint)")
-                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
-                                    Text("Relationship: \(pointModels.RelationPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                   
                                     Spacer()
