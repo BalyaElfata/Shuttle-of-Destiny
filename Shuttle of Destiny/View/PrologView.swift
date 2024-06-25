@@ -146,46 +146,57 @@ struct PrologView: View {
                     case 1:
                         Image("prolog1")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 2:
                         Image("prolog2")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 3:
                         Image("prolog3")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 4:
                         Image("prolog4")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 5:
                         Image("prolog5")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 6:
                         Image("prolog6")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 7:
                         Image("prolog7")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 8:
                         Image("prolog8")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 9:
                         Image("prolog9")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 10:
                         Image("prolog10")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 11:
                         Image("prolog11")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 12:
                         Color.black
@@ -193,6 +204,7 @@ struct PrologView: View {
                     default:
                         Image("park")
                             .resizable()
+                            .scaledToFill()
                             .ignoresSafeArea(.all)
                     }
                     if alexConversation.contains(conversationList[conversationIndex]) {
@@ -221,13 +233,13 @@ struct PrologView: View {
                         ZStack {
                             Image("Chat Box")
                                 .opacity(conversationList[conversationIndex] == blackScreen || conversationList[conversationIndex] == noConversation ? 0 : 0.9)
+                                .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
                                 .overlay(alignment: .leading){
                                     Text(conversationList[conversationIndex])
                                         .foregroundStyle(.black)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
-                                        .padding(.horizontal, 50)
-                                        .padding(.vertical, 15)
                                 }
+                                .offset(y: 35)
                         }
                     }
                     Color.black
