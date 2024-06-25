@@ -17,12 +17,13 @@ struct EndProgressView: View {
     @Environment(\.modelContext) private var context
     var pointModels: PointModel
     @Binding var alreadyChoose: Bool
+    @Binding var suddenDays: Bool
     
     var body: some View {
         if showEndingView {
             EndingView(pointModels: pointModels)
         } else if showDailyEventView {
-            EventView()
+            DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -100,7 +101,7 @@ struct EndProgressView: View {
     let container = try! ModelContainer(for: PointModel.self)
     let container2 = try! ModelContainer(for: SuddenPointModel.self)
     
-    return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false))
+    return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)
         .modelContainer(container2)
         .environmentObject(SuddenEventViewModel())
