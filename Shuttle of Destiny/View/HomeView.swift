@@ -16,10 +16,10 @@ struct HomeView: View {
                 Image("room_day")
                     .resizable()
                     .scaledToFill()
-                if pointModels.Days <= 30 || pointModels.FamilyPoint >= 0 || pointModels.RelationPoint >= 0 || pointModels.TrainingPoint >= 0 {
+                if pointModels.Days <= 30 && pointModels.FamilyPoint >= 0 && pointModels.RelationPoint >= 0 && pointModels.TrainingPoint >= 0 {
                     if alreadyChoose {
                         if suddenDays {
-                            SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay)
+                            SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                         } else {
                             EndProgressView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
                         }
@@ -32,6 +32,7 @@ struct HomeView: View {
                 
             }
             .onAppear {
+                EndingViewModel.calculateEndingTypes(for: pointModels)
                 Helper.sharedHelper.playGameplayMusic()
                 Randomizer.randomizeSuddenDays(for: pointModels)
             }
