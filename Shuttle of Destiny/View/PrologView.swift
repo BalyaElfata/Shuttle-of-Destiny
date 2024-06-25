@@ -235,7 +235,7 @@ struct PrologView: View {
                             }label: {
                                 Image("Skip Button")
                                     .resizable()
-                                    .frame(width: geo.size.width*0.08, height: geo.size.height*0.06)
+                                    .frame(width: geo.size.width*0.08, height: geo.size.height*0.08)
                             }
                         }
                         Spacer()
