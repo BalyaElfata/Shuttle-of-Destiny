@@ -8,24 +8,6 @@
 import SwiftUI
 import SwiftData
 
-
-@MainActor
-class GameplayViewModel: ObservableObject {
-    @Published var gameplays: [SuddenPointModel] = []
-    
-    init() {
-        // Load or create initial data
-        self.gameplays = [
-            SuddenPointModel(SuddenEventTitles: "Bapak kepleset", SuddenEventDescs: "Bapak lu kepleset apa yang anda harus lakukan?", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 3, id: 1 ,Used: false),
-         
-            SuddenPointModel(SuddenEventTitles: "Pacar ngajak jalan", SuddenEventDescs: "Ajak jalan gak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 2 ,Used: false),
-            
-            SuddenPointModel(SuddenEventTitles: "Hans ajak gym", SuddenEventDescs: "Mau ikut ato enggak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2, SuddenEventType: 2, id: 3, Used: false)
-            
-        ]
-    }
-}
-
 struct SuddenEventListView: View {
     
     @ObservedObject var viewModel: GameplayViewModel
@@ -128,7 +110,7 @@ struct SuddenEventListView: View {
     }
     
     func randomizeSuddenEventId(gameplay: [SuddenPointModel]) -> SuddenPointModel {
-        return Randomizer.randomizeSuddenEvent(for: gameplays)
+        return Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
     }
     
     private func suddenTypesYes(for category: types) {
