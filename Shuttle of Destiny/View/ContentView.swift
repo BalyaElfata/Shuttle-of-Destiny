@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     
@@ -6,9 +7,13 @@ struct ContentView: View {
     @State private var showPrologueForStart = false
     @State private var showCredits = false
     
+    @Environment(\.modelContext) private var modelContext
+    
+    var randomDayInt = (1...30).randomElementsForDays(8)
+    
     var body: some View {
         if showPrologueForStart {
-            ADVView()
+            PrologView()
         } else if showCredits {
             CreditsView()
         } else {
@@ -31,6 +36,10 @@ struct ContentView: View {
                                         Helper.sharedHelper.playClickSfx()
                                         
                                         showPrologueForStart = true
+                                        
+                                        modelContext.insert(
+                                            Gameplay(playerName: "Andi", dayLapsed: 0, lovePts: 3, skillPts: 3, familyPts: 3, suddenEventsPool: randomDayInt, endingGet: 0)
+                                        )
                                     } label: {
                                         Text("Start Game")
                                             .font(.custom(Constants.psFont, size: geo.size.height * Constants.textSize))
@@ -73,4 +82,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(for: SuddenPointModel.self)
 }

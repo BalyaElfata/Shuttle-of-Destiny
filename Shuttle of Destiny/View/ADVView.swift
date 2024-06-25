@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ADVView: View {
     @State private var showDailyPlayViewForPrologue = false
     @State private var showDailyPlayView = false
     @State private var showEODProgressView = false
     @State private var showEndingView = false
+    
+    @Query private var gameplayRun: [Gameplay]
     
     var body: some View {
         
@@ -20,36 +23,35 @@ struct ADVView: View {
         } else if showDailyPlayView {
             EventView()
         } else if showEODProgressView {
-            EndProgressView()
+//            EndProgressView()
         } else if showEndingView {
             EndingView()
         } else {
             GeometryReader { geo in
                 ZStack {
                     Color.colorPaletteThree
-                    HStack {
+                    VStack {
+                        Spacer()
                         
-                        VStack {
-                            Spacer()
-                            
-                            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                                .frame(width: geo.size.width * 1, height: geo.size.height * 0.4)
-                                .offset(x: -25, y: -25)
-                                .opacity(0.8)
-                                .overlay(alignment: .topLeading) {
-                                    Text("Hello!")
-                                        .frame(alignment: .topLeading)
-                                        .foregroundStyle(.white)
-                                        .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
-                                }
-                                .overlay(alignment: .bottomTrailing) {
-                                    Image(systemName: "tennis.racket")
-                                        .frame(alignment: .topLeading)
-                                        .foregroundStyle(.white)
-                                        .font(.title3)
-                                        .offset(x: -40, y: -40)
-                                }
-                        }
+                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                            .frame(width: geo.size.width * 1, height: geo.size.height * 0.4)
+                            .offset(y: -25)
+                            .opacity(0.8)
+                            .overlay(alignment: .topLeading) {
+                                Text("Hello, John! This is Shuttle of Destiny.")
+                                    .frame(alignment: .topLeading)
+                                    .foregroundStyle(.white)
+                                    .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
+                                    .offset(y:-20)
+                                    .padding(15)
+                            }
+                            .overlay(alignment: .bottomTrailing) {
+                                Image(systemName: "tennis.racket")
+                                    .frame(alignment: .topLeading)
+                                    .foregroundStyle(.white)
+                                    .font(.title3)
+                                    .offset(x: -40, y: -40)
+                            }
                     }
                     .onAppear {
                         if !showDailyPlayViewForPrologue {

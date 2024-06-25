@@ -11,7 +11,9 @@ import SwiftUI
 struct Shuttle_of_DestinyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreenView()
+                .modelContainer(for: SuddenPointModel.self)
+                .modelContainer(for: PointModel.self)
         }
     }
 }
