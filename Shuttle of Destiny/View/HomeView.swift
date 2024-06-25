@@ -16,7 +16,6 @@ struct HomeView: View {
                 Image("room_day")
                     .resizable()
                     .scaledToFill()
-                
                 if pointModels.Days <= 30 || pointModels.FamilyPoint >= 0 || pointModels.RelationPoint >= 0 || pointModels.TrainingPoint >= 0 {
                     if alreadyChoose {
                         if suddenDays {
@@ -24,7 +23,6 @@ struct HomeView: View {
                         } else {
                             EndProgressView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
                         }
-                    
                     } else {
                         DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                     }
@@ -48,7 +46,7 @@ struct HomeView: View {
     
     
     let event = [
-        SuddenPointModel(SuddenEventTitles: ["Sudden Title"], SuddenEventDescs: ["Sudden Event Description"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 1, id: 0, Used: false)
+        SuddenPointModel(SuddenEventTitles: "Sudden Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 1, id: 0, Used: false)
     ]
     
     return HomeView(pointModels: PointModel(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)
