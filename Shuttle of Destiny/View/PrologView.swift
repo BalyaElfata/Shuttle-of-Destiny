@@ -61,11 +61,14 @@ struct PrologView: View {
             conversation1Alex,
             conversation2Dad,
             blackScreen,
+            noConversation,
             conversation3Dad,
             conversation4Alex,
             conversation5Dad,
             conversation6Alex,
             blackScreen,
+            noConversation,
+            noConversation,
             conversation7Coach,
             conversation8Alex,
             conversation9Coach,
@@ -248,15 +251,19 @@ struct PrologView: View {
                         sceneNumber = 3
                     case 5:
                         sceneNumber = 4
-                    case 9:
+                    case 10:
+                        sceneNumber = 5
+                    case 11:
+                        sceneNumber = 6
+                    case 12:
                         sceneNumber = 7
-                    case 14:
+                    case 17:
                         sceneNumber = 9
-                    case 20:
+                    case 23:
                         sceneNumber = 10
-                    case 27:
+                    case 30:
                         sceneNumber = 11
-                    case 33:
+                    case 36:
                         sceneNumber = 12
                     default:
                         return
