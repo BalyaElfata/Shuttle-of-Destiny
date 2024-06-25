@@ -38,7 +38,7 @@ struct ContentView: View {
                                         showPrologueForStart = true
                                         
                                         modelContext.insert(
-                                            Gameplay(playerName: "Andi", dayLapsed: 0, lovePts: 3, skillPts: 3, familyPts: 3, suddenEventsPool: randomDayInt, endingGet: 0)
+                                            PointModel()
                                         )
                                     } label: {
                                         Text("Start Game")

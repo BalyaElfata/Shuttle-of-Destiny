@@ -11,22 +11,25 @@ import SwiftData
 @Model
 class PointModel: Identifiable {
     
+    var PlayerName: String
     var RelationPoint: Int
     var FamilyPoint: Int
     var TrainingPoint: Int
     var Days: Int
     var ChoiceID: Int
     var SuddenDays: [Int]
-
+    var EndingGet: Int
     
-    init(RelationPoint: Int = 2, FamilyPoint: Int = 2, TrainingPoint: Int = 2, Days: Int = 1, ChoiceID: Int = 1, SuddenDays: [Int] = Array(1...30)) {
+    init(PlayerName: String = "Max", RelationPoint: Int = 2, FamilyPoint: Int = 2, TrainingPoint: Int = 2, Days: Int = 1, ChoiceID: Int = 1, SuddenDays: [Int] = Array(1...30), EndingGet: Int = 1) {
         
+        self.PlayerName = PlayerName
         self.RelationPoint = RelationPoint
         self.FamilyPoint = FamilyPoint
         self.TrainingPoint = TrainingPoint
         self.Days = Days
         self.ChoiceID = ChoiceID
         self.SuddenDays = SuddenDays
+        self.EndingGet = EndingGet
         
     }
 }

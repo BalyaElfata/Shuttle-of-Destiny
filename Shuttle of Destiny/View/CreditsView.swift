@@ -79,6 +79,9 @@ struct CreditsView: View {
             }
             .preferredColorScheme(.dark)
             .ignoresSafeArea()
+            .onAppear {
+                Helper.sharedHelper.playMenuMusic()
+            }
         }
     }
 }
