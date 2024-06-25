@@ -22,8 +22,11 @@ class SuddenEventRandomizer {
     }
     
     static func randomizeSuddenEvent(for suddenPointModel: [SuddenPointModel], pointModel: PointModel) -> SuddenPointModel {
-        var shuffledIds = Array(1...3).shuffled()
+        var shuffledIds = Array(1...3)
+        
+        // delete selected choice ID from shuffledIds
         shuffledIds.remove(at: pointModel.ChoiceID-1)
+        shuffledIds = shuffledIds.shuffled()
         
         guard let filteredEvent = suddenPointModel.filter ({ event in
             event.id == shuffledIds.first
