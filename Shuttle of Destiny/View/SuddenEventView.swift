@@ -98,21 +98,23 @@ struct SuddenEventListView: View {
                 .padding()
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             }
-            Image("Phone Call")
-                .opacity(showPhoneCall ? 1 : 0)
-        }
-        .onAppear {
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                showPhoneCall = false
-            }
-            gameplays = viewModel.suddenPointModels
-            
-            gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
-            
-            while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+            .onAppear {
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    showPhoneCall = false
+                }
+                gameplays = viewModel.suddenPointModels
+                
                 gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+                
+                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                    gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+                }
             }
+            Image("Phone Call")
+                .resizable()
+                .scaledToFill()
+                .opacity(showPhoneCall ? 1 : 0)
         }
     }
     
