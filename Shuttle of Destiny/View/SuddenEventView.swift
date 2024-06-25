@@ -100,17 +100,13 @@ struct SuddenEventListView: View {
             .onAppear {
                 gameplays = viewModel.suddenPointModels
                 
-                gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                gotEvent = Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 
                 while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
-                    gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                    gotEvent = Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 }
             }
         }
-    }
-    
-    func randomizeSuddenEventId(gameplay: [SuddenPointModel]) -> SuddenPointModel {
-        return Randomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
     }
     
     private func suddenTypesYes(for category: types) {
