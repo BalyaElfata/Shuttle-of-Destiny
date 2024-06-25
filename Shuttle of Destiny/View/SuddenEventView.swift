@@ -18,7 +18,7 @@ class GameplayViewModel: ObservableObject {
         self.gameplays = [
             SuddenPointModel(SuddenEventTitles: ["Bapak kepleset"], SuddenEventDescs: ["Bapak lu kepleset apa yang anda harus lakukan?"], SuddenPointPluses: [1], SuddenPointMinuses: [1], SuddenPointPlusesOther: [1], SuddenPointMinusesOther: [1],SuddenEventType: 3, id: 1 ,Used: false),
             
-            SuddenPointModel(SuddenEventTitles: ["Pacar ngajak jalan"], SuddenEventDescs: ["Ajak jalan gak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2],SuddenEventType: 1, id: 2 ,Used: false),
+            SuddenPointModel(SuddenEventTitles: ["Mia ngajak jalan"], SuddenEventDescs: ["Ajak jalan gak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2],SuddenEventType: 1, id: 2 ,Used: false),
             
             SuddenPointModel(SuddenEventTitles: ["Hans ajak gym"], SuddenEventDescs: ["Mau ikut ato enggak?"], SuddenPointPluses: [2], SuddenPointMinuses: [2], SuddenPointPlusesOther: [2], SuddenPointMinusesOther: [2], SuddenEventType: 2, id: 3, Used: false)
             
@@ -32,10 +32,6 @@ struct SuddenEventListView: View {
     var pointModels: PointModel
     @State var gameplays: [SuddenPointModel]
     @State var gotEvent: SuddenPointModel
-    
-//    init(){
-//        gameplays = viewModel.gameplays
-//    }
     
     var body: some View {
         ZStack {
