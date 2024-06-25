@@ -17,33 +17,33 @@ struct PrologView: View {
     var doctorConversation: [String] = []
     let blackScreen = "  "
     let noConversation = " "
-    let conversation1Alex = "Dad, look! I got it!"
-    let conversation2Dad = "I'm so proud of you, my son"
-    let conversation3Dad = "You know, Alex, every time I see you on that court, it's like watching a part of myself out there."
-    let conversation4Alex = "I learned from the best, Dad. You've always been my biggest inspiration."
-    let conversation5Dad = "I just wish I could've been the world champion. But you... you have the chance to achieve what I couldn't."
-    let conversation6Alex = "And I will, Dad. I'll make sure your dream comes true."
-    let conversation7Coach = "Alex, you need to focus more. Your rival, Marcus, is training twice as hard. He’s hungry for that championship title."
-    let conversation8Alex = "I know, Coach. But with my dad's condition and everything else, it’s tough."
-    let conversation9Coach = "I understand, Alex. But this is your dream too. You have to push through these challenges."
-    let conversation10Alex = "You’re right. I’ll do my best."
-    let conversation11Mia = "I can’t believe how much you’ve improved since we first met. Your dedication is incredible."
-    let conversation12Alex = "Thanks, Mia. Having you by my side makes all the difference."
-    let conversation13Mia = "I’m always here for you, Alex. I know how much this championship means to you and your dad."
-    let conversation14Alex = "You’ve been my rock. I don’t know what I’d do without you."
-    let conversation15Mia = "We’re a team, remember? I believe in you."
-    let conversation16Doctor = "John's condition is deteriorating. He needs to avoid stress and take his medication regularly. I suggest he stays in the hospital for better monitoring and care."
-    let conversation17Alex = "Is there anything else we can do?"
-    let conversation18Doctor = "Ensuring he's comfortable and reducing any additional strain on his heart is crucial."
-    let conversation19John = "Don't worry about me, son. Focus on your training. The championship is what matters now."
-    let conversation20Alex = "I’ll take care of you, Dad. And I'll win that championship for both of us."
-    let conversation21Dad = "I know you will, Alex. You’ve always made me proud."
-    let conversation22Mia = "Hey, how are you holding up?"
-    let conversation23Alex = "It’s been a long day, but I’m managing. How about you?"
-    let conversation24Mia = "I’m good. Just wanted to check in and remind you that you’re amazing. I believe in you."
-    let conversation25Alex = "Thanks, Mia. Your support means the world to me."
-    let conversation26Mia = "Anytime, Alex. Get some rest. Tomorrow’s another big day."
-    let conversation27Alex = "I won’t let you down, Dad. I’ll make your dream a reality."
+    let conversation1Alex = "Alex: Dad, look! I got it!"
+    let conversation2Dad = "Dad: I'm so proud of you, my son"
+    let conversation3Dad = "Dad: You know, Alex, every time I see you on that court, it's like watching a part of myself out there."
+    let conversation4Alex = "Alex: I learned from the best, Dad. You've always been my biggest inspiration."
+    let conversation5Dad = "Dad: I just wish I could've been the world champion. But you... you have the chance to achieve what I couldn't."
+    let conversation6Alex = "Alex: And I will, Dad. I'll make sure your dream comes true."
+    let conversation7Coach = "Coach: Alex, you need to focus more. Your rival, Marcus, is training twice as hard. He’s hungry for that championship title."
+    let conversation8Alex = "Alex: I know, Coach. But with my dad's condition and everything else, it’s tough."
+    let conversation9Coach = "Coach: I understand, Alex. But this is your dream too. You have to push through these challenges."
+    let conversation10Alex = "Alex: You’re right. I’ll do my best."
+    let conversation11Mia = "Mia: I can’t believe how much you’ve improved since we first met. Your dedication is incredible."
+    let conversation12Alex = "Alex: Thanks, Mia. Having you by my side makes all the difference."
+    let conversation13Mia = "Mia: I’m always here for you, Alex. I know how much this championship means to you and your dad."
+    let conversation14Alex = "Alex: You’ve been my rock. I don’t know what I’d do without you."
+    let conversation15Mia = "Mia: We’re a team, remember? I believe in you."
+    let conversation16Doctor = "Doctor: John's condition is deteriorating. He needs to avoid stress and take his medication regularly. I suggest he stays in the hospital for better monitoring and care."
+    let conversation17Alex = "Alex: Is there anything else we can do?"
+    let conversation18Doctor = "Doctor: Ensuring he's comfortable and reducing any additional strain on his heart is crucial."
+    let conversation19John = "John: Don't worry about me, son. Focus on your training. The championship is what matters now."
+    let conversation20Alex = "Alex: I’ll take care of you, Dad. And I'll win that championship for both of us."
+    let conversation21Dad = "Dad: I know you will, Alex. You’ve always made me proud."
+    let conversation22Mia = "Mia: Hey, how are you holding up?"
+    let conversation23Alex = "Alex: It’s been a long day, but I’m managing. How about you?"
+    let conversation24Mia = "Mia: I’m good. Just wanted to check in and remind you that you’re amazing. I believe in you."
+    let conversation25Alex = "Alex: Thanks, Mia. Your support means the world to me."
+    let conversation26Mia = "Mia: Anytime, Alex. Get some rest. Tomorrow’s another big day."
+    let conversation27Alex = "Alex: I won’t let you down, Dad. I’ll make your dream a reality."
     
     @State var sceneNumber = 1
     
@@ -198,27 +198,6 @@ struct PrologView: View {
                             .resizable()
                             .ignoresSafeArea(.all)
                     }
-                    if alexConversation.contains(conversationList[conversationIndex]) {
-                        Image("MC Sprite")
-                            .resizable()
-                            .frame(width: 222, height: 231)
-                            .position(x: 80, y:200)
-                            .opacity(0.9)
-                    }
-                    else if dadConversation.contains(conversationList[conversationIndex]) {
-                        Image("Dad Sprite")
-                            .resizable()
-                            .frame(width: 240, height: 240)
-                            .position(x: 680, y:220)
-                            .opacity(0.9)
-                    }
-                    else if miaConversation.contains(conversationList[conversationIndex]) {
-                        Image("Mia Sprite")
-                            .resizable()
-                            .frame(width: 240, height: 240)
-                            .position(x: 680, y:220)
-                            .opacity(0.9)
-                    }
                     VStack (){
                         Spacer()
                         ZStack {
@@ -232,6 +211,22 @@ struct PrologView: View {
                                         .padding(.vertical, 15)
                                 }
                         }
+                    }
+                    VStack() {
+                        HStack() {
+                            Spacer()
+                                .padding(.all, geo.size.height * Constants.smallGapSize)
+                            Button{
+                                Helper.sharedHelper.playClickSfx()
+                                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                                showDailyPlayView = true
+                            }label: {
+                                Image("Skip Button")
+                                    .resizable()
+                                    .frame(width: geo.size.width*0.08, height: geo.size.height*0.06)
+                            }
+                        }
+                        Spacer()
                     }
                     Color.black
                         .ignoresSafeArea(.all)
