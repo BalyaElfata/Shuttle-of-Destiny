@@ -158,13 +158,13 @@ struct SuddenEventListView: View {
             
         case .familyYes:
             
-            if gotEvent.SuddenEventType == 2{
-                pointModels.RelationPoint -= gotEvent.SuddenPointMinuses
-                pointModels.TrainingPoint += gotEvent.SuddenPointPlusesOther
+            if gotEvent.SuddenEventType == 1{
+                pointModels.FamilyPoint -= gotEvent.SuddenPointMinuses
+                pointModels.RelationPoint += gotEvent.SuddenPointPlusesOther
                 
-            } else if gotEvent.SuddenEventType == 3{
-                pointModels.RelationPoint -= gotEvent.SuddenPointMinuses
-                pointModels.FamilyPoint += gotEvent.SuddenPointPlusesOther
+            } else if gotEvent.SuddenEventType == 2{
+                pointModels.FamilyPoint -= gotEvent.SuddenPointMinuses
+                pointModels.TrainingPoint += gotEvent.SuddenPointPlusesOther
             }
             
         case .relationshipNo:
@@ -178,33 +178,28 @@ struct SuddenEventListView: View {
             }
             
         case .trainingNo:
-            if gotEvent.SuddenEventType == 2{
-                pointModels.RelationPoint += gotEvent.SuddenPointPluses
-                pointModels.TrainingPoint -= gotEvent.SuddenPointMinusesOther
+            if gotEvent.SuddenEventType == 1{
+                pointModels.TrainingPoint += gotEvent.SuddenPointPluses
+                pointModels.RelationPoint -= gotEvent.SuddenPointMinusesOther
                 
             } else if gotEvent.SuddenEventType == 3{
-                pointModels.RelationPoint += gotEvent.SuddenPointPluses
+                pointModels.TrainingPoint += gotEvent.SuddenPointPluses
                 pointModels.FamilyPoint -= gotEvent.SuddenPointMinusesOther
             }
             
         case .familyNo:
-            if gotEvent.SuddenEventType == 2{
-                pointModels.RelationPoint += gotEvent.SuddenPointPluses
-                pointModels.TrainingPoint -= gotEvent.SuddenPointMinusesOther
+            if gotEvent.SuddenEventType == 1{
+                pointModels.FamilyPoint += gotEvent.SuddenPointPluses
+                pointModels.RelationPoint -= gotEvent.SuddenPointMinusesOther
                 
-            } else if gotEvent.SuddenEventType == 3{
-                pointModels.RelationPoint += gotEvent.SuddenPointPluses
-                pointModels.FamilyPoint -= gotEvent.SuddenPointMinusesOther
+            } else if gotEvent.SuddenEventType == 2{
+                pointModels.FamilyPoint += gotEvent.SuddenPointPluses
+                pointModels.TrainingPoint -= gotEvent.SuddenPointMinusesOther
             }
            
-        
         }
         alreadyChoose = true
         suddenDays = false
-        
-        print("test")
-        print("Sudden Days:  \(suddenDays)")
-        print("Already choose:  \(alreadyChoose)")
         
         do {
             try context.save()
