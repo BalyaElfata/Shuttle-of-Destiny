@@ -23,6 +23,7 @@
 		21AA40132C26EAC1004935D2 /* DailyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40122C26EAC0004935D2 /* DailyEvent.swift */; };
 		21AA40172C26EB3A004935D2 /* SuddenEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40162C26EB3A004935D2 /* SuddenEventView.swift */; };
 		21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA40182C28A441004935D2 /* HomeScreenView.swift */; };
+		21AA401B2C2B29C1004935D2 /* SuddenEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AA401A2C2B29C1004935D2 /* SuddenEventViewModel.swift */; };
 		E9039FAD2C21B280006182F6 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9039FAC2C21B280006182F6 /* EndingView.swift */; };
 		E923D8362C2276DE003E3DCA /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923D8352C2276DE003E3DCA /* EventView.swift */; };
 		E960D1002C1A89DE00C3979B /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E960D0F12C1A89DE00C3979B /* PressStart2P-Regular.ttf */; };
@@ -63,6 +64,7 @@
 		21AA40122C26EAC0004935D2 /* DailyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEvent.swift; sourceTree = "<group>"; };
 		21AA40162C26EB3A004935D2 /* SuddenEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventView.swift; sourceTree = "<group>"; };
 		21AA40182C28A441004935D2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		21AA401A2C2B29C1004935D2 /* SuddenEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuddenEventViewModel.swift; sourceTree = "<group>"; };
 		E9039FAC2C21B280006182F6 /* EndingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		E923D8352C2276DE003E3DCA /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		E93E45ED2C1ACED60064EE2C /* Shuttle-of-Destiny-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shuttle-of-Destiny-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -162,6 +164,7 @@
 			children = (
 				21AA400A2C26E900004935D2 /* SuddenEventLogic.swift */,
 				E9DD7FC82C2A999F00576C2E /* EndingViewModel.swift */,
+				21AA401A2C2B29C1004935D2 /* SuddenEventViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				E960D1082C1A89DE00C3979B /* ContentView.swift in Sources */,
 				E99A23F32C2414B400CF2FE0 /* Conversation.swift in Sources */,
 				21AA40192C28A441004935D2 /* HomeScreenView.swift in Sources */,
+				21AA401B2C2B29C1004935D2 /* SuddenEventViewModel.swift in Sources */,
 				21AA400F2C26E9DA004935D2 /* SuddenPointModel.swift in Sources */,
 				E9DD7FCB2C2AA25A00576C2E /* EndProgressView.swift in Sources */,
 				21AA400D2C26E932004935D2 /* PointModel.swift in Sources */,
