@@ -213,24 +213,18 @@
 			children = (
 				21AA40182C28A441004935D2 /* HomeScreenView.swift */,
 				212384D42C1982780019D2D4 /* PrologView.swift */,
-<<<<<<< HEAD
 				E9039FAC2C21B280006182F6 /* EndingView.swift */,
 				E9FD79452C20FF5E004D531E /* ADVView.swift */,
 				E9C3D4262C22B6AD008FD08C /* CreditsView.swift */,
 				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
-=======
->>>>>>> balya
 				21AA40102C26EA73004935D2 /* HomeView.swift */,
 				21AA40122C26EAC0004935D2 /* DailyEvent.swift */,
 				21AA40162C26EB3A004935D2 /* SuddenEventView.swift */,
 				E9DD7FCA2C2AA25A00576C2E /* EndProgressView.swift */,
-<<<<<<< HEAD
 				E9C38DED2C2BAA22006F5B90 /* WaitingView.swift */,
-=======
 				E9039FAC2C21B280006182F6 /* EndingView.swift */,
 				E9C3D4262C22B6AD008FD08C /* CreditsView.swift */,
 				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
->>>>>>> balya
 			);
 			path = View;
 			sourceTree = "<group>";
