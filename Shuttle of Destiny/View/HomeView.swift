@@ -21,7 +21,7 @@ struct HomeView: View {
                         if suddenDays {
                             SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                         } else {
-                            EndProgressView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                            WaitingView(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                         }
                     } else {
                         DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
