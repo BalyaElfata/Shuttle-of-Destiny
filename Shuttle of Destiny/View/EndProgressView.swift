@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct EndProgressView: View {
-    @State var showADV = false
     @State var showEndingView = false
     
     @State private var animateScreenViews = false
@@ -20,10 +19,13 @@ struct EndProgressView: View {
     @Binding var suddenDays: Bool
     
     var body: some View {
-        if showADV {
-            ADVView()
-        } else if showEndingView {
+        if showEndingView {
             EndingView(pointModels: pointModels)
+<<<<<<< HEAD
+=======
+        } else if showDailyEventView {
+            DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+>>>>>>> balya
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -50,11 +52,11 @@ struct EndProgressView: View {
                                     Spacer()
                                         .frame(height: geo.size.width * Constants.verySmallGapSize)
                                     
+                                    Text("Relationship: \(pointModels.RelationPoint)")
+                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Training: \(pointModels.TrainingPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Family: \(pointModels.FamilyPoint)")
-                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
-                                    Text("Relationship: \(pointModels.RelationPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                   
                                     Spacer()
@@ -105,5 +107,5 @@ struct EndProgressView: View {
     return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

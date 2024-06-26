@@ -18,7 +18,7 @@ struct HomeScreenView: View {
     var body: some View {
         if showPrologueForStart {
             PrologView()
-                .environmentObject(GameplayViewModel())
+                .environmentObject(SuddenEventViewModel())
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -57,5 +57,5 @@ struct HomeScreenView: View {
     return HomeScreenView()
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }

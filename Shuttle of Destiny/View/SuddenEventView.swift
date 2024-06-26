@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+<<<<<<< HEAD
 
 @MainActor
 class GameplayViewModel: ObservableObject {
@@ -54,15 +55,18 @@ class GameplayViewModel: ObservableObject {
     }
 }
 
+=======
+>>>>>>> balya
 struct SuddenEventListView: View {
     
-    @ObservedObject var viewModel: GameplayViewModel
+    @ObservedObject var viewModel: SuddenEventViewModel
     var pointModels: PointModel
     @Environment(\.modelContext) private var context
     @State var gameplays: [SuddenPointModel]
     @State var gotEvent: SuddenPointModel
     @Binding var alreadyChoose: Bool
     @Binding var suddenDays: Bool
+    @State private var showPhoneCall: Bool = true
     
     var body: some View {
         GeometryReader { geo in
@@ -134,6 +138,7 @@ struct SuddenEventListView: View {
                     .padding()
                     .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
                 }
+<<<<<<< HEAD
                 .onAppear {
                     gameplays = viewModel.gameplays
                     
@@ -142,13 +147,29 @@ struct SuddenEventListView: View {
                     while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
                         gotEvent = randomizeSuddenEventId(gameplay: gameplays)
                     }
+=======
+                .padding()
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+            }
+            .onAppear {
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    showPhoneCall = false
+                }
+                gameplays = viewModel.suddenPointModels
+                
+                gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+                
+                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                    gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
+>>>>>>> balya
                 }
             }
+            Image("Phone Call")
+                .resizable()
+                .scaledToFill()
+                .opacity(showPhoneCall ? 1 : 0)
         }
-    }
-    
-    func randomizeSuddenEventId(gameplay: [SuddenPointModel]) -> SuddenPointModel {
-        return Randomizer.randomizeSuddenEvent(for: gameplays)
     }
     
     private func suddenTypesYes(for category: types) {
@@ -245,11 +266,11 @@ enum types {
         SuddenPointModel(SuddenEventTitles: "Sudden Title", SuddenEventDescs: "Sudden Event Description", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 0, id: 0, Used: false)
     ]
     
-    let viewModel = GameplayViewModel()
-            viewModel.gameplays = event
+    let viewModel = SuddenEventViewModel()
+            viewModel.suddenPointModels = event
     
     return SuddenEventListView(viewModel: viewModel, pointModels: PointModel(), gameplays: event, gotEvent: event[0], alreadyChoose: .constant(false), suddenDays: .constant(true)).modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
         
 }

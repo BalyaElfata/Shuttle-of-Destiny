@@ -141,7 +141,7 @@ struct PrologView: View {
     var body: some View {
         if showDailyPlayView {
             HomeView(pointModels: pointModels, gamePlay: suddenPointModels)
-                .environmentObject(GameplayViewModel())
+                .environmentObject(SuddenEventViewModel())
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -235,7 +235,7 @@ struct PrologView: View {
                             }label: {
                                 Image("Skip Button")
                                     .resizable()
-                                    .frame(width: geo.size.width*0.08, height: geo.size.height*0.06)
+                                    .frame(width: geo.size.width*0.08, height: geo.size.height*0.08)
                             }
                         }
                         Spacer()
@@ -282,20 +282,9 @@ struct PrologView: View {
             }
         }
     }
-
-    func animateText(text: String) {
-        animatedText = ""
-        for (index, character) in text.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.11) {
-                animatedText.append(character)
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            }
-        }
-    }
     
     func nextConversation() {
         if conversationIndex < conversationList.count-1{
-            animateText(text: conversationList[conversationIndex])
             conversationIndex+=1
         }
         else {
@@ -311,5 +300,5 @@ struct PrologView: View {
     return PrologView()
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }
