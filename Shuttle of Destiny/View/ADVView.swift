@@ -17,9 +17,9 @@ struct ADVView: View {
     var body: some View {
         
         if showDailyPlayViewForPrologue {
-            EventView()
+//            EventView()
         } else if showDailyPlayView {
-            EventView()
+//            EventView()
         } else if showEODProgressView {
 //            EndProgressView()
         } else if showEndingView {
