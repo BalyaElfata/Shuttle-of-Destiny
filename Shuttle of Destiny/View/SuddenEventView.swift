@@ -16,11 +16,39 @@ class GameplayViewModel: ObservableObject {
     init() {
         // Load or create initial data
         self.gameplays = [
-            SuddenPointModel(SuddenEventTitles: "Bapak kepleset", SuddenEventDescs: "Bapak lu kepleset apa yang anda harus lakukan?", SuddenPointPluses: 1, SuddenPointMinuses: 1, SuddenPointPlusesOther: 1, SuddenPointMinusesOther: 1,SuddenEventType: 3, id: 1 ,Used: false),
-         
-            SuddenPointModel(SuddenEventTitles: "Pacar ngajak jalan", SuddenEventDescs: "Ajak jalan gak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 2 ,Used: false),
+            // relationship
+            SuddenPointModel(SuddenEventTitles: "Mia needed you in her house for chit-chat.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 2, SuddenPointMinuses: 3, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2,SuddenEventType: 1, id: 1, Used: false),
             
-            SuddenPointModel(SuddenEventTitles: "Hans ajak gym", SuddenEventDescs: "Mau ikut ato enggak?", SuddenPointPluses: 2, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 2, SuddenEventType: 2, id: 3, Used: false)
+            SuddenPointModel(SuddenEventTitles: "Alex realized that he forgot to bring back Mia's phone.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 4, SuddenPointMinuses: 5, SuddenPointPlusesOther: 3, SuddenPointMinusesOther: 3,SuddenEventType: 1, id: 1, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Mia's father called you for F1 racing match in circuit for couple approval.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 6, SuddenPointMinuses: 6, SuddenPointPlusesOther: 5, SuddenPointMinusesOther: 5,SuddenEventType: 1, id: 1, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Mia asked you to give his allowance per day for wedding proposal.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 7, SuddenPointMinuses: 7, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 7,SuddenEventType: 1, id: 1, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Mia asked you to join window shopping for find a familymaking book.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 8, SuddenPointMinuses: 9, SuddenPointPlusesOther: 6, SuddenPointMinusesOther: 8,SuddenEventType: 1, id: 1, Used: false),
+            
+            // career
+            
+            SuddenPointModel(SuddenEventTitles: "A social media post gone viral shown Alex training. He wanted to give appreciation to it.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 3, SuddenPointMinuses: 4, SuddenPointPlusesOther: 3, SuddenPointMinusesOther: 2, SuddenEventType: 2, id: 2, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Coach has been sick for days, but you're needed by him to go on an international tournament.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 4, SuddenPointMinuses: 4, SuddenPointPlusesOther: 5, SuddenPointMinusesOther: 3, SuddenEventType: 2, id: 2, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "You're meeting Taufik Hendrawan, an former world badminton player, during an tournament.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 6, SuddenPointMinuses: 6, SuddenPointPlusesOther: 4, SuddenPointMinusesOther: 3, SuddenEventType: 2, id: 2, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Your usual racket has been broken, but Coach fully funded you to buy the legendary racket, Yonax No. 1.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 7, SuddenPointMinuses: 5, SuddenPointPlusesOther: 5, SuddenPointMinusesOther: 4, SuddenEventType: 2, id: 2, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Marcus has challenged you in an official exhibition match that is shown on national TV & social media.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 9, SuddenPointMinuses: 10, SuddenPointPlusesOther: 7, SuddenPointMinusesOther: 7, SuddenEventType: 2, id: 2, Used: false),
+            
+            // family
+            SuddenPointModel(SuddenEventTitles: "Dad has been slipped in the emergency ladder.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 3, SuddenPointMinuses: 2, SuddenPointPlusesOther: 2, SuddenPointMinusesOther: 3,SuddenEventType: 3, id: 3, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Smile! Your dad has been asked a video call, but you're in Madrid for a tournament.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 4, SuddenPointMinuses: 3, SuddenPointPlusesOther: 3, SuddenPointMinusesOther: 2,SuddenEventType: 3, id: 3, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Oh no! Your dad wanted you to move him into VIP room.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 6, SuddenPointMinuses: 3, SuddenPointPlusesOther: 5, SuddenPointMinusesOther: 4,SuddenEventType: 3, id: 3, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "A naggy journalist search your dad in hospital for interview, and you're asked to caught him.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 8, SuddenPointMinuses: 7, SuddenPointPlusesOther: 9, SuddenPointMinusesOther: 7,SuddenEventType: 3, id: 3, Used: false),
+            
+            SuddenPointModel(SuddenEventTitles: "Science is fun~ Vaccine for your dad's disease has been found.", SuddenEventDescs: "What do you do?", SuddenPointPluses: 11, SuddenPointMinuses: 8, SuddenPointPlusesOther: 6, SuddenPointMinusesOther: 5,SuddenEventType: 3, id: 3, Used: false)
             
         ]
     }
@@ -37,91 +65,83 @@ struct SuddenEventListView: View {
     @Binding var suddenDays: Bool
     
     var body: some View {
-        ZStack {
-            Image("background overlay")
-                .resizable()
-                .frame(width: 650)
-            VStack {
+        GeometryReader { geo in
+            ZStack {
+                Image("background overlay")
+                    .resizable()
+                    .frame(width: geo.size.width * Constants.largeBoxSize, height: geo.size.height * Constants.largeBoxSize)
                 VStack {
-                    Text("\(gotEvent.SuddenEventTitles)")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                    
-                    Spacer().frame(height: 10.0)
-                    
-                    Text("\(gotEvent.SuddenEventDescs)")
-                    
-                    Spacer().frame(height: 30.0)
-                    
-                    HStack {
-                        ZStack {
-                            Rectangle()
-                                .fill(Color(hex: "#85292B"))
-                                .cornerRadius(30)
-                                .frame(width: 140, height: 170)
-                            
-                            Button(action: {
-                                print("yes")
-                                if pointModels.ChoiceID == 1{
-                                    suddenTypesYes(for: .relationshipYes)
-                                    
-                                }else if pointModels.ChoiceID == 2{
-                                    suddenTypesYes(for: .trainingYes)
-                                    
-                                }else if pointModels.ChoiceID == 3{
-                                    suddenTypesYes(for: .familyYes)
-                                }
+                    VStack {
+                        Text("Will you do it? \n \(gotEvent.SuddenEventTitles)")
+                            .font(.custom(Constants.vtFont, size: geo.size.height * Constants.largeTextSize))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .shadow(radius: 5)
+                            .foregroundColor(.white)
+                        
+                        Spacer().frame(height: geo.size.height * Constants.smallGapSize)
+                        
+                        VStack {
+                            ZStack {
                                 
-                            }) {
-                                Text("Yes")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                                    .frame(width: 140, height: 170)
+                                Button(action: {
+                                    print("yes")
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                    
+                                    if pointModels.ChoiceID == 1{
+                                        suddenTypesYes(for: .relationshipYes)
+                                        
+                                    }else if pointModels.ChoiceID == 2{
+                                        suddenTypesYes(for: .trainingYes)
+                                        
+                                    }else if pointModels.ChoiceID == 3{
+                                        suddenTypesYes(for: .familyYes)
+                                    }
+                                    
+                                }) {
+                                    Image("sudden_event_yes")
+                                }
+                            }
+                            
+                            Spacer().frame(height: geo.size.height * Constants.smallGapSize)
+                            
+                            ZStack {
+                                
+                                Button(action: {
+                                    print("no")
+                                    print(pointModels.ChoiceID)
+                                    
+                                    Helper.sharedHelper.playClickSfx()
+                                    
+                                    if pointModels.ChoiceID == 1{
+                                        suddenTypesYes(for: .relationshipNo)
+                                        
+                                    }else if pointModels.ChoiceID == 2{
+                                        suddenTypesYes(for: .trainingNo)
+                                        
+                                    }else if pointModels.ChoiceID == 3{
+                                        suddenTypesYes(for: .familyNo)
+                                    }
+                                    
+                                }) {
+                                    Image("sudden_event_no")
+                                }
                             }
                         }
                         
-                        Spacer().frame(width: 80.0, height: 0.0)
-                        
-                        ZStack {
-                            Rectangle()
-                                .fill(Color(hex: "#85292B"))
-                                .cornerRadius(30)
-                                .frame(width: 140, height: 170)
-                            
-                            Button(action: {
-                                print("no")
-                                print(pointModels.ChoiceID)
-                                if pointModels.ChoiceID == 1{
-                                    suddenTypesYes(for: .relationshipNo)
-                                    
-                                }else if pointModels.ChoiceID == 2{
-                                    suddenTypesYes(for: .trainingNo)
-                                    
-                                }else if pointModels.ChoiceID == 3{
-                                    suddenTypesYes(for: .familyNo)
-                                }
-                                
-                            }) {
-                                Text("No")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                                    .frame(width: 140, height: 170)
-                            }
-                        }
                     }
-                    
+                    .padding()
+                    .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
                 }
-                .padding()
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
-            }
-            .onAppear {
-                gameplays = viewModel.gameplays
-                
-                gotEvent = randomizeSuddenEventId(gameplay: gameplays)
-                
-                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                .onAppear {
+                    gameplays = viewModel.gameplays
+                    
                     gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                    
+                    while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                        gotEvent = randomizeSuddenEventId(gameplay: gameplays)
+                    }
                 }
             }
         }
@@ -198,6 +218,7 @@ struct SuddenEventListView: View {
             }
            
         }
+        gotEvent.Used = true
         alreadyChoose = true
         suddenDays = false
         
