@@ -103,7 +103,7 @@ struct SuddenEventListView: View {
                 
                 gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 
-                while (pointModels.ChoiceID == gameplays.first?.SuddenEventType) && (gameplays.first?.Used == true) {
+                while (pointModels.ChoiceID == gotEvent.SuddenEventType) {
                     gotEvent = SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
                 }
             }
