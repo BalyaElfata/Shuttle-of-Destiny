@@ -24,7 +24,7 @@ struct SuddenEventListView: View {
             ZStack {
                 Image("background overlay")
                     .resizable()
-                    .frame(width: geo.size.width * Constants.largeBoxSize, height: geo.size.height * Constants.largeBoxSize)
+                    .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
                 VStack {
                     VStack {
                         Text("Will you do it? \n \(gotEvent.SuddenEventTitles)")
@@ -92,9 +92,11 @@ struct SuddenEventListView: View {
                 .padding()
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             }
+            .frame(width: geo.size.width, height: geo.size.height)
             .onAppear {
+                Helper.sharedHelper.playPhoneCallSfx()
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     showPhoneCall = false
                 }
                 gameplays = viewModel.suddenPointModels
@@ -107,8 +109,8 @@ struct SuddenEventListView: View {
             }
             Image("Phone Call")
                 .resizable()
-                .scaledToFill()
                 .opacity(showPhoneCall ? 1 : 0)
+                .ignoresSafeArea()
         }
     }
     
@@ -116,6 +118,7 @@ struct SuddenEventListView: View {
         print("Button tapped for Yes")
         switch category {
         case .relationshipYes:
+            pointModels.ChoiceID = 1
             
             if gotEvent.SuddenEventType == 2{
                 pointModels.RelationPoint -= gotEvent.SuddenPointMinuses
@@ -127,6 +130,7 @@ struct SuddenEventListView: View {
             }
             
         case .trainingYes:
+            pointModels.ChoiceID = 2
             
             if gotEvent.SuddenEventType == 1 {
                 pointModels.TrainingPoint -= gotEvent.SuddenPointMinuses
@@ -138,6 +142,7 @@ struct SuddenEventListView: View {
             }
             
         case .familyYes:
+            pointModels.ChoiceID = 3
             
             if gotEvent.SuddenEventType == 1{
                 pointModels.FamilyPoint -= gotEvent.SuddenPointMinuses

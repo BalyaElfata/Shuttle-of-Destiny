@@ -149,6 +149,18 @@ class Helper {
             print("The audio file for the Start of Day SFX part couldn't be played, due to error: \(error).")
         }
     }
+    
+    func playPhoneCallSfx() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "phone_call_sfx", ofType: "mp3")!)
+        
+        do {
+            sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
+            sfxPlayer?.play()
+        } catch {
+            print("The audio file for the Phone calling SFX part couldn't be played, due to error: \(error).")
+        }
+    }
 }
 
 extension RangeExpression where Bound: FixedWidthInteger {

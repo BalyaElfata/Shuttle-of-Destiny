@@ -15,7 +15,7 @@ class EndingViewModel {
             pointModels.EndingGet = 1
         } else if (pointModels.FamilyPoint <= 1 || pointModels.RelationPoint <= 1 || pointModels.TrainingPoint <= 1) && pointModels.Days <= 30 {
             pointModels.EndingGet = 3
-        } else {
+        } else if pointModels.Days > 30 {
             pointModels.EndingGet = 2
         }
     }
