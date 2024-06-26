@@ -213,10 +213,6 @@
 			children = (
 				21AA40182C28A441004935D2 /* HomeScreenView.swift */,
 				212384D42C1982780019D2D4 /* PrologView.swift */,
-				E9039FAC2C21B280006182F6 /* EndingView.swift */,
-				E9FD79452C20FF5E004D531E /* ADVView.swift */,
-				E9C3D4262C22B6AD008FD08C /* CreditsView.swift */,
-				E9C3D4282C22BADD008FD08C /* AcknowledgementView.swift */,
 				21AA40102C26EA73004935D2 /* HomeView.swift */,
 				21AA40122C26EAC0004935D2 /* DailyEvent.swift */,
 				21AA40162C26EB3A004935D2 /* SuddenEventView.swift */,
@@ -458,6 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Shuttle of Destiny/Shuttle_of_Destiny.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shuttle of Destiny/Preview Content\"";
@@ -503,6 +500,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Shuttle of Destiny/Shuttle_of_Destiny.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shuttle of Destiny/Preview Content\"";
