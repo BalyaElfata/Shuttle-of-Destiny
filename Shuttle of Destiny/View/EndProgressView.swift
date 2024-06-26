@@ -10,7 +10,6 @@ import SwiftData
 
 struct EndProgressView: View {
     @State var showEndingView = false
-    @State var showDailyEventView = false
     
     @State private var animateScreenViews = false
     
@@ -22,8 +21,11 @@ struct EndProgressView: View {
     var body: some View {
         if showEndingView {
             EndingView(pointModels: pointModels)
+<<<<<<< HEAD
+=======
         } else if showDailyEventView {
             DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+>>>>>>> balya
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -72,6 +74,7 @@ struct EndProgressView: View {
                             }
                             .padding(.horizontal, geo.size.width * Constants.smallGapSize)
                             .onTapGesture {
+                                Helper.sharedHelper.playClickSfx()
                                 alreadyChoose = false
                                 pointModels.Days += 1
                                 do {
