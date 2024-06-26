@@ -52,6 +52,7 @@ struct EndingView: View {
                     }
                 }
                 .onAppear {
+                    EndingViewModel.calculateEndingTypes(for: pointModels)
                     
                     if pointModels.EndingGet == 1 {
                         showGoodEnding = true

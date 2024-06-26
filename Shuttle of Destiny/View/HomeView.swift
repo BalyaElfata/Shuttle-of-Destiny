@@ -32,7 +32,6 @@ struct HomeView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .onAppear {
-                EndingViewModel.calculateEndingTypes(for: pointModels)
                 Helper.sharedHelper.playGameplayMusic()
                 SuddenEventRandomizer.randomizeSuddenDays(for: pointModels)
             }
