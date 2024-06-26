@@ -15,7 +15,7 @@ struct HomeView: View {
             ZStack {
                 Image("room_day")
                     .resizable()
-                if pointModels.Days <= 30 && pointModels.FamilyPoint >= 0 && pointModels.RelationPoint >= 0 && pointModels.TrainingPoint >= 0 {
+                if pointModels.Days <= 30 && (pointModels.FamilyPoint >= 0 && pointModels.RelationPoint >= 0 && pointModels.TrainingPoint >= 0) {
                     if alreadyChoose {
                         if suddenDays {
                             SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)

@@ -118,13 +118,13 @@ struct SuddenEventListView: View {
         print("Button tapped for Yes")
         switch category {
         case .relationshipYes:
-            pointModels.ChoiceID = 1
-            
             if gotEvent.SuddenEventType == 2{
+                pointModels.ChoiceID = 2
                 pointModels.RelationPoint -= gotEvent.SuddenPointMinuses
                 pointModels.TrainingPoint += gotEvent.SuddenPointPlusesOther
                 
             } else if gotEvent.SuddenEventType == 3{
+                pointModels.ChoiceID = 3
                 pointModels.RelationPoint -= gotEvent.SuddenPointMinuses
                 pointModels.FamilyPoint += gotEvent.SuddenPointPlusesOther
             }
@@ -133,10 +133,12 @@ struct SuddenEventListView: View {
             pointModels.ChoiceID = 2
             
             if gotEvent.SuddenEventType == 1 {
+                pointModels.ChoiceID = 1
                 pointModels.TrainingPoint -= gotEvent.SuddenPointMinuses
                 pointModels.RelationPoint += gotEvent.SuddenPointPlusesOther
                 
             } else if gotEvent.SuddenEventType == 3{
+                pointModels.ChoiceID = 3
                 pointModels.TrainingPoint -= gotEvent.SuddenPointMinuses
                 pointModels.FamilyPoint += gotEvent.SuddenPointPlusesOther
             }
@@ -145,10 +147,12 @@ struct SuddenEventListView: View {
             pointModels.ChoiceID = 3
             
             if gotEvent.SuddenEventType == 1{
+                pointModels.ChoiceID = 1
                 pointModels.FamilyPoint -= gotEvent.SuddenPointMinuses
                 pointModels.RelationPoint += gotEvent.SuddenPointPlusesOther
                 
             } else if gotEvent.SuddenEventType == 2{
+                pointModels.ChoiceID = 2
                 pointModels.FamilyPoint -= gotEvent.SuddenPointMinuses
                 pointModels.TrainingPoint += gotEvent.SuddenPointPlusesOther
             }
