@@ -18,7 +18,7 @@ struct PrologView: View {
     let blackScreen = "  "
     let noConversation = " "
     let conversation1Alex = "Alex: Dad, look! I got it!"
-    let conversation2Dad = "Dad: I'm so proud of you, my son"
+    let conversation2Dad = "Dad: I'm so proud of you, my son."
     let conversation3Dad = "Dad: You know, Alex, every time I see you on that court, it's like watching a part of myself out there."
     let conversation4Alex = "Alex: I learned from the best, Dad. You've always been my biggest inspiration."
     let conversation5Dad = "Dad: I just wish I could've been the world champion. But you... you have the chance to achieve what I couldn't."

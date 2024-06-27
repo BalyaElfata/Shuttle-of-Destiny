@@ -26,7 +26,7 @@ struct HomeView: View {
                         DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                     }
                 } else {
-                    EndingView(pointModels: pointModels)
+                    EndingADVView(pointModels: pointModels)
                 }
                 
             }
