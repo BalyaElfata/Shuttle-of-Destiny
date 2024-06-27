@@ -20,7 +20,7 @@ class PointModel: Identifiable {
     var SuddenDays: [Int]
     var EndingGet: Int
     
-    init(PlayerName: String = "Max", RelationPoint: Int = 2, FamilyPoint: Int = 2, TrainingPoint: Int = 2, Days: Int = 1, ChoiceID: Int = 1, SuddenDays: [Int] = Array(1...30), EndingGet: Int = 0) {
+    init(PlayerName: String = "Max", RelationPoint: Int = 2, FamilyPoint: Int = 2, TrainingPoint: Int = 2, Days: Int = 1, ChoiceID: Int = 1, SuddenDays: [Int] = Array(1...30), EndingGet: Int = 1) {
         
         self.PlayerName = PlayerName
         self.RelationPoint = RelationPoint
