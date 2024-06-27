@@ -37,7 +37,7 @@ struct CreditsView: View {
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
                                 
-                                Text("Hose")
+                                Text("Mikhael Hose")
                                     .font(.custom(Constants.psFont, size: geo.size.height * Constants.smallTextSize))
                                     .multilineTextAlignment(.center)
                                     .padding(.vertical, geo.size.width * Constants.verySmallGapSize)
