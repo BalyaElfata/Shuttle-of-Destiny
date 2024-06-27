@@ -16,18 +16,12 @@ struct EndingADVView: View {
     
     let blackScreen = "  "
     let noConversation = " "
-    let conversation1Alex = "Alex: I finally did it! I achieved my dreams."
-    let conversation2Alex = "Alex: Looking back it was one hell of a ride. I’m satisfied with my own life right now."
-    let conversation3Alex = "Alex: Where did it all go wrong. Damn it all!"
-    let conversation4Alex = "Alex: Where did it all go wrong. Damn it all!"
-    let conversation5Alex = "Alex: Where did it all go wrong. Damn it all!"
     
     var pointModels: PointModel
     
     @State var sceneNumber = 1
     
     @State private var showEndingInfo = false
-    
     @State private var animatedText: String = ""
 
 
@@ -44,12 +38,12 @@ struct EndingADVView: View {
                             .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 2:
-                        Image("golden_ending_1")
+                        Image("golden_ending_2")
                             .resizable()
                             .scaledToFill()
                             .ignoresSafeArea(.all)
                     case 3:
-                        Image("standard_ending_1")
+                        Image("standard_ending_3")
                             .resizable()
                             .scaledToFill()
                             .ignoresSafeArea(.all)
@@ -80,7 +74,7 @@ struct EndingADVView: View {
                             Image("Chat Box")
                                 .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
                                 .overlay(alignment: .leading){
-                                    Text(pointModels.EndingGet == 1 ? "Alex: I finally did it! I achieved my dreams." : pointModels.EndingGet == 2 ? "Alex: Looking back it was one hell of a ride. I’m satisfied with my own life right now." : pointModels.EndingGet == 3 ? "Alex: Where did it all go wrong. Damn it all!" : "This is a test text box.")
+                                    Text(pointModels.EndingGet == 1 ? "\(pointModels.PlayerName.capitalizingFirstLetter()): I finally did it! I achieved my dreams." : pointModels.EndingGet == 2 ? "\(pointModels.PlayerName.capitalizingFirstLetter()): Looking back it was one hell of a ride. I’m satisfied with my own life right now." : pointModels.EndingGet == 3 ? "\(pointModels.PlayerName.capitalizingFirstLetter()): Where did it all go wrong. Damn it all!" : "This is a test text box.")
                                         .foregroundStyle(.black)
                                         .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
                                 }
@@ -89,8 +83,10 @@ struct EndingADVView: View {
                     }
                 }
                 .onTapGesture {
-                    if pointModels.EndingGet == 1 {
+                    if pointModels.EndingGet == 1 && sceneNumber == 1 {
                         sceneNumber = 2
+                    } else if pointModels.EndingGet == 1 && sceneNumber == 2 {
+                        showEndingInfo = true
                     } else {
                         showEndingInfo = true
                     }

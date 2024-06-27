@@ -64,14 +64,14 @@ struct WaitingView: View {
                                                     .frame(width: 175, height: 225)
                                                 
                                                 Spacer().frame(height: geo.size.width * Constants.verySmallGapSize)
-                                                Text("Alex is dating...")
+                                                Text("\(pointModels.PlayerName.capitalizingFirstLetter()) is dating...")
                                                 
                                             case 2:
                                                 Image("coach_main")
                                                     .resizable()
                                                     .frame(width: 150, height: 225)
                                                 Spacer().frame(height: geo.size.width * Constants.verySmallGapSize)
-                                                    Text("Alex is training...")
+                                                    Text("\(pointModels.PlayerName.capitalizingFirstLetter()) is training...")
                                                 
                                             case 3:
                                                 Image("dad_alternate")
@@ -79,7 +79,7 @@ struct WaitingView: View {
                                                     .frame(width: 150, height: 225)
                                                 
                                                 Spacer().frame(height: geo.size.width * Constants.verySmallGapSize)
-                                                Text("Alex is visiting his dad...")
+                                                Text("\(pointModels.PlayerName.capitalizingFirstLetter()) is visiting his dad...")
                                                 
                                             default:
                                                 Image("mia_alternate")
@@ -88,7 +88,7 @@ struct WaitingView: View {
                                                 
                                                 Spacer().frame(height: geo.size.width * Constants.verySmallGapSize)
                                                 
-                                                Text("Alex is what?...")
+                                                Text("\(pointModels.PlayerName.capitalizingFirstLetter()) is what?...")
                                             }
                                         }
                                     }
