@@ -13,6 +13,18 @@ class Helper {
     private var audioPlayer: AVAudioPlayer!
     private var sfxPlayer: AVAudioPlayer!
     
+    func playDrimLogoSfx() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "drim_logo_sfx", ofType: "mp3")!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.setVolume(0.5, fadeDuration: 2)
+            audioPlayer?.play()
+        } catch {
+            print("The audio file for the DRIM logo SFX part couldn't be played, due to error: \(error).")
+        }
+    }
+    
     func playMenuMusic() {
         let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "menu_audio", ofType: "mp3")!)
     
