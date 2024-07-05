@@ -3,7 +3,7 @@ import SwiftData
 
 struct HomeView: View {
     
-    @EnvironmentObject private var gameplay: GameplayViewModel
+    @EnvironmentObject private var gameplay: SuddenEventViewModel
     @Environment(\.modelContext) private var context
     var pointModels: PointModel
     var gamePlay: SuddenPointModel
@@ -15,22 +15,25 @@ struct HomeView: View {
             ZStack {
                 Image("room_day")
                     .resizable()
-                    .scaledToFill()
-                
-                if alreadyChoose == true {
-                    
-                    if suddenDays == true {
-                        SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+                if pointModels.Days <= 30 && (pointModels.FamilyPoint >= 0 && pointModels.RelationPoint >= 0 && pointModels.TrainingPoint >= 0) {
+                    if alreadyChoose {
+                        if suddenDays {
+                            SuddenEventListView(viewModel: gameplay, pointModels: pointModels, gameplays: [gamePlay], gotEvent: gamePlay, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+                        } else {
+                            WaitingView(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+                        }
                     } else {
-                        EndProgressView(pointModels: pointModels, alreadyChoose: $alreadyChoose)
+                        DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
                     }
-                
                 } else {
-                    DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
+                    EndingADVView(pointModels: pointModels)
                 }
+                
             }
+            .frame(width: geo.size.width, height: geo.size.height)
             .onAppear {
-                Randomizer.randomizeSuddenDays(for: pointModels)
+                Helper.sharedHelper.playGameplayMusic()
+                SuddenEventRandomizer.randomizeSuddenDays(for: pointModels)
             }
         }
         
@@ -49,6 +52,6 @@ struct HomeView: View {
     return HomeView(pointModels: PointModel(), gamePlay: event[0], alreadyChoose: false, suddenDays: false)
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }
 
