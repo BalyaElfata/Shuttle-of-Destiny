@@ -52,7 +52,6 @@ struct EndingView: View {
                     }
                 }
                 .onAppear {
-                    
                     if pointModels.EndingGet == 1 {
                         showGoodEnding = true
                     } else if pointModels.EndingGet == 2 {
@@ -61,16 +60,6 @@ struct EndingView: View {
                         showBadEnding = true
                     } else {
                         showDefaultEnding = true
-                    }
-                    
-                    if showGoodEnding {
-                        Helper.sharedHelper.playGoodEDMusic()
-                    } else if showNeutralEnding {
-                        Helper.sharedHelper.playNeutralEDMusic()
-                    } else if showBadEnding {
-                        Helper.sharedHelper.playBadEDMusic()
-                    } else {
-                        Helper.sharedHelper.playGoodEDMusic()
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

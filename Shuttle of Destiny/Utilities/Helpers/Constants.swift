@@ -35,6 +35,7 @@ enum Constants {
     static let imageScale = 0.72
     static let largeBoxSize = 0.96
     static let boxSize = 0.84
+    static let midiLargeBoxSize = 0.72
     static let midiBoxSize = 0.60
     static let smallBoxSize = 0.5
     static let verySmallBoxSize = 0.15
