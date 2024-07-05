@@ -23,13 +23,20 @@ enum Constants {
     static let textSize =  0.0492
     static let smallTextSize =  0.0360
 
+    static let midiGapSize = 0.36
     static let gapSize =  0.18
     static let extraMediumGapSize =  0.15
     static let mediumGapSize =  0.12
     static let smallGapSize = 0.06
     static let midiSmallGapSize = 0.0360
     static let verySmallGapSize = 0.006
+    static let veryVerySmallGapSize = 0.00096
     
     static let imageScale = 0.72
+    static let largeBoxSize = 0.96
     static let boxSize = 0.84
+    static let midiLargeBoxSize = 0.72
+    static let midiBoxSize = 0.60
+    static let smallBoxSize = 0.5
+    static let verySmallBoxSize = 0.15
 }
