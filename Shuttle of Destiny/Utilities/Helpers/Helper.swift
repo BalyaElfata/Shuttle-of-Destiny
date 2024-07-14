@@ -13,18 +13,36 @@ class Helper {
     private var audioPlayer: AVAudioPlayer!
     private var sfxPlayer: AVAudioPlayer!
     
-    func playMenuMusic() {
-        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "menu_audio", ofType: "mp3")!)
+    func playDrimLogoSfx() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "drim_logo_sfx", ofType: "mp3")!)
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
-            audioPlayer?.numberOfLoops = -1
-            audioPlayer?.prepareToPlay()
-            audioPlayer?.setVolume(0.5, fadeDuration: 5)
+            audioPlayer?.setVolume(0.5, fadeDuration: 2)
             audioPlayer?.play()
+        } catch {
+            print("The audio file for the DRIM logo SFX part couldn't be played, due to error: \(error).")
+        }
+    }
+    
+    func playMenuMusic() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "menu_audio", ofType: "mp3")!)
+    
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            audioPlayer?.numberOfLoops = -1
+            
+            audioPlayer?.setVolume(0.5, fadeDuration: 5)
+            
+            if !audioPlayer.isPlaying {
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            }
+            
         } catch {
             print("The audio file for the menu music part couldn't be played, due to error: \(error).")
         }
+
     }
     
     func playPrologueMusic() {
@@ -47,7 +65,10 @@ class Helper {
             audioPlayer = try AVAudioPlayer(contentsOf: sound as URL)
             audioPlayer?.numberOfLoops = -1
             audioPlayer?.setVolume(0.5, fadeDuration: 5)
-            audioPlayer?.play()
+            if !audioPlayer.isPlaying {
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            }
         } catch {
             print("The audio file for the gameplay music part couldn't be played, due to error: \(error).")
         }
@@ -140,6 +161,18 @@ class Helper {
             print("The audio file for the Start of Day SFX part couldn't be played, due to error: \(error).")
         }
     }
+    
+    func playPhoneCallSfx() {
+        let sound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "phone_call_sfx", ofType: "mp3")!)
+        
+        do {
+            sfxPlayer = try AVAudioPlayer(contentsOf: sound as URL)
+            sfxPlayer?.setVolume(0.5, fadeDuration: 2)
+            sfxPlayer?.play()
+        } catch {
+            print("The audio file for the Phone calling SFX part couldn't be played, due to error: \(error).")
+        }
+    }
 }
 
 extension RangeExpression where Bound: FixedWidthInteger {
@@ -168,5 +201,15 @@ extension Range where Bound: FixedWidthInteger {
 extension ClosedRange where Bound: FixedWidthInteger {
     var randomElement: Bound {
         .random(in: self)
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }

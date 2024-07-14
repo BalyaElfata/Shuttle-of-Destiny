@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct EndProgressView: View {
-    @State var showADV = false
     @State var showEndingView = false
     @State var showDailyEventView = false
     
@@ -18,14 +17,13 @@ struct EndProgressView: View {
     @Environment(\.modelContext) private var context
     var pointModels: PointModel
     @Binding var alreadyChoose: Bool
+    @Binding var suddenDays: Bool
     
     var body: some View {
-        if showADV {
-            ADVView()
-        } else if showEndingView {
-            EndingView()
+        if showEndingView {
+            EndingView(pointModels: pointModels)
         } else if showDailyEventView {
-            EventView()
+            DailyEvents(pointModels: pointModels, alreadyChoose: $alreadyChoose, suddenDays: $suddenDays)
         } else {
             GeometryReader { geo in
                 ZStack {
@@ -46,19 +44,17 @@ struct EndProgressView: View {
                                     .frame(width: geo.size.width * Constants.verySmallGapSize, height: geo.size.height * Constants.verySmallGapSize)
                                 
                                 VStack {
-                                
-                                    
                                     Text("DAY-\(pointModels.Days)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.largeTextSize))
                                     
                                     Spacer()
                                         .frame(height: geo.size.width * Constants.verySmallGapSize)
                                     
+                                    Text("Relationship: \(pointModels.RelationPoint)")
+                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Training: \(pointModels.TrainingPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                     Text("Family: \(pointModels.FamilyPoint)")
-                                        .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
-                                    Text("Relationship: \(pointModels.RelationPoint)")
                                         .font(.custom(Constants.vtFont, size: geo.size.height * Constants.midiTextSize))
                                   
                                     Spacer()
@@ -76,6 +72,7 @@ struct EndProgressView: View {
                             }
                             .padding(.horizontal, geo.size.width * Constants.smallGapSize)
                             .onTapGesture {
+                                Helper.sharedHelper.playClickSfx()
                                 alreadyChoose = false
                                 pointModels.Days += 1
                                 do {
@@ -95,11 +92,6 @@ struct EndProgressView: View {
                     animateScreenViews = true
                 }
             }
-            .onTapGesture {
-//                showADV = true
-                showEndingView = true
-//                showDailyEventView = true
-            }
             .preferredColorScheme(.dark)
             .ignoresSafeArea()
         }
@@ -110,8 +102,8 @@ struct EndProgressView: View {
     let container = try! ModelContainer(for: PointModel.self)
     let container2 = try! ModelContainer(for: SuddenPointModel.self)
     
-    return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false))
+    return EndProgressView(pointModels: PointModel(), alreadyChoose: .constant(false), suddenDays: .constant(false))
         .modelContainer(container)
         .modelContainer(container2)
-        .environmentObject(GameplayViewModel())
+        .environmentObject(SuddenEventViewModel())
 }
