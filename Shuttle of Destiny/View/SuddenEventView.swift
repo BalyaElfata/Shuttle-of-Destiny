@@ -133,7 +133,7 @@ struct SuddenEventListView: View {
     }
     
     func randomizeSuddenEventId(gameplay: [SuddenPointModel]) -> SuddenPointModel {
-        return Randomizer.randomizeSuddenEvent(for: gameplays)
+        return SuddenEventRandomizer.randomizeSuddenEvent(for: gameplays, pointModel: pointModels)
     }
     
     private func suddenTypesYes(for category: types) {
