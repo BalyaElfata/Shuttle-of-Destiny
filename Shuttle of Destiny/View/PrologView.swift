@@ -204,7 +204,7 @@ struct PrologView: View {
                                     .opacity(conversationList[conversationIndex] == blackScreen || conversationList[conversationIndex] == noConversation ? 0 : 0.9)
                                     .frame(width: geo.size.width * Constants.boxSize, height: geo.size.height * Constants.boxSize)
                                     .overlay(alignment: .leading){
-                                        Text(conversationList[conversationIndex] ?? "This is a sample text of ADV feature.")
+                                        Text(conversationList[conversationIndex])
                                             .foregroundStyle(.black)
                                             .font(.custom(Constants.vtFont, size: geo.size.width * Constants.smallTextSize))
                                     }
